@@ -1,73 +1,50 @@
 
 /* ウィンドウサイズが0px */
 @media screen and (min-width: 0px) {
-	div#contents-wrap {
-  width: 90%;
-  height  : auto;
-	margin: 30px auto 100px;
-  }
-  div#delay-show{
-    width  : 90%;
-    margin : 0 auto;
-  }  
-
-	#fadein_area {
-		width: 200px;
-	}
+  
 }
 /* ウィンドウサイズが480px */
 @media screen and (min-width:480px){
-	div#contents-wrap {
-  width: 450px;
-  height  : auto;
-	margin: 30px auto 100px;
-  }	
-  div#delay-show{
-    width  : 400px;
-    margin : 0 auto;
-  }  
-	#fadein_area {
-		width: 400px;
-	}
 }
 /* ウィンドウサイズが700px */
 @media screen and (min-width:780px){
-	div#contents-wrap {
-  width: 750px;
-  height  : auto;
-	margin: 30px auto 100px;
-  }
-  div#delay-show{
-  }  
-	#fadein_area {
-		width: 600px;
-	}
 }
 /* ウィンドウサイズが1020px */
 @media screen and (min-width:1020px){
-	div#contents-wrap {
-  width: 1000px;
-  height  : auto;
-	margin: 30px auto 100px;
+  .wrapper{
+    width : 1024px;
   }
-  div#delay-show{
+  .heder{
+    width:900px;
+    height: 50px;
+    margin: 20px auto;
+    background: #ddd;
+    text-align: center;
+    line-height: 50px;
+    border-radius: 20px;
 
-  }  
-  div#delay-show{
-  }  
 
-	#fadein_area {
-		width: 600px;
-	}
+  }
+  #store_map{
+    width : 900px;
+    margin: 20px auto;
+  }
+  #store_map img{
+    width: 900px;
+  }
+  .button_list ul{
+    display: flex;
+  }
+  .button_list li{
+    width: 300px;
+    height: 100px;
+    background: linear-gradient(90deg, #29ABE2 150px, white 150px);   
+    border : solid #29ABE2 1px;
+    margin : 0px 20px;
+    border-radius: 50px;
+
+  } 
 }
+/* 11インチ2,388 x 1,668ピクセル解像度、264ppi*/
 
-#fadein_area ul li {
-  float:left;
-}
-
-
-
-
-#delay-show2 ul li {
-  position: relative;
-}
+/* 12インチ2,732 x 2,048ピクセル解像度、264ppi*/
