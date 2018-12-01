@@ -1,15 +1,20 @@
 <div class="wrapper">
-    <div class="heder">
+    <!-- title -->
+    <div class="title">
         <h1>店内マップ</h1>
     </div>
-    <div id="store_map">
-        <img src="./../../design/Drag_list/sample.png" alt="店内マップ">
+    <!-- main -->
+    <div class="c__store_main">
+        <div id="store_map">
+            <img src="./../../design/Drag_list/sample.png" alt="店内マップ">
+        </div>
     </div>
-    <div class="button_list">
+    <!-- nav -->
+    <div class="c__button_list">
         <ul>
-            <li>お薬検索</li>
-            <li>店内マップ</li>
-            <li>お薬一覧</li>
+            <li><a href="./seatch.php">お薬検索</a></li>
+            <li><a href="#" >店内マップ</a></li>
+            <li><a href="#">お薬一覧</a></li>
         </ul>
     </div>
 </div>
