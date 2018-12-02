@@ -102,6 +102,87 @@
 
 }
 /* Drag_list========================================== */
+/* タイトル */
+#list>div{
+  height : 25px;
+  border:solid #ddd 2px;
+  margin-top : 50px;
+  color: #103B51;
+  font-weight: bold;
+  line-height: 25px;
+  padding-left:50px; 
+
+}
+/* 薬品リスト */
+#list>ul{
+}
+#list li{
+  margin : 10px;
+  padding: 10px ;
+  border-bottom: solid #103B51 1px;
+  display: flex;
+
+}
+#list li>div:nth-child(1){
+  width:95px;
+  height: 95px;
+}
+#list li>div:nth-child(1)>img{
+  width:95px;
+  height: 95px;
+
+}
+#list li>div:nth-child(2){
+  width: 600px;
+  height: 95px;
+  padding-left: 10px;
+}
+#list li>div:nth-child(2) h2{
+  font-size : 24px;
+}
+
+#list li>div:nth-child(3){
+  width: 165px;
+  height: 95px;  
+}
+#list li>div:nth-child(3)>a{
+  display        : inline-block;
+  width          : 160px;
+  height         : 30px;
+  font-size      : 16px;
+  margin         : 20px auto;
+  padding-right   : 10px;
+  line-height    : 30px;
+  text-align     : right;
+  color          : #fff;
+  font-weight    : bold;
+  position       : relative;
+  text-decoration: none;
+  background     : url("./../../design/Drag_search/icon_buttom.png");
+  background-size: auto 31px;
+  border-bottom  : solid 5px #FF5B00;/**/
+  border-left   : solid 5px #FF5B00;/**/   
+  border-top   : solid 2px #ddd;/**/ 
+  border-right   : solid 2px #ddd;/**/ 
+   
+  
+}
+#list li>div:nth-child(3)>a:hover {
+  border           :none;
+  -ms-transform    : translate(5px,5px);
+  -webkit-transform: translate(5px,5px);
+  transform        : translate(5px,5px);
+}
+#list li>div:nth-child(3)>a:before{    
+  content   : "";
+  position  : absolute;
+}
+
+#list li>div:nth-child(3)>a:after{   
+  content   : "";
+  position  : absolute;
+}
+
 /* Drag_details========================================== */
 /* Drag_seatch========================================== */
 #seatch{
@@ -205,10 +286,11 @@ form{
 }
 .seatch_block li>div:nth-child(3)>a{
   display        : inline-block;
-  width          : 150px;
+  width          : 160px;
   height         : 30px;
   font-size      : 16px;
   margin         : 20px auto;
+  padding-right   : 10px;
   line-height    : 30px;
   text-align     : right;
   color          : #fff;
@@ -217,8 +299,10 @@ form{
   text-decoration: none;
   background     : url("./../../design/Drag_search/icon_buttom.png");
   background-size: auto 31px;
-  border-bottom  : solid 5px #7e5600;/**/
-  border-right   : solid 5px #7e5600;/**/  
+  border-bottom  : solid 5px #FF5B00;/**/
+  border-left   : solid 5px #FF5B00;/**/   
+  border-top   : solid 2px #ddd;/**/ 
+  border-right   : solid 2px #ddd;/**/ 
   
 }
 .seatch_block li>div:nth-child(3)>a:hover {
@@ -240,3 +324,5 @@ form{
 /* Mane_Drag_Arrival_History========================================== */
 
 }
+
+

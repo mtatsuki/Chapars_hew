@@ -36,7 +36,7 @@
                             <p>薬品内容</p>
                         </div>
                         <div>
-                            <a href="#">詳しくはこちら</a>
+                            <a href="./details.php?id=1">詳しくはこちら</a>
                         </div>
                     </li>
                     <li>
@@ -85,9 +85,9 @@
     <!-- nav -->
     <div class="c__button_list">
         <ul>
-            <li><a href="#">お薬検索</a></li>
+            <li><a href="./seatch.php">お薬検索</a></li>
             <li><a href="./index.php">店内マップ</a></li>
-            <li><a href="#">お薬一覧</a></li>
+            <li><a href="./list.php">お薬一覧</a></li>
         </ul>
     </div>
 </div>
