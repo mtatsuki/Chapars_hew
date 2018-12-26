@@ -27,55 +27,29 @@
                     <p>検索結果一覧</p>
                 </div>
                 <ul>
+                    <?php
+                    if(file_exists($jsonUrl)){
+                    $json = file_get_contents($jsonUrl);
+                    $json = mb_convert_encoding($json, 'UTF8', 'ASCII,JIS,UTF-8,EUC-JP,SJIS-WIN');
+                    $obj = json_decode($json,true);
+                    $obj = $obj["res"]["Drags"];
+                    foreach ($obj as $key => $val){
+                    ?>
+                    
                     <li>
                         <div>
-                            <img src="./../../design/Drag_search/IJxfad.png" alt="">
+                            <img src="./image/Drag_search/<?php echo $val["image"][0]; ?>" alt="">
                         </div>
                         <div>
-                            <h2>薬品名</h2>
-                            <p>薬品内容</p>
+                            <h2><?php echo $val["name"]; ?></h2>
+                            <p><?php echo $val["category"], $val["remarks"][0] ,$val["remarks"][1] , $val["remarks"][2]; ?></p>
                         </div>
                         <div>
-                            <a href="./details.php?id=1">詳しくはこちら</a>
+                            <a href="./details.php?id=<?php echo $val["code"]; ?>">詳しくはこちら</a>
                         </div>
                     </li>
-                    <li>
-                        <div>
-                            <img src="./../../design/Drag_search/IJxfad.png" alt="">
-                        </div>
-                        <div>
-                            <h2>薬品名</h2>
-                            <p>薬品内容</p>
-                        </div>
-                        <div>
-                            <a href="#">詳しくはこちら</a>
-                        </div>
-                    </li>
-                    <li>
-                        <div>
-                            <img src="./../../design/Drag_search/IJxfad.png" alt="">
-                        </div>
-                        <div>
-                            <h2>薬品名</h2>
-                            <p>薬品内容</p>
-                        </div>
-                        <div>
-                            <a href="#">詳しくはこちら</a>
-                        </div>
-                    </li>
-                    <li>
-                        <div>
-                            <img src="./../../design/Drag_search/IJxfad.png" alt="">
-                        </div>
-                        <div>
-                            <h2>薬品名</h2>
-                            <p>薬品内容</p>
-                        </div>
-                        <div>
-                            <a href="#">詳しくはこちら</a>
-                        </div>
-                    </li>
-
+                    <?php } 
+                }?>
                 </ul>
 
             </div>

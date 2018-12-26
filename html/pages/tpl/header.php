@@ -17,14 +17,14 @@
   <meta http-equiv="content-type" content="text/html" charset="UTF-8">
 
   <!-- 優先CSSファイル -->
-  <meta http-equiv="default-style" content="./../css/style.css">
+  <meta http-equiv="default-style" content="./css/style.css">
   <!-- resetCSS -->
-  <link rel="stylesheet" href="./../css/reset.css">
+  <link rel="stylesheet" href="./css/reset.css">
   <!-- CSS -->
-  <link rel="stylesheet" href="./../css/style.css">
+  <link rel="stylesheet" href="./css/style.css">
 
   <!-- js -->
-  <script type="text/javascript"  src="../js/javascript_style.js"></script>
+  <script type="text/javascript"  src="./js/javascript_style.js"></script>
   <!-- jqueryバージョン３ -->
   <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.3.1/jquery.min.js"></script>
   <script type="text/javascript">

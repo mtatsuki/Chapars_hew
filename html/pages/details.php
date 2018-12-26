@@ -1,6 +1,6 @@
 
 <?php
-
+  $jsonUrl = "./tpl/test.json"; //JSONファイルの場所とファイル名を記述
 //==================================
 
 include "./tpl/header.php";
