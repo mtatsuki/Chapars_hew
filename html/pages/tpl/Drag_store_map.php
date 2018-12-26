@@ -6,7 +6,7 @@
     <!-- main -->
     <div class="c__store_main">
         <div id="store_map">
-            <img src="./../../design/Drag_list/sample.png" alt="店内マップ">
+            <img src="./image/Drag_list/sample.png" alt="店内マップ">
         </div>
     </div>
     <!-- nav -->

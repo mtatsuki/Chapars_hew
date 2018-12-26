@@ -114,8 +114,7 @@
 
 }
 /* 薬品リスト */
-#list>ul{
-}
+
 #list li{
   margin : 10px;
   padding: 10px ;
@@ -158,13 +157,13 @@
   font-weight    : bold;
   position       : relative;
   text-decoration: none;
-  background     : url("./../../design/Drag_search/icon_buttom.png");
+  background     : url("./../image/Drag_search/icon_buttom.png");
   background-size: auto 31px;
   border-bottom  : solid 5px #FF5B00;/**/
   border-left   : solid 5px #FF5B00;/**/   
   border-top   : solid 2px #ddd;/**/ 
   border-right   : solid 2px #ddd;/**/ 
-   
+  
   
 }
 #list li>div:nth-child(3)>a:hover {
@@ -253,8 +252,7 @@ form{
   line-height: 25px;
   padding-left:50px; 
 }
-.seatch_block>ul{
-}
+
 .seatch_block li{
   margin : 10px;
   padding: 10px ;
@@ -297,7 +295,7 @@ form{
   font-weight    : bold;
   position       : relative;
   text-decoration: none;
-  background     : url("./../../design/Drag_search/icon_buttom.png");
+  background     : url("./../image/Drag_search/icon_buttom.png");
   background-size: auto 31px;
   border-bottom  : solid 5px #FF5B00;/**/
   border-left   : solid 5px #FF5B00;/**/   
