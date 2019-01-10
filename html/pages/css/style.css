@@ -78,6 +78,7 @@
     border-bottom  : solid 8px #103B51;/**/
     border-right   : solid 8px #103B51;/**/  
     border-radius  : 100% 50% 100% 50%; 
+    
   }
   .c__button_list li>a:hover {
     border           :none;
@@ -145,43 +146,32 @@
   height: 95px;  
 }
 #list li>div:nth-child(3)>a{
-  display        : inline-block;
-  width          : 160px;
-  height         : 30px;
-  font-size      : 16px;
-  margin         : 20px auto;
-  padding-right   : 10px;
+  display: block;
+	cursor: pointer;
+	max-width: 300px;
+  margin: 20px auto;
   line-height    : 30px;
-  text-align     : right;
-  color          : #fff;
-  font-weight    : bold;
-  position       : relative;
-  text-decoration: none;
-  background     : url("./../image/Drag_search/icon_buttom.png");
-  background-size: auto 31px;
-  border-bottom  : solid 5px #FF5B00;/**/
-  border-left   : solid 5px #FF5B00;/**/   
-  border-top   : solid 2px #ddd;/**/ 
-  border-right   : solid 2px #ddd;/**/ 
-  
-  
+  text-align     : right; 
+	border-radius: 4px;
+	box-sizing: border-box;
+	color: #fff;
+	text-align: center;
+	text-decoration: inherit;
+	background: #ff9900;
+	box-shadow: 0 6px 0 #ff2f00, 0 12px 0 rgba(0,0,0,.2);
+	transition: color .3s, background .3s, box-shadow .3s, transform 0.3s;
 }
 #list li>div:nth-child(3)>a:hover {
-  border           :none;
-  -ms-transform    : translate(5px,5px);
-  -webkit-transform: translate(5px,5px);
-  transform        : translate(5px,5px);
+  background: #ffbb55;
+	box-shadow: 0 3px 0 #941c01, 0 6px 0 rgba(0,0,0,.2);
+  transform: translateY(3px);
 }
-#list li>div:nth-child(3)>a:before{    
-  content   : "";
-  position  : absolute;
-}
-
-#list li>div:nth-child(3)>a:after{   
-  content   : "";
-  position  : absolute;
-}
-
+  #list li>div:nth-child(3)>a:active {
+  color: #ddd;
+	background: #6c2f0f;
+	box-shadow: 0 0 0 #941c01, 0 0 0 rgba(0,0,0,.2);
+	transform: translateY(6px);
+	transition-duration: .1s;}
 /* Drag_details========================================== */
 /* Drag_seatch========================================== */
 #seatch{
@@ -213,35 +203,34 @@ form{
   display:flex;
 }
 .c__seatch_bottom input{
-  display        : inline-block;
+  display: block;
+	cursor: pointer;
   width          : 200px;
   height         : 100px;
-  top : 15%;
-  left: 25%;
+  margin         : 13px 50%;
   font-size      : 30px;
   line-height    : 100px;
   text-align     : center;
-  color          : #fff;
-  font-weight    : bold;
-  position       : relative;
-  background     : #29ABE2 ;   
-  border-bottom  : solid 8px #103B51;/**/
-  border-right   : solid 8px #103B51;/**/  
+	border-radius: 4px;
+	box-sizing: border-box;
+	color: #fff;
+	text-align: center;
+	text-decoration: inherit;
+	background: #29ABE2;
+	box-shadow: 0 10px 0 #103B51, 0 20px 0 rgba(0,0,0,.2);
+	transition: color .3s, background .3s, box-shadow .3s, transform 0.3s;
 }
 .c__seatch_bottom input:hover {
-  border           :none;
-  -ms-transform    : translate(8px,8px);
-  -webkit-transform: translate(8px,8px);
-  transform        : translate(8px,8px);
+  background: #77c2e3;
+	box-shadow: 0 5px 0 #103B51, 0 10px 0 rgba(0,0,0,.2);
+  transform: translateY(3px);
 }
-.c__seatch_bottom input:before{    
-  content   : "";
-  position  : absolute;
-}
-
-.c__seatch_bottom input:after{   
-  content   : "";
-  position  : absolute;
+.c__seatch_bottom input:active {
+  color: #ddd;
+	background: #0c2e3c;
+	box-shadow: 0 0 0 #103B51, 0 0 0 rgba(0,0,0,.2);
+	transform: translateY(6px);
+  transition-duration: .1s;
 }
 .seatch_block>div{
   height : 25px;
@@ -283,41 +272,32 @@ form{
   height: 95px;  
 }
 .seatch_block li>div:nth-child(3)>a{
-  display        : inline-block;
-  width          : 160px;
-  height         : 30px;
-  font-size      : 16px;
-  margin         : 20px auto;
-  padding-right   : 10px;
+  display: block;
+	cursor: pointer;
+	max-width: 300px;
+  margin: 20px auto;
   line-height    : 30px;
-  text-align     : right;
-  color          : #fff;
-  font-weight    : bold;
-  position       : relative;
-  text-decoration: none;
-  background     : url("./../image/Drag_search/icon_buttom.png");
-  background-size: auto 31px;
-  border-bottom  : solid 5px #FF5B00;/**/
-  border-left   : solid 5px #FF5B00;/**/   
-  border-top   : solid 2px #ddd;/**/ 
-  border-right   : solid 2px #ddd;/**/ 
-  
+  text-align     : right; 
+	border-radius: 4px;
+	box-sizing: border-box;
+	color: #fff;
+	text-align: center;
+	text-decoration: inherit;
+	background: #ff9900;
+	box-shadow: 0 6px 0 #ff2f00, 0 12px 0 rgba(0,0,0,.2);
+	transition: color .3s, background .3s, box-shadow .3s, transform 0.3s;
 }
 .seatch_block li>div:nth-child(3)>a:hover {
-  border           :none;
-  -ms-transform    : translate(5px,5px);
-  -webkit-transform: translate(5px,5px);
-  transform        : translate(5px,5px);
+  background: #ffbb55;
+	box-shadow: 0 3px 0 #941c01, 0 6px 0 rgba(0,0,0,.2);
+  transform: translateY(3px);
 }
-.seatch_block li>div:nth-child(3)>a:before{    
-  content   : "";
-  position  : absolute;
-}
-
-.seatch_block li>div:nth-child(3)>a:after{   
-  content   : "";
-  position  : absolute;
-}
+.seatch_block li>div:nth-child(3)>a:active {
+  color: #ddd;
+	background: #6c2f0f;
+	box-shadow: 0 0 0 #941c01, 0 0 0 rgba(0,0,0,.2);
+	transform: translateY(6px);
+	transition-duration: .1s;}
 /* Mane_Drag_Arrival========================================== */
 /* Mane_Drag_Arrival_History========================================== */
 
