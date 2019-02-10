@@ -1,1 +1,11 @@
-//薬データの更新用のJS
+//自動ログイン用js
+const puppeteer = require("puppeteer");
+
+async function download(){
+
+
+
+}
+
+
+download();

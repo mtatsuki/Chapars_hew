@@ -23,20 +23,20 @@
   <!-- CSS -->
   <link rel="stylesheet" href="./css/style.css">
 
-  <!-- js -->
-  <script type="text/javascript"  src="./js/javascript_style.js"></script>
   <!-- jqueryバージョン３ -->
   <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.3.1/jquery.min.js"></script>
+    <!-- js -->
+    <script type="text/javascript" src="js/js_puppeteer.js"></script>
+
   <script type="text/javascript">
 
-  $(function(){
-    //ナビのアコーディオン（動作確認様）　
-    $('#list ul').hide();
-    $("#list div").click(function(){
-      $(this).next().slideToggle(500);								 
+    $(function(){
+      //ナビのアコーディオン（動作確認様）　
+      $('#list ul').hide();
+      $("#list div").click(function(){
+        $(this).next().slideToggle(500);								 
+      });
     });
-
-  });
 
   </script>
   <title>jquery</title>

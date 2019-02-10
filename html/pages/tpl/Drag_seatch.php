@@ -59,9 +59,9 @@
     <!-- nav -->
     <div class="c__button_list">
         <ul>
-            <li><a href="./seatch.php">お薬検索</a></li>
+            <li><a href="./seatch.php" id="puppeteer_login">お薬検索</a></li>
             <li><a href="./index.php">店内マップ</a></li>
-            <li><a href="./list.php">お薬一覧</a></li>
+            <li><a href="./list.php" id="puppeteer_login">お薬一覧</a></li>
         </ul>
     </div>
 </div>
