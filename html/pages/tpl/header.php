@@ -22,11 +22,10 @@
   <link rel="stylesheet" href="./css/reset.css">
   <!-- CSS -->
   <link rel="stylesheet" href="./css/style.css">
-
-  <!-- jqueryバージョン３ -->
-  <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.3.1/jquery.min.js"></script>
-    <!-- js -->
-    <script type="text/javascript" src="js/js_puppeteer.js"></script>
+ <!-- jqueryバージョン３ -->
+ <script type="text/javascript" src="js/jquery-3.3.1.min.js"></script>
+  <!-- js -->
+  <script type="text/javascript" src="js/js_puppeteer.js"></script>
 
   <script type="text/javascript">
 
@@ -39,6 +38,7 @@
     });
 
   </script>
+
   <title>jquery</title>
 </head>
 <body>
