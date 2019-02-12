@@ -20,6 +20,27 @@ async function downloads(){
     await page.setViewport({ width: 1200, height: 600 });
     //移動
     await page.goto("https://accounts.smaregi.jp/login?client_id=pos&_ga=2.40594788.79894584.1549952904-166718165.1549952904");
+      // twitter id 入力
+    await page.type(
+        "#UserLoginForm > div.form-group.signin-form-group > input.version-2-item.f.f-login-id",
+        "chapars2019@gmail.com"
+    );
+
+    // twitter password 入力
+    await page.type(
+        "#UserLoginForm > div.form-group.signin-form-group > input.f.f-login-pswd",
+        "ohs2019hew"
+    );
+
+    // ログインボタンクリック
+    await page.click(
+        "#UserLoginForm > input#doLogin.btn.btn-primary.btn-primary-login"
+    );
+
+    // ページ遷移するの待つ
+    await page.waitFor(5000);
+
+
 
 }//downloads
 
