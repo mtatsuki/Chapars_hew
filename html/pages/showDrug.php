@@ -33,6 +33,68 @@ function urlencode_rfc3986($str)
 }
 
 $rakuten_result = getRakutenResult('4946842100019', 1000);
-var_dump($rakuten_result);
+echo print_r($rakuten_result);
 
 // next -> csvを作る
+
+/**
+ * CSVローダー
+ *
+ * @param string $csvfile CSVファイルパス
+ * @param string $mode `sjis` ならShift-JISでカンマ区切り、 `utf16` ならUTF-16LEでタブ区切りのCSVを読む。'utf8'なら文字コード変換しないでカンマ区切り。
+ * @return array ヘッダ列をキーとした配列を返す
+ */
+function get_csv($csvfile, $mode = 'sjis')
+{
+    // ファイル存在確認
+    if (!file_exists($csvfile)) {
+        return false;
+    }
+ 
+    // 文字コードを変換しながら読み込めるようにPHPフィルタを定義
+    if ($mode === 'sjis') {
+        $filter = 'php://filter/read=convert.iconv.cp932%2Futf-8/resource='.$csvfile;
+    } elseif ($mode === 'utf16') {
+        $filter = 'php://filter/read=convert.iconv.utf-16%2Futf-8/resource='.$csvfile;
+    } elseif ($mode === 'utf8') {
+        $filter = $csvfile;
+    }
+ 
+    // SplFileObject()を使用してCSVロード
+    $file = new SplFileObject($filter);
+    if ($mode === 'utf16') {
+        $file->setCsvControl("\t");
+    }
+    $file->setFlags(
+        SplFileObject::READ_CSV |
+        SplFileObject::SKIP_EMPTY |
+        SplFileObject::READ_AHEAD
+    );
+ 
+    // 各行を処理
+    $records = array();
+    foreach ($file as $i => $row) {
+        // 1行目はキーヘッダ行として取り込み
+        if ($i===0) {
+            foreach ($row as $j => $col) {
+                $colbook[$j] = $col;
+            }
+            continue;
+        }
+ 
+        // 2行目以降はデータ行として取り込み
+        $line = array();
+        foreach ($colbook as $j => $col) {
+            $line[$colbook[$j]] = @$row[$j];
+        }
+        $records[] = $line;
+    }
+    return $records;
+}
+// 登録ボタンが押されたら
+$records = get_csv('./商品データ.csv', 'utf8');
+
+$productData = fopen("商品データ.csv", "a");
+$itemCode = explode(":", $rakuten_result->Item->itemCode);
+// fwrite($productData, "商品ID","部門ID","商品コード","商品名","商品単価","説明");
+fclose($productData);
