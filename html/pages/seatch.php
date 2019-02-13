@@ -1,4 +1,3 @@
-
 <?php
   /*
     JSON_UNESCAPED_UNICODE (integer)
@@ -24,16 +23,40 @@
   //ファイルに保存 文字列の文字コードを指定（文字化防止）
   // file_put_contents("test.json" , mb_convert_encoding($arr, 'utf-8'));
 
-
-
-  
-  $jsonUrl = "./tpl/test.json"; //JSONファイルの場所とファイル名を記述
+  session_start();  //検索ワードを残しておく用
+  require_once "./func/getdata.php";  //DBから検索する関数を呼び出す
+  //検索用変数
+  $name = ""; //薬品名
+  $symptom = "";  //症状
+  $company = "";  //製薬会社
+  $datas = array();
+  if((isset($_GET["name"]) || isset($_GET["symptom"]) || isset($_GET["company"])) && isset($_GET["search"])){
+    $_SESSION["name_search"] = $_GET["name"];
+    $_SESSION["symptom_search"] = $_GET["symptom"];
+    $_SESSION["company_search"] = $_GET["company"];
+    $name =  $_SESSION["name_search"];
+    $symptom =  $_SESSION["symptom_search"];
+    $company =  $_SESSION["company_search"];
+    $datas = getdatas($name,$symptom,$company);
+  }
+  else{
+    $name = "";
+    $symptom = "";
+    $company = "";
+    $datas = getdatas($name,$symptom,$company); 
+  }
 //==================================
 
 include "./tpl/header.php";
 include "./tpl/Drag_seatch.php";
-include "./tpl/fooder.html";
+include "./tpl/footer.html";
 
 //==================================
+
+//sessionの削除
+require_once "./func/session_del.php";
+if($_POST["del"]){
+session_del();
+}
 
 ?>
