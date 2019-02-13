@@ -3,8 +3,13 @@
   "version": "1.0.0",
   "main": "js_puppeteer.js",
   "repository": "ssh://git@github.com:mtatsuki/Chapars_hew.git",
-  "author": "chapars <junya03dance@gmail.com>",
+  "author": "chapars <chapars2019@gmail.com>",
+  "account": {
+    "name": "chapars2019@gmail.com",
+    "pass": "ohs2019hew"
+  },
   "dependencies": {
+    "config": "^3.0.1",
     "puppeteer": "^1.12.2"
   }
 }
