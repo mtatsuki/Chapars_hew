@@ -16,7 +16,7 @@
                     <th align="left">症状検索</th><td><input type="text" name="symptom" value="<?php echo $symptom; ?>"></td>
                 </tr>
                 <tr>
-                    <th align="left">薬品会社検索</th><td><input type="text" name="company" value="<?php echo $company; ?>"></td>
+                    <th align="left">製薬会社検索</th><td><input type="text" name="company" value="<?php echo $company; ?>"></td>
                 </tr>
             </table>
             <div class="c__seatch_bottom">

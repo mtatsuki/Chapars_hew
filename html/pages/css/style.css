@@ -216,7 +216,10 @@
   height     : 300px;
   margin     : 10px;
   display    : inline-block; 
-  background : #ffbb55;
+  /* background : #ffbb55; */
+}
+#details > div:nth-child(2) > div.p__main_img > img{
+  width : 300px; 
 }
 #details div.p__main_text_info>div.list_section>div:nth-child(2){
   margin        : 10px;

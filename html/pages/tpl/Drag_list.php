@@ -96,8 +96,8 @@
                     </div>
 
                 </li>
-                <?php } ?>            </ul>
-
+                <?php } ?> 
+           </ul>
             <div class="list_h_text">
                 <p>解胃腸薬</p>
             </div>

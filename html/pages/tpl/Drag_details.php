@@ -8,7 +8,7 @@
         <div id="details">
             <div class="p__text_title"><p>薬の名前が入る</p></div>
             <div>
-                <div class="p__main_img"><img src="" alt="薬の名前が入る"></div>
+                <div class="p__main_img"><img src="./image/Drag_search/IJxfad.png" alt="薬の名前が入る"></div>
                 <div class="p__text_info list_section">
                     <div class="list_h_text">製薬会社</div>
                     <table>
