@@ -3,53 +3,50 @@
     <div class="title">
         <h1>お薬検索</h1>
     </div>
+    <form method="post" action="seatch.php"><input type="submit" name="del" value="削除"></form>
     <!-- main -->
     <div class="c__store_main">
         <div id="seatch">
             <form method="get" name="form" action="seatch.php">
             <table>
                 <tr>
-                    <th align="left">薬名検索</th><td><input type="text" name="name"></td>
+                    <th align="left">薬名検索</th><td><input type="text" name="name" value="<?php echo $name; ?>"></td>
                 </tr>
                 <tr>
-                    <th align="left">症状検索</th><td><input type="text" name="症状"></td>
+                    <th align="left">症状検索</th><td><input type="text" name="symptom" value="<?php echo $symptom; ?>"></td>
                 </tr>
                 <tr>
-                    <th align="left">薬品会社検索</th><td><input type="text" name="薬品会社"></td>
+                    <th align="left">製薬会社検索</th><td><input type="text" name="company" value="<?php echo $company; ?>"></td>
                 </tr>
             </table>
             <div class="c__seatch_bottom">
-                <input type="submit" value="検索">
+                <input type="submit" name="search" value="検索">
             </div>
             </form>
             <div class="seatch_block">  
                 <div>
-                    <p>検索結果一覧</p>
+                    <p>検索結果一覧  検索ワード:<?php echo  $name_ans.",".$symptom_ans.",".$company_ans; ?></p>
                 </div>
                 <ul>
                     <?php
-                    if(file_exists($jsonUrl)){
-                    $json = file_get_contents($jsonUrl);
-                    $json = mb_convert_encoding($json, 'UTF8', 'ASCII,JIS,UTF-8,EUC-JP,SJIS-WIN');
-                    $obj = json_decode($json,true);
-                    $obj = $obj["res"]["Drags"];
-                    foreach ($obj as $key => $val){
+                        foreach($datas as $data){
                     ?>
                     
                     <li>
                         <div>
-                            <img src="./image/Drag_search/<?php echo $val["image"][0]; ?>" alt="">
+                            <img src="./image/Drag_search/IJxfad.png" alt="">
                         </div>
                         <div>
-                            <h2><?php echo $val["name"]; ?></h2>
-                            <p><?php echo $val["category"], $val["remarks"][0] ,$val["remarks"][1] , $val["remarks"][2]; ?></p>
+                            <h2><?php echo $data["itemName"]; ?></h2>
+                            <p><?php echo $data["shopName"]; ?></p>
                         </div>
                         <div>
-                            <a href="./details.php?id=<?php echo $val["code"]; ?>">詳しくはこちら</a>
+                            <a href="./details.php?id=<?php echo $data["id"]; ?>">詳しくはこちら</a>
                         </div>
                     </li>
-                    <?php } 
-                }?>
+                    <?php
+                        }
+                    ?>
                 </ul>
 
             </div>
