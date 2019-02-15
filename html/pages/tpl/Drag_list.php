@@ -63,19 +63,6 @@
                     </div>
 
                 </li>
-                <li>
-                    <div>
-                        <img src="./image/Drag_search/<?php echo $value["image"][0];?>" alt="">
-                    </div>
-                    <div>
-                        <h2><?php echo $value["name"]; ?></h2>
-                        <p><?php  ?></p>
-                    </div>
-                    <div>
-                        <a href="./details.php?id=<?php echo $value["code"];?>">詳しくはこちら</a>
-                    </div>
-
-                </li>
                 <?php } ?>
             </ul>
             <div class="list_h_text">
