@@ -25,7 +25,7 @@
             </form>
             <div class="seatch_block">  
                 <div>
-                    <p>検索結果一覧  検索ワード:<?php echo  $name_ans.",".$symptom_ans.",".$company_ans; ?></p>
+                    <p>検索結果一覧<?php echo isset($_GET["search"]) ? "　検索ワード:".$name." ".$symptom." ".$company : ""; ?></p>
                 </div>
                 <ul>
                     <?php

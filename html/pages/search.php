@@ -48,7 +48,7 @@
 //==================================
 
 include "./tpl/header.php";
-include "./tpl/Drag_seatch.php";
+include "./tpl/Drag_search.php";
 include "./tpl/footer.html";
 
 //==================================
