@@ -5,11 +5,10 @@
     </div>
     <!-- main -->
     <div class="c__store_main">
-        <div id="list">
+        <div id="list" class="list_section">
         <?php foreach($datas as $key => $data){ ?>
             <div>
                 <p><?php echo $key; ?></p>
-            </div>
             <ul>
                 <?php foreach ($data as $value) {?>
                 <li>
