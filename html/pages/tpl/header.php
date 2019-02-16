@@ -24,7 +24,7 @@
   <link rel="stylesheet" href="./css/style.css">
 
   <!-- jqueryバージョン３ -->
-  <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.3.1/jquery.min.js"></script>
+  <script src="./js/jquery3.3.1.min.js"></script>
   <!-- js -->
   <script type="text/javascript"  src="./js/javascript_style.js"></script>
 
@@ -42,10 +42,15 @@
       $(this).next().slideToggle(500);								 
     });
         //チェックボックスのアコーディオン（動作確認様）　
-    $('#store_item_box ul').hide();
     $("#store_item_box div").click(function(){
-      $(this).next().slideToggle(500);								 
+      $(this).next().slideDown(500);		
+      // $("#store_map div").css("background","#ffffffdd");		
     });
+    $("#store_item_box li:last-child").click(function(){
+      $("#store_item_box ul").slideUp(500);		
+      // $("#store_map div").css("background","#ffffffdd");		
+    });
+
   });
 
   </script>

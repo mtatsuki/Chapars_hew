@@ -121,60 +121,64 @@
   position      : absolute;
 }
 #store_item_box>div:nth-of-type(1){
-  background: #ff4747;
-  top: 100px;
-  left: 0;
+  background: #0c2e3c;
+  top        : 100px;
+  left       : 0;
 }
 #store_item_box>div:nth-of-type(2){
-  background: #ffd447;
-  top: 100px;
-  left: 200px;
+  background: #0c2e3c;
+  top        : 100px;
+  left       : 200px;
 
 }
 #store_item_box>div:nth-of-type(3){
-  background: #47ff47;
-  top: 100px;
-  left: 400px;
+  background: #0c2e3c;
+  top        : 100px;
+  left       : 400px;
 
 }
 #store_item_box>div:nth-of-type(4){
-  background: #47e3ff;
-  top: 100px;
-  right: 200px;
+  background: #0c2e3c;
+  top        : 100px;
+  right      : 200px;
 }
 #store_item_box>div:nth-of-type(5){
-  background: #8d47ff;
-  top: 100px;
-  right: 0;
+  background: #0c2e3c;
+  top        : 100px;
+  right      : 0;
 }
-#store_item_box>div>ul{
-  width       : 50%;
-  height      : 500px;
-  position    : absolute;
+#store_item_box>ul{
+  display    : none;
+  position   : absolute;
+  top        : 0;
+  bottom     : 0; 
+  left       : 0;
+  right      : 0;
+  width      : 500px;
+  height     : 300px;
+  margin     : auto;
+  z-index    : 1;
 }
-#store_item_box>ul:nth-of-type(1){
-  background: #ff4747;
-  height    : 10%;
+
+#store_item_box>ul{
+  background: #ddd;
+  border: #18323d 2px solid;
+  padding : 10px;
 }
-#store_item_box>ul:nth-of-type(2){
-  background: #ffd447;
-  height    : 10%;
-}
-#store_item_box>ul:nth-of-type(3){
-  background: #47ff47;
-  height    : 10%;
-}
-#store_item_box>ul:nth-of-type(4){
-  background: #47e3ff;
-  height    : 10%;
-}
-#store_item_box>ul:nth-of-type(5){
-  background: #8d47ff;
-  height    : 10%;
-}
-#store_item_box>div>ul>li:nth-of-type(2n){
+#store_item_box li:last-child{
+  position: absolute;
+  text-align: center;
+  line-height: 50px;
+  width: 50px;
+  height : 50px;
+  top:-30px;
+  right:-10px;
+  margin-right:-15px;
+  border: 5px solid #555;
+  border-bottom: 5px solid #555;
   background: #ccc;
-  height    : 10%;
+  border-radius: 50%;
+
 }
 /* Drag_list========================================== */
 /* タイトル */
@@ -306,8 +310,8 @@
 }
 
 #seatch th,#seatch td{
-  padding         : 10px 10px;
-  border          : solid #fff 2px;
+  padding      : 10px 10px;
+  border       : solid #fff 2px;
 
 }
 #seatch td{
@@ -333,8 +337,8 @@
 }
 #seatch table tr.p_cate_list div,
 #seatch table tr.p_type_list div{
-  font-weight : bold;
-  color       : #185E89;
+  font-weight  : bold;
+  color        : #185E89;
   padding-left : 25px;
 
 }
