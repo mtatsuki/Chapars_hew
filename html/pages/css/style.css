@@ -98,100 +98,125 @@
     content   : "";
     position  : absolute;
 }
+  /* タイトル========================================== */
+  .list_section>.list_h_text{
+  height       : 25px;
+  border       : solid #ddd 2px;
+  margin-top   : 50px;
+  color        : #103B51;
+  font-weight  : bold;
+  line-height  : 25px;
+  padding-left :50px; 
 
+}
 /* Drag_store_map========================================== */
 #store_map{
   position     : relative;
-
 }
 #store_map img{
   width        : 900px;
   margin       : 0px auto;
-
 }
 #store_item_box{
   width         : 900px;
   display       : flex;
   flex-wrap     : wrap;
 }
+/*薬品棚*/
 #store_item_box>div{
   width        : 100px;
   height       : 250px;
   color        : #fff;
-  position      : absolute;
+  text-align   : center;
+  background   : #0c2e3c;
+  position     : absolute;
 }
+
 #store_item_box>div:nth-of-type(1){
-  background: #0c2e3c;
   top        : 100px;
   left       : 0;
 }
 #store_item_box>div:nth-of-type(2){
-  background: #0c2e3c;
   top        : 100px;
   left       : 200px;
 
 }
 #store_item_box>div:nth-of-type(3){
-  background: #0c2e3c;
   top        : 100px;
   left       : 400px;
 
 }
 #store_item_box>div:nth-of-type(4){
-  background: #0c2e3c;
   top        : 100px;
   right      : 200px;
 }
 #store_item_box>div:nth-of-type(5){
-  background: #0c2e3c;
   top        : 100px;
   right      : 0;
 }
-#store_item_box>ul{
-  display    : none;
-  position   : absolute;
-  top        : 0;
-  bottom     : 0; 
-  left       : 0;
-  right      : 0;
-  width      : 500px;
-  height     : 300px;
-  margin     : auto;
-  z-index    : 1;
+/* ポップアップ */
+#store_item_box>ul {
+  display        : none; /*初期状態が消去*/
+  position       : absolute;
+
+  top            : 0;
+  left           : 0;
+  right          : 0;
+  margin         : auto;
+  z-index        : 1;
+
+  width          : 500px;
+  padding        : 20px;
+
+  background     : #ddd;
+  border         : #0c2e3c 50px solid;
+}
+#store_item_box>ul>li:nth-child(1){
+  font-size      : 20px;
+  padding        : 10px 0px 10px 10px;
+  font-weight    : bold;
+  background     : #ccc;
+  color          : #103B51;
 }
 
-#store_item_box>ul{
-  background: #ddd;
-  border: #18323d 2px solid;
-  padding : 10px;
+#store_item_box>ul>li>div{
+  margin-top   : 0px;
+  background   : #fff;
+  border       : solid #ccc 0px;
 }
-#store_item_box li:last-child{
-  position: absolute;
-  text-align: center;
-  line-height: 50px;
-  width: 50px;
-  height : 50px;
-  top:-30px;
-  right:-10px;
-  margin-right:-15px;
-  border: 5px solid #555;
-  border-bottom: 5px solid #555;
-  background: #ccc;
-  border-radius: 50%;
-
+#store_item_box>ul>li>ul>li{
+  margin-left: 10px;
+}
+#store_item_box>ul>li>ul>li>a{
+  display      : inline-block;
+  color        : #000;
+  text-indent  : 1em;
+  width        : 100%;
+  padding      : 10px 0px;
+  font-weight  : bold;
+}
+#store_item_box>ul>li>ul>li>a:hover{
+  background    : #103B51;
+  color         : #fff;
+}
+/*ポップアップ消去ボタン*/
+#store_item_box>ul>li:last-child{
+  position     : absolute;
+  text-align   : center;
+  line-height  : 50px;
+  width        : 50px;
+  height       : 50px;
+  top          : -50px;
+  right        : -50px;
+  padding-left : 0;
+  background   : #0c2e3c;
+  color        : #fff;
+}
+#store_item_box>ul>li:last-child:hover{
+  background   : #ffffff65;
 }
 /* Drag_list========================================== */
-/* タイトル */
-.list_section>.list_h_text{
-  height      : 25px;
-  border      :solid #ddd 2px;
-  margin-top  : 50px;
-  color       : #103B51;
-  font-weight : bold;
-  line-height : 25px;
-  padding-left:50px; 
 
-}
 /* 薬品リスト */
 #list li{
   margin        : 10px;
@@ -252,6 +277,7 @@
   transition-duration : .1s;
 }
 /* Drag_details========================================== */
+
 #details > div.p__text_title {
   width      : 100%;
   margin     : 10px 0px;
@@ -263,10 +289,32 @@
   font-weight: bold;
 }
 #details > div:nth-child(2){
-  position  : relative;
-  display   : flex;  
-  justify-content: space-between;
+  position        : relative;
+  display         : flex;  
+  justify-content : space-between;
 }
+
+#details #p__to_store_map {
+  background  :#0c2e3c;
+  position    : fixed;
+  top         : 80px;
+  right       : 0;
+  margin      : auto;
+  width       : 200px;
+  height      : 50px;
+}
+#details #p__to_store_map >a{
+  color        : #fff;
+  display      : inline-block;
+  width        : 100%;
+  height       : 100%;
+  text-align   : center;
+  line-height  : 50px;
+}
+#details #p__to_store_map >a:hover{
+  background: #ffffff7e;
+}
+
 #details > div:nth-child(2) > div.p__text_info{
   width      : 500px;
   margin     : 10px;
@@ -290,7 +338,6 @@
   height     : 300px;
   margin     : 10px;
   display    : inline-block; 
-  background : #ffbb55;
 }
 #details > div:nth-child(2) > div.p__main_img > img{
   width : 300px; 

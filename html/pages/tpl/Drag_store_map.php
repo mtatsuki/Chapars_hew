@@ -1,3 +1,26 @@
+<script type="text/javascript">
+$(function(){
+    let url = document.referrer;//遷移元URL取得
+
+    let urlParam = location.search.substring(1);//パラメーター取得
+    // && (url.indexOf('details.php') != -1)
+    if(urlParam  ) {                            // URLにパラメータが存在する場合
+        console.log(url);                       //遷移元URL取得
+        console.log(urlParam);                  //取得したパラメーターが一行で
+        var param = urlParam.split('&');        //「&」が含まれている場合は「&」で分割
+    
+        var paramArray = [];                    // パラメーター配列
+    
+        for (i = 0; i < param.length; i++) {    // 用意した配列にパラメータを格納
+            var paramItem = param[i].split('=');
+            paramArray[paramItem[0]] = paramItem[1];
+        }
+    
+
+        $("#"+paramArray.id).css("background","#ff8484");
+    }
+})
+</script>
 <div class="wrapper">
     <!-- title -->
     <div class="title">
@@ -8,56 +31,165 @@
         <div id="store_map">
             <img src="./image/Drag_list/sample.png" alt="店内マップ">
             <div id="store_item_box">
-                <div>1</div>
+                <div>A</div>
                 <ul>
-                    <li>棚番号１の薬一覧</li>
+                    <li>棚番号Aの薬一覧</li>
+                    <li class="list_section">
+                        <div class="list_h_text">カテゴリA-1</div>
+                        <ul>
+                            <li id="999999X9990"><a href="./details.php?id=999999X9990">1</a></li>
+                            <li id="999999X9991"><a href="./details.php?id=999999X9991">2</a></li>
+                            <li id="999999X9992"><a href="./details.php?id=999999X9992">3</a></li>
+                            <li id="999999X9993"><a href="./details.php?id=999999X9993">4</a></li>
+                        </ul>
+                    </li>
+                    <li class="list_section">
+                        <div class="list_h_text">カテゴリA-2</div>
+                        <ul>
+                            <li id="999999X9994"><a href="./details.php?id=999999X9994">1</a></li>
+                            <li id="999999X9995"><a href="./details.php?id=999999X9995">2</a></li>
+                            <li id="999999X9996"><a href="./details.php?id=999999X9996">3</a></li>
+                            <li id="999999X9997"><a href="./details.php?id=999999X9997">4</a></li>
+                        </ul>
+                    </li>
+                    <li class="list_section">
+                        <div class="list_h_text">カテゴリA-3</div>
+                        <ul>
+                            <li id="999999X9998"><a href="./details.php?id=999999X9998">1</a></li>
+                            <li id="999999X9999"><a href="./details.php?id=999999X9999">2</a></li>
+                            <li><a href="#">3</a></li>
+                            <li><a href="#">4</a></li>
+                        </ul>
+                    </li>
 
-                    <li>1-1</li>
-                    <li>1-2</li>
-                    <li>1-3</li>
-                    <li>1-4</li>
-                    <li>1-5</li>
-
                     <li>×</li>
                 </ul>
-                <div>2</div>
+                <div>B</div>
                 <ul>
-                    <li>棚番号２の薬一覧</li>
-                    <li>2-1</li>
-                    <li>2-2</li>
-                    <li>2-3</li>
-                    <li>2-4</li>
-                    <li>2-5</li>
+                    <li>棚番号Bの薬一覧</li>
+                    <li class="list_section">
+                        <div class="list_h_text">カテゴリB-1</div>
+                        <ul>
+                            <li><a href="#">1</a></li>
+                            <li><a href="#">2</a></li>
+                            <li><a href="#">3</a></li>
+                            <li><a href="#">4</a></li>
+                        </ul>
+                    </li>
+                    <li class="list_section">
+                        <div class="list_h_text">カテゴリB-2</div>
+                        <ul>
+                            <li><a href="#">1</a></li>
+                            <li><a href="#">2</a></li>
+                            <li><a href="#">3</a></li>
+                            <li><a href="#">4</a></li>
+                        </ul>
+                    </li>
+                    <li class="list_section">
+                        <div class="list_h_text">カテゴリB-3</div>
+                        <ul>
+                            <li><a href="#">1</a></li>
+                            <li><a href="#">2</a></li>
+                            <li><a href="#">3</a></li>
+                            <li><a href="#">4</a></li>
+                        </ul>
+                    </li>
                     <li>×</li>
                 </ul>
-                <div>3</div>
+                <div>C</div>
                 <ul>
-                    <li>棚番号３の薬一覧</li>
-                    <li>3-1</li>
-                    <li>3-2</li>
-                    <li>3-3</li>
-                    <li>3-4</li>
-                    <li>3-5</li>
+                    <li>棚番号Cの薬一覧</li>
+                    <li class="list_section">
+                        <div class="list_h_text">カテゴリC-1</div>
+                        <ul>
+                            <li><a href="#">1</a></li>
+                            <li><a href="#">2</a></li>
+                            <li><a href="#">3</a></li>
+                            <li><a href="#">4</a></li>
+                        </ul>
+                    </li>
+                    <li class="list_section">
+                        <div class="list_h_text">カテゴリC-2</div>
+                        <ul>
+                            <li><a href="#">1</a></li>
+                            <li><a href="#">2</a></li>
+                            <li><a href="#">3</a></li>
+                            <li><a href="#">4</a></li>
+                        </ul>
+                    </li>
+                    <li class="list_section">
+                        <div class="list_h_text">カテゴリC-3</div>
+                        <ul>
+                            <li><a href="#">1</a></li>
+                            <li><a href="#">2</a></li>
+                            <li><a href="#">3</a></li>
+                            <li><a href="#">4</a></li>
+                        </ul>
+                    </li>
                     <li>×</li>
                 </ul>
-                <div>4</div>
+                <div>D</div>
                 <ul>
-                    <li>棚番号４の薬一覧</li>
-                    <li>4-1</li>
-                    <li>4-2</li>
-                    <li>4-3</li>
-                    <li>4-4</li>
-                    <li>4-5</li>
+                    <li>棚番号Dの薬一覧</li>
+                    <li class="list_section">
+                        <div class="list_h_text">カテゴリD-1</div>
+                        <ul>
+                            <li><a href="#">1</a></li>
+                            <li><a href="#">2</a></li>
+                            <li><a href="#">3</a></li>
+                            <li><a href="#">4</a></li>
+                        </ul>
+                    </li>
+                    <li class="list_section">
+                        <div class="list_h_text">カテゴリD-2</div>
+                        <ul>
+                            <li><a href="#">1</a></li>
+                            <li><a href="#">2</a></li>
+                            <li><a href="#">3</a></li>
+                            <li><a href="#">4</a></li>
+                        </ul>
+                    </li>
+                    <li class="list_section">
+                        <div class="list_h_text">カテゴリD-3</div>
+                        <ul>
+                            <li><a href="#">1</a></li>
+                            <li><a href="#">2</a></li>
+                            <li><a href="#">3</a></li>
+                            <li><a href="#">4</a></li>
+                        </ul>
+                    </li>
                     <li>×</li>
                 </ul>
-                <div>5</div>
+                <div>E</div>
                 <ul>
-                    <li>棚番号５の薬一覧</li>
-                    <li>5-1</li>
-                    <li>5-2</li>
-                    <li>5-3</li>
-                    <li>5-4</li>
-                    <li>5-5</li>
+                    <li>棚番号Eの薬一覧</li>
+                    <li class="list_section">
+                        <div class="list_h_text">カテゴリE-1</div>
+                        <ul>
+                            <li><a href="#">1</a></li>
+                            <li><a href="#">2</a></li>
+                            <li><a href="#">3</a></li>
+                            <li><a href="#">4</a></li>
+                        </ul>
+                    </li>
+                    <li class="list_section">
+                        <div class="list_h_text">カテゴリE-2</div>
+                        <ul>
+                            <li><a href="#">1</a></li>
+                            <li><a href="#">2</a></li>
+                            <li><a href="#">3</a></li>
+                            <li><a href="#">4</a></li>
+                        </ul>
+                    </li>
+                    <li class="list_section">
+                        <div class="list_h_text">カテゴリE-3</div>
+                        <ul>
+                            <li><a href="#">1</a></li>
+                            <li><a href="#">2</a></li>
+                            <li><a href="#">3</a></li>
+                            <li><a href="#">4</a></li>
+                        </ul>
+                    </li>
                     <li>×</li>
                 </ul>
             </div>

@@ -36,19 +36,17 @@
     $("#list div").click(function(){
       $(this).next().slideToggle(500);								 
     });
-    //チェックボックスのアコーディオン（動作確認様）　
+    //チェックボックスの
     $('#checkboox ul').hide();
     $("#checkboox div").click(function(){
       $(this).next().slideToggle(500);								 
     });
-        //チェックボックスのアコーディオン（動作確認様）　
+      //棚内容の表示
     $("#store_item_box div").click(function(){
       $(this).next().slideDown(500);		
-      // $("#store_map div").css("background","#ffffffdd");		
     });
-    $("#store_item_box li:last-child").click(function(){
-      $("#store_item_box ul").slideUp(500);		
-      // $("#store_map div").css("background","#ffffffdd");		
+    $("#store_item_box>ul>li:last-child").click(function(){
+      $("#store_item_box>ul").slideUp(500);		
     });
 
   });
