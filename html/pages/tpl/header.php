@@ -23,10 +23,11 @@
   <!-- CSS -->
   <link rel="stylesheet" href="./css/style.css">
 
-  <!-- js -->
-  <script type="text/javascript"  src="./js/javascript_style.js"></script>
   <!-- jqueryバージョン３ -->
   <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.3.1/jquery.min.js"></script>
+  <!-- js -->
+  <script type="text/javascript"  src="./js/javascript_style.js"></script>
+
   <script type="text/javascript">
 
   $(function(){
@@ -35,7 +36,16 @@
     $("#list div").click(function(){
       $(this).next().slideToggle(500);								 
     });
-
+    //チェックボックスのアコーディオン（動作確認様）　
+    $('#checkboox ul').hide();
+    $("#checkboox div").click(function(){
+      $(this).next().slideToggle(500);								 
+    });
+        //チェックボックスのアコーディオン（動作確認様）　
+    $('#store_item_box ul').hide();
+    $("#store_item_box div").click(function(){
+      $(this).next().slideToggle(500);								 
+    });
   });
 
   </script>

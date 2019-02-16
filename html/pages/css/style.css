@@ -23,7 +23,7 @@
   .wrapper{
     position   : relative;
     width      : 1024px;
-    height     :auto !important; /*IE6対策*/
+    height     : auto !important; /*IE6対策*/
     height     : 100%; /*IE6対策*/
     min-height : 100%;
     margin     : 0 auto;
@@ -100,10 +100,81 @@
 }
 
 /* Drag_store_map========================================== */
+#store_map{
+  position     : relative;
+
+}
 #store_map img{
   width        : 900px;
   margin       : 0px auto;
 
+}
+#store_item_box{
+  width         : 900px;
+  display       : flex;
+  flex-wrap     : wrap;
+}
+#store_item_box>div{
+  width        : 100px;
+  height       : 250px;
+  color        : #fff;
+  position      : absolute;
+}
+#store_item_box>div:nth-of-type(1){
+  background: #ff4747;
+  top: 100px;
+  left: 0;
+}
+#store_item_box>div:nth-of-type(2){
+  background: #ffd447;
+  top: 100px;
+  left: 200px;
+
+}
+#store_item_box>div:nth-of-type(3){
+  background: #47ff47;
+  top: 100px;
+  left: 400px;
+
+}
+#store_item_box>div:nth-of-type(4){
+  background: #47e3ff;
+  top: 100px;
+  right: 200px;
+}
+#store_item_box>div:nth-of-type(5){
+  background: #8d47ff;
+  top: 100px;
+  right: 0;
+}
+#store_item_box>div>ul{
+  width       : 50%;
+  height      : 500px;
+  position    : absolute;
+}
+#store_item_box>ul:nth-of-type(1){
+  background: #ff4747;
+  height    : 10%;
+}
+#store_item_box>ul:nth-of-type(2){
+  background: #ffd447;
+  height    : 10%;
+}
+#store_item_box>ul:nth-of-type(3){
+  background: #47ff47;
+  height    : 10%;
+}
+#store_item_box>ul:nth-of-type(4){
+  background: #47e3ff;
+  height    : 10%;
+}
+#store_item_box>ul:nth-of-type(5){
+  background: #8d47ff;
+  height    : 10%;
+}
+#store_item_box>div>ul>li:nth-of-type(2n){
+  background: #ccc;
+  height    : 10%;
 }
 /* Drag_list========================================== */
 /* タイトル */
@@ -118,7 +189,6 @@
 
 }
 /* 薬品リスト */
-
 #list li{
   margin        : 10px;
   padding       : 10px;
@@ -249,8 +319,31 @@
   background  : #29ABE2 ;
   color       :#fff;
 }
-#seatch table input{
+
+#seatch table tr:nth-child(-n+3) input{
   width       : 100%;
+}
+#seatch table tr.p_cate_list ul,
+#seatch table tr.p_type_list ul{
+  width     : 100%;
+  height    : 200px;
+  display   : flex;
+  flex-direction:column;
+  flex-wrap : wrap;
+}
+#seatch table tr.p_cate_list div,
+#seatch table tr.p_type_list div{
+  font-weight : bold;
+  color       : #185E89;
+  padding-left : 25px;
+
+}
+
+#seatch table tr.p_cate_list li,
+#seatch table tr.p_type_list li{
+  width    : 33%;
+  height   : 10%;
+  padding  : 10px 0px;
 }
 form{
   display   :flex;
@@ -285,6 +378,7 @@ form{
 	transform           : translateY(6px);
   transition-duration : .1s;
 }
+
 .seatch_block>div{
   height         : 25px;
   border         :solid #ddd 2px;
@@ -350,6 +444,7 @@ form{
 	transform          : translateY(6px);
   transition-duration: .1s;
 }
+
 /* Mane_Drag_Arrival========================================== */
 /* Mane_Drag_Arrival_History========================================== */
 
