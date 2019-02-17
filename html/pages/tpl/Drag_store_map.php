@@ -1,23 +1,22 @@
 <script type="text/javascript">
 $(function(){
-    let url = document.referrer;//遷移元URL取得
+    let url = document.referrer;                          //遷移元URL取得
 
-    let urlParam = location.search.substring(1);//パラメーター取得
-    // && (url.indexOf('details.php') != -1)
-    if(urlParam  ) {                            // URLにパラメータが存在する場合
-        console.log(url);                       //遷移元URL取得
-        console.log(urlParam);                  //取得したパラメーターが一行で
-        var param = urlParam.split('&');        //「&」が含まれている場合は「&」で分割
+    let urlParam = location.search.substring(1);          //パラメーター取得
+    $("#right_nav >a:nth-child(1)").css("display","none");//印刷するボタンを消す
+    if(urlParam && (url.indexOf('details.php') != -1)) {  //URLにパラメータが存在する場合
+        console.log(url);                                 //遷移元URL取得
+        console.log(urlParam);                            //取得したパラメーターが一行で
+        var param = urlParam.split('&');                  //「&」が含まれている場合は「&」で分割
     
-        var paramArray = [];                    // パラメーター配列
+        var paramArray = [];                              // パラメーター配列
     
-        for (i = 0; i < param.length; i++) {    // 用意した配列にパラメータを格納
+        for (i = 0; i < param.length; i++) {              // 用意した配列にパラメータを格納
             var paramItem = param[i].split('=');
             paramArray[paramItem[0]] = paramItem[1];
         }
-    
-
-        $("#"+paramArray.id).css("background","#ff8484");
+        $("#"+paramArray.id).css("background","#ff8484"); //IDパラメーターの場所の色を変える
+        $("#right_nav a").css("display","");              //右の印刷するボタン表示
     }
 })
 </script>
@@ -29,6 +28,9 @@ $(function(){
     <!-- main -->
     <div class="c__store_main">
         <div id="store_map">
+            <div id="right_nav">
+                <a href="./copy.php?id=<?php echo $_GET['id'];?>">情報を印刷する</a>
+            </div><!-- right_nav -->
             <img src="./image/Drag_list/sample.png" alt="店内マップ">
             <div id="store_item_box">
                 <div>A</div>
@@ -192,9 +194,9 @@ $(function(){
                     </li>
                     <li>×</li>
                 </ul>
-            </div>
-        </div>
-    </div>
+            </div><!-- store_item_box -->
+        </div><!-- store_map -->
+    </div><!-- store_main -->
     <!-- nav -->
     <div class="c__button_list">
         <ul>

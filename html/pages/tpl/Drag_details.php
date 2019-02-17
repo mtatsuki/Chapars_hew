@@ -10,9 +10,10 @@
                 <p>薬の名前が入る</p>
             </div>
             <div>
-                <div id="p__to_store_map">
+                <div id="right_nav">
                     <a href="./index.php?id=<?php echo $_GET['id'];?>">店内マップで表示</a>
-                </div>
+                    <a href="./copy.php?id=<?php echo $_GET['id'];?>">情報を印刷する</a>
+                </div><!-- right_nav -->
                 <div class="p__main_img"><img src="./image/Drag_search/IJxfad.png" alt="薬の名前が入る"></div>
                 <div class="p__text_info list_section">
                     <div class="list_h_text">製薬会社</div>
@@ -23,8 +24,7 @@
                         <tr><th>制作会社　：</th><td>会社の名前</td></p></tr>
                         <tr><th>販売会社　：</th><td>会社の名前</td></p></tr>
                     </table>
-                    
-                </div>
+                </div><!-- text_info -->
             </div>
             <div class="p__main_text_info" >
                 <div class="list_section">
@@ -51,7 +51,7 @@
                         内容
                     </div>
                 </div>
-            </div>
+            </div><!-- main_text_info -->
         </div>
     </div>
     <!-- nav -->
