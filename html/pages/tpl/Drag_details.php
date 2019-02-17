@@ -13,6 +13,7 @@
                 <div id="right_nav">
                     <a href="./index.php?id=<?php echo $_GET['id'];?>"><img src="./image/icon/map.png" alt="map_icon"> <span>店内マップで表示</span> </a>
                     <a href="./copy.php?id=<?php echo $_GET['id'];?>"> <img src="./image/icon/printer.png" alt="printer_icon"> <span>情報を印刷する</span> </a>
+                    <a href="./qr_code.php?id=<?php echo $_GET['id'];?>"> <img src="./image/icon/qr.png" alt="qr_icon"> <span>QRコード作成</span> </a>
                 </div><!-- right_nav -->
                 <div class="p__main_img"><img src="./image/Drag_search/IJxfad.png" alt="薬の名前が入る"></div>
                 <div class="p__text_info list_section">
