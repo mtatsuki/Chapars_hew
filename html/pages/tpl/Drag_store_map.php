@@ -29,7 +29,7 @@ $(function(){
     <div class="c__store_main">
         <div id="store_map">
             <div id="right_nav">
-                <a href="./copy.php?id=<?php echo $_GET['id'];?>">情報を印刷する</a>
+                <a href="./copy.php?id=<?php echo $_GET['id'];?>"> <img src="./image/icon/printer.png" alt=""> 情報を印刷する</a>
             </div><!-- right_nav -->
             <img src="./image/Drag_list/sample.png" alt="店内マップ">
             <div id="store_item_box">

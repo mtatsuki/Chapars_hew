@@ -106,7 +106,7 @@
   color        : #103B51;
   font-weight  : bold;
   line-height  : 25px;
-  padding-left :50px; 
+  padding-left : 50px; 
 }
   /* 右の固定ナビゲーション================================ */
 #right_nav{
@@ -117,19 +117,23 @@
   margin      : auto;
   width       : 200px;
 }
-#right_nav >a{
+#right_nav > a{
   color        : #fff;
   display      : inline-block;
   width        : 100%;
   height       : 50px;
-  text-align   : center;
   line-height  : 50px;
 }
-#right_nav >a:nth-child(n+2){
+#right_nav > a:nth-child(n+2){
   border-top   : #ddd 1px dotted;
 }
-
-#right_nav >a:hover{
+#right_nav > a > img{
+  height         : 16px;
+  width          : 16px;
+  margin         : auto 10px auto 15px;
+  vertical-align : middle;
+}
+#right_nav > a:hover{
   background   : #ffffff7e;
 }
 /* Drag_store_map========================================== */
