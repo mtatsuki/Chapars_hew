@@ -3,7 +3,7 @@ $(function(){
     let url = document.referrer;                          //遷移元URL取得
 
     let urlParam = location.search.substring(1);          //パラメーター取得
-    $("#right_nav >a:nth-child(1)").css("display","none");//印刷するボタンを消す
+    $("#right_nav >a").css("display","none");//印刷するボタンを消す
     if(urlParam && (url.indexOf('details.php') != -1)) {  //URLにパラメータが存在する場合
         console.log(url);                                 //遷移元URL取得
         console.log(urlParam);                            //取得したパラメーターが一行で
