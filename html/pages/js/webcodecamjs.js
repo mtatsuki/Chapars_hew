@@ -5,7 +5,7 @@
  * email: atandrastoth@gmail.com
  * Licensed under the MIT license
  */
-var WebCodeCamJS = function(element) {
+var WebCodeCamJS = function (element) {
     'use strict';
     this.Version = {
         name: 'WebCodeCamJS',
@@ -13,14 +13,14 @@ var WebCodeCamJS = function(element) {
         author: 'Tóth András',
     };
     var mediaDevices = window.navigator.mediaDevices;
-    mediaDevices.getUserMedia = function(c) {
-        return new Promise(function(y, n) {
+    mediaDevices.getUserMedia = function (c) {
+        return new Promise(function (y, n) {
             (window.navigator.getUserMedia || window.navigator.mozGetUserMedia || window.navigator.webkitGetUserMedia).call(navigator, c, y, n);
         });
     }
-    HTMLVideoElement.prototype.streamSrc = ('srcObject' in HTMLVideoElement.prototype) ? function(stream) {
+    HTMLVideoElement.prototype.streamSrc = ('srcObject' in HTMLVideoElement.prototype) ? function (stream) {
         this.srcObject = !!stream ? stream : null;
-    } : function(stream) {
+    } : function (stream) {
         if (!!stream) {
             this.src = (window.URL || window.webkitURL).createObjectURL(stream);
         } else {
@@ -70,22 +70,22 @@ var WebCodeCamJS = function(element) {
             contrast: 0,
             threshold: 0,
             sharpness: [],
-            resultFunction: function(res) {
+            resultFunction: function (res) {
                 console.log(res.format + ": " + res.code);
             },
-            cameraSuccess: function(stream) {
+            cameraSuccess: function (stream) {
                 console.log('cameraSuccess');
             },
-            canPlayFunction: function() {
+            canPlayFunction: function () {
                 console.log('canPlayFunction');
             },
-            getDevicesError: function(error) {
+            getDevicesError: function (error) {
                 console.log(error);
             },
-            getUserMediaError: function(error) {
+            getUserMediaError: function (error) {
                 console.log(error);
             },
-            cameraError: function(error) {
+            cameraError: function (error) {
                 console.log(error);
             }
         };
@@ -93,7 +93,7 @@ var WebCodeCamJS = function(element) {
     function init() {
         var constraints = changeConstraints();
         try {
-            mediaDevices.getUserMedia(constraints).then(cameraSuccess).catch(function(error) {
+            mediaDevices.getUserMedia(constraints).then(cameraSuccess).catch(function (error) {
                 options.cameraError(error);
                 return false;
             });
@@ -144,14 +144,14 @@ var WebCodeCamJS = function(element) {
     function delay() {
         delayBool = true;
         if (!localImage) {
-            setTimeout(function() {
+            setTimeout(function () {
                 delayBool = false;
                 if (options.decodeBarCodeRate) {
                     tryParseBarCode();
                 }
-                if (options.decodeQRCodeRate) {
-                    tryParseQRCode();
-                }
+                // if (options.decodeQRCodeRate) {
+                //     tryParseQRCode();
+                // }
             }, options.successTimeout);
         }
     }
@@ -173,7 +173,7 @@ var WebCodeCamJS = function(element) {
     }
 
     function setEventListeners() {
-        video.addEventListener('canplay', function(e) {
+        video.addEventListener('canplay', function (e) {
             if (!isStreaming) {
                 if (video.videoWidth > 0) {
                     h = video.videoHeight / (video.videoWidth / w);
@@ -186,8 +186,8 @@ var WebCodeCamJS = function(element) {
                 }
             }
         }, false);
-        video.addEventListener('play', function() {
-            setInterval(function() {
+        video.addEventListener('play', function () {
+            setInterval(function () {
                 if (!video.paused && !video.ended) {
                     var z = options.zoom;
                     if (z === 0) {
@@ -217,13 +217,13 @@ var WebCodeCamJS = function(element) {
     }
 
     function setCallBack() {
-        DecodeWorker.onmessage = function(e) {
+        DecodeWorker.onmessage = function (e) {
             if (localImage || (!delayBool && !video.paused)) {
                 if (e.data.success === true && e.data.success != 'localization') {
                     sucessLocalDecode = true;
                     delayBool = true;
                     delay();
-                    setTimeout(function() {
+                    setTimeout(function () {
                         if (options.codeRepetition || lastCode != e.data.result[0].Value) {
                             beep();
                             lastCode = e.data.result[0].Value;
@@ -242,12 +242,12 @@ var WebCodeCamJS = function(element) {
                 }
             }
         };
-        qrcode.callback = function(a) {
+        qrcode.callback = function (a) {
             if (localImage || (!delayBool && !video.paused)) {
                 sucessLocalDecode = true;
                 delayBool = true;
                 delay();
-                setTimeout(function() {
+                setTimeout(function () {
                     if (options.codeRepetition || lastCode != a) {
                         beep();
                         lastCode = a;
@@ -410,12 +410,12 @@ var WebCodeCamJS = function(element) {
         videoSelect.innerHTML = '';
         try {
             if (mediaDevices && mediaDevices.enumerateDevices) {
-                mediaDevices.enumerateDevices().then(function(devices) {
-                    devices.forEach(function(device) {
+                mediaDevices.enumerateDevices().then(function (devices) {
+                    devices.forEach(function (device) {
                         gotSources(device);
                     });
                     if (typeof ind === 'string') {
-                        Array.prototype.find.call(videoSelect.children, function(a, i) {
+                        Array.prototype.find.call(videoSelect.children, function (a, i) {
                             if (a['innerText' in HTMLElement.prototype ? 'innerText' : 'textContent'].toLowerCase().match(new RegExp(ind, 'g'))) {
                                 videoSelect.selectedIndex = i;
                             }
@@ -423,7 +423,7 @@ var WebCodeCamJS = function(element) {
                     } else {
                         videoSelect.selectedIndex = videoSelect.children.length <= ind ? 0 : ind;
                     }
-                }).catch(function(error) {
+                }).catch(function (error) {
                     options.getDevicesError(error);
                 });
             } else if (mediaDevices && !mediaDevices.enumerateDevices) {
@@ -455,7 +455,7 @@ var WebCodeCamJS = function(element) {
                             sourceId: true
                         }];
                     } else {
-                        constraints.video.deviceId = undefined;  
+                        constraints.video.deviceId = undefined;
                     }
                     break;
                 case 'false':
@@ -471,7 +471,7 @@ var WebCodeCamJS = function(element) {
                             exact: videoSelect[videoSelect.selectedIndex].value
                         };
                     } else {
-                         constraints.video.deviceId = videoSelect[videoSelect.selectedIndex].value;
+                        constraints.video.deviceId = videoSelect[videoSelect.selectedIndex].value;
                     }
                     break;
             }
@@ -493,7 +493,7 @@ var WebCodeCamJS = function(element) {
         localImage = true;
         sucessLocalDecode = false;
         var img = new Image();
-        img.onload = function() {
+        img.onload = function () {
             con.fillStyle = '#fff';
             con.fillRect(0, 0, w, h);
             con.drawImage(this, 5, 5, w - 10, h - 10);
@@ -505,7 +505,7 @@ var WebCodeCamJS = function(element) {
             decodeLocalImage();
         } else {
             if (FileReaderHelper) {
-                new FileReaderHelper().Init('jpg|png|jpeg|gif', 'dataURL', function(e) {
+                new FileReaderHelper().Init('jpg|png|jpeg|gif', 'dataURL', function (e) {
                     img.src = e.data;
                 }, true);
             } else {
@@ -562,7 +562,7 @@ var WebCodeCamJS = function(element) {
     }
     NotSupportError.prototype = Error.prototype;
     return {
-        init: function(opt) {
+        init: function (opt) {
             if (initialized) {
                 return this;
             }
@@ -589,33 +589,33 @@ var WebCodeCamJS = function(element) {
             }
             return this;
         },
-        play: function() {
+        play: function () {
             localImage = false;
             setTimeout(play, 100);
             return this;
         },
-        stop: function() {
+        stop: function () {
             stop();
             return this;
         },
-        pause: function() {
+        pause: function () {
             pause();
             return this;
         },
-        buildSelectMenu: function(selector, ind) {
+        buildSelectMenu: function (selector, ind) {
             buildSelectMenu(selector, ind ? ind : 0);
             return this;
         },
-        getOptimalZoom: function() {
+        getOptimalZoom: function () {
             return optimalZoom();
         },
-        getLastImageSrc: function() {
+        getLastImageSrc: function () {
             return display.toDataURL();
         },
-        decodeLocalImage: function(url) {
+        decodeLocalImage: function (url) {
             decodeLocalImage(url);
         },
-        isInitialized: function() {
+        isInitialized: function () {
             return initialized;
         },
         getWorker: function () {

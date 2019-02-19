@@ -1,20 +1,12 @@
-<!DOCTYPE html>
-<html>
-<head>
-    <meta charset="utf-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>simple</title>
-    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/twitter-bootstrap/3.3.7/css/bootstrap.min.css">
-    <link rel="stylesheet"
-          href="https://cdnjs.cloudflare.com/ajax/libs/twitter-bootstrap/3.3.7/css/bootstrap-theme.min.css">
-</head>
-
 <body>
 <div class="container">
     <div class="row">
         <div class="col-md-12">
             <span id="scanned-TYPE">CODE TYPE</span>
-            <textarea rows="3" id="scanned-QR"></textarea>
+            <form action="#" method="GET">
+                <textarea rows="3" id="scanned-QR" name="barcode"></textarea>
+                <button>読み取る</button>
+            </form>
         </div>
         <div class="col-md-12">
             <div class="thumbnail" id="result" style="width:320px;height:240px;max-width:320px;">
@@ -43,6 +35,7 @@
             <input type="range" value="0" min="0" max="64" id="contrast" onchange="Page.changeContrast();"/>
             <span class="label label-default" id="threshold-value">2値化 : 0</span>
             <input type="range" value="0" min="0" max="512" id="threshold" onchange="Page.changeThreshold();"/>
+            <br>
             <span class="label label-default" id="sharpness-value">鋭化 : off</span>
             <input type="checkbox" id="sharpness" onchange="Page.changeSharpness();"/>
             <span class="label label-default" id="grayscale-value">白黒 : off</span>
@@ -54,16 +47,11 @@
         </div>
     </div>
 </div>
-<div>
-使わないけど設置しておかないとエラーが表示されるボタン
-<button id="decode-img"></button>
-<button id="grab-img"></button>
+<div class="not-use-img">
+    <button id="decode-img"></button>
+    <button id="grab-img"></button>
 </div>
 <script type="text/javascript" src="js/qrcodelib.js"></script>
 <script type="text/javascript" src="js/webcodecamjs.js"></script>
 <script type="text/javascript" src="js/main.js"></script>
-<script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.2.1/jquery.min.js"></script>
-<script src="https://cdnjs.cloudflare.com/ajax/libs/twitter-bootstrap/3.3.7/js/bootstrap.min.js"></script>
 </body>
-
-</html>
