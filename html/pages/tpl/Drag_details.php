@@ -1,23 +1,21 @@
 <div class="wrapper">
     <!-- title -->
-    <div class="title">
+    <header class="title">
         <h1>お薬詳細</h1>
-    </div>
+    </header>
     <!-- main -->
     <div class="c__store_main">
         <div id="details">
-            <div class="p__text_title">
-                <p>薬の名前が入る</p>
-            </div>
+            <h2>薬の名前が入る</h2>
             <div>
-                <div id="right_nav">
+                <aside id="right_nav">
                     <a href="./index.php?id=<?php echo $_GET['id'];?>"><img src="./image/icon/map.png" alt="map_icon"> <span>店内マップで表示</span> </a>
                     <a href="./copy.php?id=<?php echo $_GET['id'];?>"> <img src="./image/icon/printer.png" alt="printer_icon"> <span>情報を印刷する</span> </a>
                     <a href="./qr_code.php?id=<?php echo $_GET['id'];?>"> <img src="./image/icon/qr.png" alt="qr_icon"> <span>QRコード作成</span> </a>
-                </div><!-- right_nav -->
+                </aside><!-- aside  right_nav -->
                 <div class="p__main_img"><img src="./image/Drag_search/IJxfad.png" alt="薬の名前が入る"></div>
                 <div class="p__text_info list_section">
-                    <div class="list_h_text">製薬会社</div>
+                    <h3 class="list_h_text">製薬会社</h3>
                     <table>
                         <tr><th>薬品名　　：</th><td>薬品名</td></p></tr>
                         <tr><th>棚番号　　：</th><td>A-999</td></p></tr>
@@ -27,41 +25,41 @@
                     </table>
                 </div><!-- text_info -->
             </div>
-            <div class="p__main_text_info" >
-                <div class="list_section">
-                    <div class="list_h_text">test1</div>
+            <article class="p__main_text_info" >
+                <section class="list_section">
+                    <h3 class="list_h_text">test1</h3>
                     <div>
                         内容
                     </div>
-                </div>
-                <div class="list_section">
-                    <div class="list_h_text">test2</div>
+                </section><!-- section  test1 -->
+                <section class="list_section">
+                    <h3 class="list_h_text">test2</h3>
                     <div>
                         内容
                     </div>
-                </div>
-                <div class="list_section">
-                    <div class="list_h_text">test3</div>
+                </section><!-- section  test2 -->
+                <section class="list_section">
+                    <h3 class="list_h_text">test3</h3>
                     <div>
                         内容
                     </div>
-                </div>
-                <div class="list_section">
-                    <div class="list_h_text">test4</div>
+                </section><!-- section  test2 -->
+                <section class="list_section">
+                    <h3 class="list_h_text">test4</h3>
                     <div>
                         内容
                     </div>
-                </div>
-            </div><!-- main_text_info -->
+                </section><!-- test2 -->
+            </article><!-- article  main_text_info -->
         </div>
     </div>
     <!-- nav -->
-    <div class="c__button_list" >
+    <nav class="c__button_list" >
         <ul>
             <li><a href="./seatch.php">お薬検索</a></li>
             <li><a href="./index.php">店内マップ</a></li>
             <li><a href="./list.php">お薬一覧</a></li>
         </ul>
-    </div>
+    </nav>
 
 </div>

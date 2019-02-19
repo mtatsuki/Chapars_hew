@@ -29,7 +29,7 @@
     margin     : 0 auto;
   }
   /* タイトル========================================== */
-  .title{
+  header{
     width        :900px;
     height       : 50px;
     margin       : 20px auto;
@@ -38,7 +38,7 @@
     line-height  : 50px;
     border-radius: 20px;
     font-size    : 40px;
-    color        :#185E89;
+    color        : #185E89;
 
   }
   /* メイン========================================== */
@@ -46,7 +46,7 @@
     width         : 900px;
     margin        : 20px auto;
     height        : 100%;
-    padding-bottom:100px;
+    padding-bottom: 100px;
     margin-bottom : 100px;
   }
   /* ボタン========================================== */
@@ -150,7 +150,7 @@
   flex-wrap     : wrap;
 }
 /*薬品棚*/
-#store_item_box>div{
+#store_item_box>h2{
   width        : 100px;
   height       : 250px;
   color        : #fff;
@@ -159,25 +159,25 @@
   position     : absolute;
 }
 
-#store_item_box>div:nth-of-type(1){
+#store_item_box>h2:nth-of-type(1){
   top        : 100px;
   left       : 0;
 }
-#store_item_box>div:nth-of-type(2){
+#store_item_box>h2:nth-of-type(2){
   top        : 100px;
   left       : 200px;
 
 }
-#store_item_box>div:nth-of-type(3){
+#store_item_box>h2:nth-of-type(3){
   top        : 100px;
   left       : 400px;
 
 }
-#store_item_box>div:nth-of-type(4){
+#store_item_box>h2:nth-of-type(4){
   top        : 100px;
   right      : 200px;
 }
-#store_item_box>div:nth-of-type(5){
+#store_item_box>h2:nth-of-type(5){
   top        : 100px;
   right      : 0;
 }
@@ -198,7 +198,7 @@
   background     : #ddd;
   border         : #0c2e3c 50px solid;
 }
-#store_item_box>ul>li:nth-child(1){
+#store_item_box>ul>li:nth-child(1)>h3{
   font-size      : 20px;
   padding        : 10px 0px 10px 10px;
   font-weight    : bold;
@@ -206,7 +206,7 @@
   color          : #103B51;
 }
 
-#store_item_box>ul>li>div{
+#store_item_box>ul>li>h4{
   margin-top   : 0px;
   background   : #fff;
   border       : solid #ccc 0px;
@@ -221,6 +221,9 @@
   width        : 100%;
   padding      : 10px 0px;
   font-weight  : bold;
+}
+#store_item_box>ul>li>ul>li:nth-child(n+2)>a{
+border-top   : 1px dashed #fff;
 }
 #store_item_box>ul>li>ul>li>a:hover{
   background    : #103B51;
@@ -243,8 +246,13 @@
   background   : #ffffff65;
 }
 /* Drag_list========================================== */
-
-/* 薬品リスト */
+#list h2{
+  text-align: center;
+}
+#list h4{
+  font-size : 24px;
+}
+/* 薬品リスト-------------------------------------------*/
 #list li{
   margin        : 10px;
   padding       : 10px;
@@ -253,6 +261,7 @@
 #list li:nth-child(n + 2){
   border-top : solid #103B51 1px;
 }
+/*リストの商品画像--------------------------------------*/
 #list li>div:nth-child(1){
   width     : 95px;
   height    : 95px;
@@ -260,17 +269,14 @@
 #list li>div:nth-child(1)>img{
   width     : 95px;
   height    : 95px;
-
 }
+/*商品の簡単説明--------------------------------------*/
 #list li>div:nth-child(2){
   width         : 600px;
   height        : 95px;
   padding-left  : 10px;
 }
-#list li>div:nth-child(2) h2{
-  font-size : 24px;
-}
-
+/*商品詳細へのボタン--------------------------------------*/
 #list li>div:nth-child(3){
   width     : 165px;
   height    : 95px;  
@@ -309,7 +315,8 @@
   width      : 100%;
   margin     : 10px 0px;
 }
-#details > div.p__text_title > p{
+/*ページの中見出し--------------------------------------------*/
+#details >  h2{
   font-size  : 24px;
   text-align : center;
   color      : #103B51;
@@ -339,6 +346,7 @@
   width       : 300px;
   padding     : 10px;
 }
+/*薬品の画像--------------------------------------------*/
 #details > div:nth-child(2) > div.p__main_img{
   width      : 300px;
   height     : 300px;
@@ -348,7 +356,8 @@
 #details > div:nth-child(2) > div.p__main_img > img{
   width : 300px; 
 }
-#details div.p__main_text_info>div.list_section>div:nth-child(2){
+/*薬品の説明概要覧-----------------------------------------*/
+#details article.p__main_text_info > section.list_section > div:nth-child(2){
   margin        : 10px;
   padding       : 10px;
 
@@ -369,7 +378,7 @@
 }
 #seatch td{
   width       : 350px;
-  padding     : 0px 50px;
+  padding     : 10px 50px;
   background  : #bacaff;
 }
 #seatch th{
@@ -377,16 +386,18 @@
   color       :#fff;
 }
 
-#seatch table tr:nth-child(-n+3) input{
+#seatch table tr:nth-child(-n+4) input{
   width       : 100%;
+  height      : 20px;
 }
+/*チェックアウトボタン-----------------------------------*/
 #seatch table tr.p_cate_list ul,
 #seatch table tr.p_type_list ul{
-  width     : 100%;
-  height    : 200px;
-  display   : flex;
+  width         : 100%;
+  height        : 200px;
+  display       : flex;
   flex-direction:column;
-  flex-wrap : wrap;
+  flex-wrap     : wrap;
 }
 #seatch table tr.p_cate_list div,
 #seatch table tr.p_type_list div{
@@ -395,27 +406,30 @@
   padding-left : 25px;
 
 }
-
 #seatch table tr.p_cate_list li,
 #seatch table tr.p_type_list li{
   width    : 33%;
   height   : 10%;
   padding  : 10px 0px;
 }
+#seatch table tr.p_cate_list li > label,
+#seatch table tr.p_type_list li > label{ 
+  display  : inline-block;
+  width    : 100%;
+}
+
 form{
   display   :flex;
 }
-.c__seatch_bottom input{
+/*検索ボタン設定----------------------------------------------------------*/
+.c__seatch_bottom button{
   display        : block;
 	cursor         : pointer;
   width          : 200px;
   height         : 100px;
   margin         : 13px 50%;
   font-size      : 30px;
-  line-height    : 100px;
-  text-align     : center;
 	border-radius  : 4px;
-	box-sizing     : border-box;
 	color          : #fff;
 	text-align     : center;
 	text-decoration: inherit;
@@ -423,12 +437,17 @@ form{
 	box-shadow     : 0 10px 0 #103B51, 0 20px 0 rgba(0,0,0,.2);
 	transition     : color .3s, background .3s, box-shadow .3s, transform 0.3s;
 }
-.c__seatch_bottom input:hover {
+.c__seatch_bottom button:nth-child(2){
+  border-radius  : 50%;
+  width          : 100px;
+  margin         : 30px 75% 0px;
+}
+.c__seatch_bottom button:hover {
   background     : #77c2e3;
 	box-shadow     : 0 5px 0 #103B51, 0 10px 0 rgba(0,0,0,.2);
   transform      : translateY(3px);
 }
-.c__seatch_bottom input:active {
+.c__seatch_bottom button:active {
   color               : #ddd;
 	background          : #0c2e3c;
 	box-shadow          : 0 0 0 #103B51, 0 0 0 rgba(0,0,0,.2);
@@ -502,8 +521,25 @@ form{
   transition-duration: .1s;
 }
 
-/* Mane_Drag_Arrival========================================== */
-/* Mane_Drag_Arrival_History========================================== */
+/* Qr_code========================================== */
+#qr_code{
+  width : 100%;
+  height : 450px;
+  margin:  auto;
+}
+#p_main_qr_code {
+  border: 3px #000 solid;
+  width   : 300px;
+  height  : 300px;
+  margin  : 0 auto; 
+  padding : 10px;
+}
+#p_main_qr_code > canvas{
+  width   : 300px;
+  height  : 300px;
+
+}
+/* Drag_copy========================================== */
 
 }
 

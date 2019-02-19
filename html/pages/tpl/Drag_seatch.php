@@ -1,8 +1,8 @@
 <div class="wrapper">
     <!-- title -->
-    <div class="title">
+    <header class="title">
         <h1>お薬検索</h1>
-    </div>
+    </header>
     <form method="post" action="seatch.php"><input type="submit" name="del" value="削除"></form>
     <!-- main -->
     <div class="c__store_main">
@@ -18,6 +18,10 @@
                     <tr>
                         <th align="left">製薬会社</th><td><input type="text" name="company" value="<?php echo $company; ?>"></td>
                     </tr>
+                    <tr>
+                        <th align="left">音声検索</th><td><input type="text" name="voice_sound" value="<?php echo $company; ?>"></td>
+                    </tr>
+
                     <tr class="p_cate_list" id="checkboox">
                         <th align="left">カテゴリ</th>
                         <td>
@@ -39,25 +43,28 @@
                         <td>
                             <div><p>選択する<span>▼</span></p></div>
                             <ul>
-                                <li><label for="type_1"><input type="checkbox" name="type" value="type1" >種類１</label></li>
-                                <li><label for="type_2"><input type="checkbox" name="type" value="type2" >種類２</label></li>
-                                <li><label for="type_3"><input type="checkbox" name="type" value="type3" >種類３</label></li>
-                                <li><label for="type_4"><input type="checkbox" name="type" value="type4" >種類４</label></li>
-                                <li><label for="type_5"><input type="checkbox" name="type" value="type5" >種類５</label></li>
-                                <li><label for="type_6"><input type="checkbox" name="type" value="type6" >種類６</label></li>
-                                <li><label for="type_7"><input type="checkbox" name="type" value="type7" >種類７</label></li>
-                                <li><label for="type_8"><input type="checkbox" name="type" value="type8" >種類８</label></li>
+                                <li><label for="type_1"><input type="checkbox" name="type" value="type1" id="type_1">種類１</label></li>
+                                <li><label for="type_2"><input type="checkbox" name="type" value="type2" id="type_2">種類２</label></li>
+                                <li><label for="type_3"><input type="checkbox" name="type" value="type3" id="type_3">種類３</label></li>
+                                <li><label for="type_4"><input type="checkbox" name="type" value="type4" id="type_4">種類４</label></li>
+                                <li><label for="type_5"><input type="checkbox" name="type" value="type5" id="type_5">種類５</label></li>
+                                <li><label for="type_6"><input type="checkbox" name="type" value="type6" id="type_6">種類６</label></li>
+                                <li><label for="type_7"><input type="checkbox" name="type" value="type7" id="type_7">種類７</label></li>
+                                <li><label for="type_8"><input type="checkbox" name="type" value="type8" id="type_8">種類８</label></li>
                             </ul>
                         </td>
                     </tr>
+
                 </table>
                 <div class="c__seatch_bottom">
-                    <input type="submit" name="search" value="検索">
+                    <!-- <input type="submit" name="search" value="検索"> -->
+                    <button name="search">検索</button>
+                    <button name="voice_sound_search"><img src="./image/icon/maic.png" alt="map_icon"></button>
                 </div>
             </form>
             <div class="seatch_block">  
                 <div>
-                    <p>検索結果一覧  検索ワード:<?php echo  $name_ans.",".$symptom_ans.",".$company_ans; ?></p>
+                    <h2>検索結果一覧  検索ワード:<?php echo  $name_ans.",".$symptom_ans.",".$company_ans; ?></h2>
                 </div>
                 <ul>
                     <?php
@@ -69,7 +76,7 @@
                             <img src="./image/Drag_search/IJxfad.png" alt="">
                         </div>
                         <div>
-                            <h2><?php echo $data["itemName"]; ?></h2>
+                            <h3><?php echo $data["itemName"]; ?></h3>
                             <p><?php echo $data["shopName"]; ?></p>
                         </div>
                         <div>
@@ -86,11 +93,11 @@
         </div>
     </div>
     <!-- nav -->
-    <div class="c__button_list">
+    <nav class="c__button_list">
         <ul>
             <li><a href="./seatch.php">お薬検索</a></li>
             <li><a href="./index.php">店内マップ</a></li>
             <li><a href="./list.php">お薬一覧</a></li>
         </ul>
-    </div>
+    </nav>
 </div>
