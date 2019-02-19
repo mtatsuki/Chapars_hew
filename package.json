@@ -9,6 +9,7 @@
     "pass": "ohs2019hew"
   },
   "dependencies": {
+    "child_process": "^1.0.2",
     "config": "^3.0.1",
     "puppeteer": "^1.12.2"
   }
