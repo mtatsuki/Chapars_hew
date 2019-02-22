@@ -1,6 +1,5 @@
 
 <?php
-
 $jsonUrl = "./tpl/test.json"; //JSONファイルの場所とファイル名を記述
 if(file_exists($jsonUrl)){
   $json = file_get_contents($jsonUrl);

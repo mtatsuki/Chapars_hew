@@ -42,12 +42,5 @@
   <title>jquery</title>
 </head>
 <body>
-<?php
- $results = '/usr/local/bin/node /works/project_file/chapars/Chapars_hew/html/pages/js/js_child_process.js';
- echo exec($results, $opt, $return_ver);
- var_dump( $opt );
- echo '実行結果：'.$return_ver;
-  
-?>
 
   

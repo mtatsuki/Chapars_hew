@@ -5,7 +5,11 @@
 // const boolValue = true;                //true/false
 // const arrayValue = [1, 2, 3];          //配列
 // const objValue = { key: 'value' };     //連想配列
-
+//
+//crontab -e
+//*/5 * * * * /usr/local/bin/node /works/project_file/chapars/Chapars_hew/html/pages/js/js_puppeteer.js
+//cat /var/mail/ユーザー名
+//
 //=========================== 
 //設定
 //=========================== 
@@ -21,7 +25,6 @@ const puppeteer = require('puppeteer');
 async function downloads(){
 
     const browser = await puppeteer.launch({headless:false});
-
     //--------------------------------------------------
     //新タブを作る
     //--------------------------------------------------
@@ -85,10 +88,10 @@ async function downloads(){
     //--------------------------------------------------
     //CSVダウンロードボタン
     //--------------------------------------------------
-    // await page.click(
-    //     '#id_csv_download_button'
-    // );
-    // await page.waitFor(3000);
+    await page.click(
+        '#id_csv_download_button'
+    );
+    await page.waitFor(3000);
     //--------------------------------------------------
     // ブラウザーを閉じる
     //--------------------------------------------------
