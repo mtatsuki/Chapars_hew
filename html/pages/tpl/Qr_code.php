@@ -11,7 +11,7 @@
 
             </article>
             <aside>
-                <p></p>
+                <h2>上記のQRコードで、薬の情報を取得できます。</h2>
             </aside>
         </div>
     </div>

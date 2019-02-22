@@ -1,16 +1,13 @@
 <script type="text/javascript">
 $(function(){
     let url = document.referrer;                          //遷移元URL取得
-
     let urlParam = location.search.substring(1);          //パラメーター取得
     $("#right_nav >a").css("display","none");             //印刷するボタンを消す
-    if(urlParam && (url.indexOf('details.php') != -1)) {  //URLにパラメータが存在する場合
+    if(urlParam) {  //URLにパラメータが存在する場合
         console.log(url);                                 //遷移元URL取得
         console.log(urlParam);                            //取得したパラメーターが一行で
         var param = urlParam.split('&');                  //「&」が含まれている場合は「&」で分割
-    
         var paramArray = [];                              // パラメーター配列
-    
         for (i = 0; i < param.length; i++) {              // 用意した配列にパラメータを格納
             var paramItem = param[i].split('=');
             paramArray[paramItem[0]] = paramItem[1];
@@ -40,26 +37,26 @@ $(function(){
                     <li class="list_section">
                         <h4 class="list_h_text">カテゴリA-1</h4>
                         <ul>
-                            <li id="999999X9990"><a href="./details.php?id=999999X9990">1</a></li>
-                            <li id="999999X9991"><a href="./details.php?id=999999X9991">2</a></li>
-                            <li id="999999X9992"><a href="./details.php?id=999999X9992">3</a></li>
-                            <li id="999999X9993"><a href="./details.php?id=999999X9993">4</a></li>
+                            <li id="9999999990"><a href="./details.php?id=9999999990">1</a></li>
+                            <li id="9999999991"><a href="./details.php?id=9999999991">2</a></li>
+                            <li id="9999999992"><a href="./details.php?id=9999999992">3</a></li>
+                            <li id="9999999993"><a href="./details.php?id=9999999993">4</a></li>
                         </ul>
                     </li>
                     <li class="list_section">
                         <h4 class="list_h_text">カテゴリA-2</h4>
                         <ul>
-                            <li id="999999X9994"><a href="./details.php?id=999999X9994">1</a></li>
-                            <li id="999999X9995"><a href="./details.php?id=999999X9995">2</a></li>
-                            <li id="999999X9996"><a href="./details.php?id=999999X9996">3</a></li>
-                            <li id="999999X9997"><a href="./details.php?id=999999X9997">4</a></li>
+                            <li id="9999999981"><a href="./details.php?id=9999999981">1</a></li>
+                            <li id="9999999982"><a href="./details.php?id=9999999982">2</a></li>
+                            <li id="9999999983"><a href="./details.php?id=9999999983">3</a></li>
+                            <li id="9999999984"><a href="./details.php?id=9999999984">4</a></li>
                         </ul>
                     </li>
                     <li class="list_section">
                         <h4 class="list_h_text">カテゴリA-3</h4>
                         <ul>
-                            <li id="999999X9998"><a href="./details.php?id=999999X9998">1</a></li>
-                            <li id="999999X9999"><a href="./details.php?id=999999X9999">2</a></li>
+                            <li id="9999999971"><a href="./details.php?id=9999999971">1</a></li>
+                            <li id="9999999972"><a href="./details.php?id=9999999972">2</a></li>
                             <li><a href="#">3</a></li>
                             <li><a href="#">4</a></li>
                         </ul>

@@ -4,17 +4,13 @@
         <h1>コピー画面</h1>
     </header>
     <!-- main -->
-    <article class="c__store_main">
-        <section id="copy">
-        </section>
-    </article>
-    <!-- nav -->
-    <nav class="c__button_list" >
-        <ul>
-            <li><a href="./seatch.php">お薬検索</a></li>
-            <li><a href="./index.php">店内マップ</a></li>
-            <li><a href="./list.php">お薬一覧</a></li>
-        </ul>
-    </nav>
-
+    <div class="c__store_main">
+        <div id="copy">
+            <article>
+                <h2>コピー用紙が出るまでお待ち下さい。</h2>
+                <img src="./image/Drag_search/IJxfad.png" alt="">
+                <a href="./tpl_copy/Copy_date.php?id=9999999980">コピー内容</a>
+            </article>
+        </div>
+    </div>
 </div>
