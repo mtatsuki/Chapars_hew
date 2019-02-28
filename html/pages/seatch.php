@@ -25,11 +25,14 @@
 
   session_start();  //検索ワードを残しておく用
   require_once "./func/getdata.php";  //DBから検索する関数を呼び出す
-  //検索用変数
+  //=====================================
+  // //検索用変数初期化
+  //=====================================
   $name = ""; //薬品名
   $symptom = "";  //症状
   $company = "";  //製薬会社
   $datas = array();
+
   if((isset($_GET["name"]) || isset($_GET["symptom"]) || isset($_GET["company"])) && isset($_GET["search"])){
     $_SESSION["name_search"] = $_GET["name"];
     $_SESSION["symptom_search"] = $_GET["symptom"];
