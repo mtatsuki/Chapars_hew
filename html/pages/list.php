@@ -63,7 +63,7 @@ if(file_exists($jsonUrl)){
 
 include "./tpl/header.php";
 include "./tpl/Drag_list.php";
-include "./tpl/fooder.html";
+include "./tpl/footer.html";
 
 //==================================
 
