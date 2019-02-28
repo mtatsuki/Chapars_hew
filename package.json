@@ -1,0 +1,11 @@
+{
+    "name": "chapars_hew_puppeteer",
+    "version": "1.0.0",
+    "main": "./html/pages/js/js_puppeteer.js",
+    "repository": "ssh://git@github.com:mtatsuki/Chapars_hew.git",
+    "author": "",
+    "license": "",
+    "dependencies": {
+      "puppeteer": "^1.11.0"
+    }
+  }
