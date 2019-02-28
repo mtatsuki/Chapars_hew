@@ -57,9 +57,9 @@ include "./tpl/footer.html";
 //==================================
 
 //sessionの削除
-require_once "./func/session_del.php";
-if($_POST["del"]){
-session_del();
-}
+// require_once "./func/session_del.php";
+// if(!empty($_POST["del"])){
+// session_del();
+// }
 
 ?>

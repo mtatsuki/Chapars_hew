@@ -1,7 +1,7 @@
 <?php
   function getdatas($name,$symptom,$company){  //DBの中身を取得する
-    //configを読み込む
-    require_once "./../../config.php";
+    //confを読み込む
+    require_once "./../../conf.php";
     $dsn = "mysql:dbname=".DB.";
             host=".DB_HOST.";
             charset=utf8";
