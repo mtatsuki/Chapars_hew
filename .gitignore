@@ -1,2 +1,6 @@
 /node_modules
 conf.php
+<<<<<<< HEAD
+=======
+/package.json
+>>>>>>> dev
