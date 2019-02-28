@@ -1,4 +1,83 @@
+/*印刷用CSS*/
+@media print {
+  body {
+    overflow-x: visible !important;
+    overflow-y: visible !important;
+ }
+  header{
+    width        : 900px;
+    height       : 50px;
+    margin       : 20px auto;
+    background   : #ddd;
+    text-align   : center;
+    line-height  : 50px;
+    border-radius: 20px;
+    font-size    : 40px;
+    color        : #185E89;
 
+  }
+    /* メイン========================================== */
+    .c__store_main{
+      width         : 900px;
+      margin        : 20px auto;
+      height        : 100%;
+      padding-bottom: 100px;
+      margin-bottom : 100px;
+    }
+  
+    #store_map{
+      position     : relative;
+    }
+    #store_map img{
+      width        : 900px;
+      margin       : 0px auto;
+    }
+    #store_item_box{
+      width         : 900px;
+      display       : flex;
+      flex-wrap     : wrap;
+    }
+    /*薬品棚*/
+    #store_item_box>h2{
+      width        : 100px;
+      height       : 250px;
+      color        : #fff;
+      text-align   : center;
+      background   : #0c2e3c;
+      position     : absolute;
+    }
+    
+    #store_item_box>h2:nth-of-type(1){
+      top        : 100px;
+      left       : 0;
+    }
+    #store_item_box>h2:nth-of-type(2){
+      top        : 100px;
+      left       : 200px;
+    
+    }
+    #store_item_box>h2:nth-of-type(3){
+      top        : 100px;
+      left       : 400px;
+    
+    }
+    #store_item_box>h2:nth-of-type(4){
+      top        : 100px;
+      right      : 200px;
+    }
+    #store_item_box>h2:nth-of-type(5){
+      top        : 100px;
+      right      : 0;
+    }    
+
+
+
+
+    /*ボタンを非表示*/
+    form{
+      display: none;
+    }
+}
 /* ウィンドウサイズが0px */
 @media screen and (min-width: 0px) {
   

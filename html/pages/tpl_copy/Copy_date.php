@@ -79,5 +79,9 @@
           </article><!-- store_item_box -->
       </div>
     </div>
+    <form>
+            <input type="button" value="このページを印刷する" onclick="window.print();" />
+        </form>
+
   </body>
 </html>
