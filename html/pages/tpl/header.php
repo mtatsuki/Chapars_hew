@@ -24,22 +24,36 @@
   <link rel="stylesheet" href="./css/style.css">
  <!-- jqueryバージョン３ -->
  <script type="text/javascript" src="js/jquery-3.3.1.min.js"></script>
-  <!-- js -->
+  <!-- puppteer -->
   <script type="text/javascript" src="js/js_puppeteer.js"></script>
+  <!-- js -->
+  <script type="text/javascript"  src="./js/javascript_style.js"></script>
+  <!-- qr_code -->
+  <script type="text/javascript" src="./js/jquery.qrcode.min.js"></script>
 
   <script type="text/javascript">
 
-    $(function(){
-      //ナビのアコーディオン（動作確認様）　
-      $('#list ul').hide();
-      $("#list div").click(function(){
-        $(this).next().slideToggle(500);								 
-      });
+$(function(){
+    //ナビのアコーディオン（動作確認様）　
+    $('section ul').hide();
+    $("section h3").click(function(){
+      $(this).next().slideToggle(500);								 
     });
-
+    //チェックボックスの
+    $('#checkboox ul').hide();
+    $("#checkboox div").click(function(){
+      $(this).next().slideToggle(500);								 
+    });
+      //棚内容の表示
+    $("#store_item_box h2").click(function(){
+      $(this).next().slideDown(500);		
+    });
+    $("#store_item_box>ul>li:last-child").click(function(){
+      $("#store_item_box>ul").slideUp(500);
+    });
+    $('#p_main_qr_code').qrcode("https://github.com/mtatsuki/Chapars_hew",{text: "size doesn't matter"});
+  });
   </script>
 
-  <title>jquery</title>
-</head>
-<body>
+
   
