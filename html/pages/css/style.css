@@ -639,3 +639,9 @@ form{
 }
 
 
+
+
+/* scanDrug.php========================================== */
+.not-use-img{
+  visibility:hidden;
+}
