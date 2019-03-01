@@ -1,6 +1,7 @@
 <?php
   function str_judge($input){
-    $path = '"C:\Program Files\MeCab\bin\mecab.exe"';
+    require_once "../../config.php";
+    $path = MeCab_URL;
 
     //パイプ処理
     $descriptorspec = array(
