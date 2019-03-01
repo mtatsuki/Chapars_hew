@@ -1,3 +1,7 @@
+
+  <title>jquery</title>
+</head>
+<body>
 <div class="wrapper">
     <!-- title -->
     <header class="title">

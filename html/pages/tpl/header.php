@@ -55,8 +55,5 @@ $(function(){
   });
   </script>
 
-  <title>jquery</title>
-</head>
-<body>
 
   
