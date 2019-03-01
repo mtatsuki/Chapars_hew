@@ -1,15 +1,16 @@
 <?php
-  function getcate($cate){  //DBの中身を取得する
+  function getproduct($code){  //DBの中身を取得する
     //configを読み込む
     require_once "./../../config.php";
     $dsn = "mysql:dbname=".DB.";host=".DB_HOST.";charset=utf8";
     $dbh = new PDO($dsn,DB_USER,DB_PASS);
 
-    $stmt = $dbh -> prepare("SELECT itemCode FROM genres WHERE genreName = '".$cate."' ORDER BY id ASC");
+    $stmt = $dbh -> prepare("SELECT id,itemName FROM stocks WHERE itemCode = '".$code."' ORDER BY id ASC");
     $stmt -> execute();
-    $data = "";
+    $data = array();
     while($row = $stmt -> fetch(PDO::FETCH_ASSOC)){
-      $data = $row["itemCode"];
+      $data["id"] = $row["id"];
+      $data["itemName"] = $row["itemName"];
     }
     return $data;
   }

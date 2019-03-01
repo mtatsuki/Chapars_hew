@@ -5,11 +5,11 @@
     $dsn = "mysql:dbname=".DB.";host=".DB_HOST.";charset=utf8";
     $dbh = new PDO($dsn,DB_USER,DB_PASS);
 
-    $stmt1 = $dbh -> prepare("SELECT DISTINCT category FROM stocks GROUP BY category ORDER BY id ASC");
+    $stmt1 = $dbh -> prepare("SELECT DISTINCT genreName FROM genres GROUP BY genreName ORDER BY id ASC");
     $stmt1 -> execute();
     $cate = array();
     while($row = $stmt1 -> fetch(PDO::FETCH_ASSOC)){
-      $cate[] = $row["category"];
+      $cate[] = $row["genreName"];
     }
     return $cate;
   }
