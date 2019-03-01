@@ -37,13 +37,6 @@
     $name =  $_SESSION["name_search"];
     $symptom =  $_SESSION["symptom_search"];
     $company =  $_SESSION["company_search"];
-
-    $array_word = array();
-    require_once "./func/str_judge.php";
-    $array_word = str_judge($name);
-    $result = array();
-    require_once "./func/get_kanji.php";
-    $result = get_kanji($array_word);
     $datas = getdatas($name,$symptom,$company);
   }
   else{
