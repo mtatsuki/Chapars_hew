@@ -53,3 +53,10 @@ function get_csv($csvfile, $mode = 'sjis')
     }
     return $records;
 }
+
+
+// 連番作成
+function get_csv_sequence($csv_path)
+{
+    return $count = count(file($csv_path));
+}
