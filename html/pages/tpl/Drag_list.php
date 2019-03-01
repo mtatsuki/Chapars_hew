@@ -8,16 +8,15 @@
         <div id="list" class="list_section">
         <?php foreach($datas as $key => $data){ ?>
             <div>
-                <p><?php echo $key; ?></p>
+                <h2><?php echo $key; ?></h2>
             <ul>
                 <?php foreach ($data as $value) {?>
                 <li>
                     <div>
-                        <img src="./image/Drag_search/IJxfad" alt="">
+                        <img src="./image/Drag_search/IJxfad.png" alt="">
                     </div>
                     <div>
-                        <h2><?php echo $value["itemName"]; ?></h2>
-                        <p><?php echo $value["shopName"] ?></p>
+                        <h3><?php echo $value["itemName"]; ?></h3>
                     </div>
                     <div>
                         <a href="./details.php?id=<?php echo $value["id"];?>">詳しくはこちら</a>

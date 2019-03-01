@@ -11,12 +11,20 @@
   for($cnt = 0;$cnt < count($cates);$cnt++){
     $getdata[] = getcate($cates[$cnt]); //カテゴリー取得
   }
-
-  $datas = array();
-  for($cnt = 0;$cnt < count($cates);$cnt++){
-    $datas[$cates[$cnt]] = $getdata[$cnt];
+  require_once "./func/getproduct.php";  //DBから検索する関数を呼び出す
+  $getproducts = array();
+  for($cnt = 0;$cnt < count($getdata);$cnt++){
+    $getproducts[] = getproduct($getdata[$cnt]); //商品取得
   }
 
+  $datas = array();
+  for($i = 0;$cnt < count($getdata);$cnt++){
+    for($j = 0;$j < 999;$j++){  ///////////////////////////////修正中!!!!
+      $datas[$cates[$i]][] = $getproducts[$j];
+    }
+    $j = 0;
+  }
+var_dump($datas);
   //////////////////////////////////////////////////////////////////
 
   // foreach ($obj as $key => $val){

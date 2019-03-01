@@ -45,6 +45,7 @@
     $company = "";
     $datas = getdatas($name,$symptom,$company); 
   }
+  
 //==================================
 
 include "./tpl/header.php";
@@ -52,11 +53,5 @@ include "./tpl/Drag_search.php";
 include "./tpl/footer.html";
 
 //==================================
-
-//sessionの削除
-require_once "./func/session_del.php";
-if($_POST["del"]){
-session_del();
-}
 
 ?>
