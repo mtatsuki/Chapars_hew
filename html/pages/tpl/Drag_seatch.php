@@ -7,7 +7,6 @@
     <header class="title">
         <h1>お薬検索</h1>
     </header>
-    <!-- <form method="post" action="seatch.php"><input type="submit" name="del" value="削除"></form> -->
     <!-- main -->
     <div class="c__store_main">
         <div id="seatch">
