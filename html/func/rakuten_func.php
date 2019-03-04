@@ -1,15 +1,12 @@
 <?php
-function getRakutenResult($keyword)
+function getRakutenResult($keyword, $base_url, $search_type)
 {
-
-// ベースとなるリクエストURL
-    $base_url = 'https://app.rakuten.co.jp/services/api/IchibaItem/Search/20170706';
+    $params_type = paramsCheck($search_type);
 // リクエストのパラメータ作成
     $params = array();
+    $params['format'] = 'json';
+    $params[$params_type] = urlencode_rfc3986($keyword); // 任意のキーワード。※文字コードは UTF-8
     $params['applicationId'] = '1069000170280582227'; // アプリID
-    $params['keyword'] = urlencode_rfc3986($keyword); // 任意のキーワード。※文字コードは UTF-8
-    $params['sort'] = urlencode_rfc3986('+itemPrice'); // ソートの方法。※文字コードは UTF-8
-
     $canonical_string='';
 
     foreach ($params as $k => $v) {
@@ -20,19 +17,31 @@ function getRakutenResult($keyword)
 
 // リクエストURL を作成
     $url = $base_url . '?' . $canonical_string;
-
 // XMLをオブジェクトに代入
     $rakuten_json=json_decode(@file_get_contents($url, true));
-    return current($rakuten_json->Items);
+    if (!empty($rakuten_json)) {
+        return $rakuten_json;
+    }
 }
-
+function paramsCheck($search_type)
+{
+    switch ($search_type) {
+        case 'keyword':
+            return 'keyword';
+            break;
+        case 'genre':
+            return 'genreId';
+            break;
+        case 'tag':
+            return 'tagId';
+            break;
+        default:
+            return false;
+            break;
+    }
+}
 // RFC3986 形式で URL エンコードする関数
 function urlencode_rfc3986($str)
 {
     return str_replace('%7E', '~', rawurlencode($str));
 }
-
-$rakuten_result = getRakutenResult('4946842100019', 1000);
-var_dump($rakuten_result);
-
-// next -> csvを作る

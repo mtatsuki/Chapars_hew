@@ -1,4 +1,83 @@
+/*印刷用CSS*/
+@media print {
+  body {
+    overflow-x: visible !important;
+    overflow-y: visible !important;
+ }
+  header{
+    width        : 900px;
+    height       : 50px;
+    margin       : 20px auto;
+    background   : #ddd;
+    text-align   : center;
+    line-height  : 50px;
+    border-radius: 20px;
+    font-size    : 40px;
+    color        : #185E89;
 
+  }
+    /* メイン========================================== */
+    .c__store_main{
+      width         : 900px;
+      margin        : 20px auto;
+      height        : 100%;
+      padding-bottom: 100px;
+      margin-bottom : 100px;
+    }
+  
+    #store_map{
+      position     : relative;
+    }
+    #store_map img{
+      width        : 900px;
+      margin       : 0px auto;
+    }
+    #store_item_box{
+      width         : 900px;
+      display       : flex;
+      flex-wrap     : wrap;
+    }
+    /*薬品棚*/
+    #store_item_box>h2{
+      width        : 100px;
+      height       : 250px;
+      color        : #fff;
+      text-align   : center;
+      background   : #0c2e3c;
+      position     : absolute;
+    }
+    
+    #store_item_box>h2:nth-of-type(1){
+      top        : 100px;
+      left       : 0;
+    }
+    #store_item_box>h2:nth-of-type(2){
+      top        : 100px;
+      left       : 200px;
+    
+    }
+    #store_item_box>h2:nth-of-type(3){
+      top        : 100px;
+      left       : 400px;
+    
+    }
+    #store_item_box>h2:nth-of-type(4){
+      top        : 100px;
+      right      : 200px;
+    }
+    #store_item_box>h2:nth-of-type(5){
+      top        : 100px;
+      right      : 0;
+    }    
+
+
+
+
+    /*ボタンを非表示*/
+    form{
+      display: none;
+    }
+}
 /* ウィンドウサイズが0px */
 @media screen and (min-width: 0px) {
   
@@ -12,21 +91,24 @@
 /* ウィンドウサイズが1020px */
 @media screen and (min-width:1020px){
   body{
-    width : 100%;
-    height: 100%;
-    font-family: '筑紫B丸ゴシック';
+    width       : 100%;
+    height      : 100%;
+    font-family : '筑紫B丸ゴシック';
+  }
+  p{
+    line-height: 1.5;
   }
   /* 全体========================================== */
   .wrapper{
-    position: relative;
-    width  : 1024px;
-    height:auto !important; /*IE6対策*/
-    height: 100%; /*IE6対策*/
-    min-height: 100%;
-    margin : 0 auto;
+    position   : relative;
+    width      : 1024px;
+    height     : auto !important; /*IE6対策*/
+    height     : 100%; /*IE6対策*/
+    min-height : 100%;
+    margin     : 0 auto;
   }
   /* タイトル========================================== */
-  .title{
+  header{
     width        :900px;
     height       : 50px;
     margin       : 20px auto;
@@ -35,7 +117,7 @@
     line-height  : 50px;
     border-radius: 20px;
     font-size    : 40px;
-    color        :#185E89;
+    color        : #185E89;
 
   }
   /* メイン========================================== */
@@ -43,8 +125,8 @@
     width         : 900px;
     margin        : 20px auto;
     height        : 100%;
-    padding-bottom:100px;
-    margin-bottom: 100px;
+    padding-bottom: 100px;
+    margin-bottom : 100px;
   }
   /* ボタン========================================== */
   .c__button_list {
@@ -95,212 +177,471 @@
     content   : "";
     position  : absolute;
 }
-
+  /* タイトル========================================== */
+  .list_section>.list_h_text{
+  height       : 25px;
+  border       : solid #ddd 2px;
+  margin-top   : 50px;
+  color        : #103B51;
+  font-weight  : bold;
+  line-height  : 25px;
+  padding-left : 50px; 
+}
+  /* 右の固定ナビゲーション================================ */
+#right_nav{
+  background  :#0c2e3c;
+  position    : fixed;
+  top         : 80px;
+  right       : 0;
+  margin      : auto;
+  width       : 200px;
+}
+#right_nav > a{
+  color        : #fff;
+  display      : inline-block;
+  width        : 100%;
+  height       : 50px;
+  line-height  : 50px;
+}
+#right_nav > a:nth-child(n+2){
+  border-top   : #ddd 1px dotted;
+}
+#right_nav > a > img{
+  height         : 16px;
+  width          : 16px;
+  margin         : auto 10px auto 15px;
+  vertical-align : middle;
+}
+#right_nav > a:hover{
+  background   : #ffffff7e;
+}
 /* Drag_store_map========================================== */
+#store_map{
+  position     : relative;
+}
 #store_map img{
   width        : 900px;
   margin       : 0px auto;
+}
+#store_item_box{
+  width         : 900px;
+  display       : flex;
+  flex-wrap     : wrap;
+}
+/*薬品棚*/
+#store_item_box>h2{
+  width        : 100px;
+  height       : 250px;
+  color        : #fff;
+  text-align   : center;
+  background   : #0c2e3c;
+  position     : absolute;
+}
 
+#store_item_box>h2:nth-of-type(1){
+  top        : 100px;
+  left       : 0;
+}
+#store_item_box>h2:nth-of-type(2){
+  top        : 100px;
+  left       : 200px;
+
+}
+#store_item_box>h2:nth-of-type(3){
+  top        : 100px;
+  left       : 400px;
+
+}
+#store_item_box>h2:nth-of-type(4){
+  top        : 100px;
+  right      : 200px;
+}
+#store_item_box>h2:nth-of-type(5){
+  top        : 100px;
+  right      : 0;
+}
+/* ポップアップ */
+#store_item_box>ul {
+  display        : none; /*初期状態が消去*/
+  position       : absolute;
+
+  top            : 0;
+  left           : 0;
+  right          : 0;
+  margin         : auto;
+  z-index        : 1;
+
+  width          : 500px;
+  padding        : 20px;
+
+  background     : #ddd;
+  border         : #0c2e3c 50px solid;
+}
+#store_item_box>ul>li:nth-child(1)>h3{
+  font-size      : 20px;
+  padding        : 10px 0px 10px 10px;
+  font-weight    : bold;
+  background     : #ccc;
+  color          : #103B51;
+}
+
+#store_item_box>ul>li>h4{
+  margin-top   : 0px;
+  background   : #fff;
+  border       : solid #ccc 0px;
+}
+#store_item_box>ul>li>ul>li{
+  margin-left: 10px;
+}
+#store_item_box>ul>li>ul>li>a{
+  display      : inline-block;
+  color        : #000;
+  text-indent  : 1em;
+  width        : 100%;
+  padding      : 10px 0px;
+  font-weight  : bold;
+}
+#store_item_box>ul>li>ul>li:nth-child(n+2)>a{
+border-top   : 1px dashed #fff;
+}
+#store_item_box>ul>li>ul>li>a:hover{
+  background    : #103B51;
+  color         : #fff;
+}
+/*ポップアップ消去ボタン*/
+#store_item_box>ul>li:last-child{
+  position     : absolute;
+  text-align   : center;
+  line-height  : 50px;
+  width        : 50px;
+  height       : 50px;
+  top          : -50px;
+  right        : -50px;
+  padding-left : 0;
+  background   : #0c2e3c;
+  color        : #fff;
+}
+#store_item_box>ul>li:last-child:hover{
+  background   : #ffffff65;
 }
 /* Drag_list========================================== */
-/* タイトル */
-#list>div{
-  height : 25px;
-  border:solid #ddd 2px;
-  margin-top : 50px;
-  color: #103B51;
-  font-weight: bold;
-  line-height: 25px;
-  padding-left:50px; 
-
+#list h2{
+  text-align: center;
 }
-/* 薬品リスト */
-
-#list li{
-  margin : 10px;
-  padding: 10px ;
-  border-bottom: solid #103B51 1px;
-  display: flex;
-
-}
-#list li>div:nth-child(1){
-  width:95px;
-  height: 95px;
-}
-#list li>div:nth-child(1)>img{
-  width:95px;
-  height: 95px;
-
-}
-#list li>div:nth-child(2){
-  width: 600px;
-  height: 95px;
-  padding-left: 10px;
-}
-#list li>div:nth-child(2) h2{
+#list h4{
   font-size : 24px;
 }
-
+/* 薬品リスト-------------------------------------------*/
+#list li{
+  margin        : 10px;
+  padding       : 10px;
+  display       : flex;
+}
+#list li:nth-child(n + 2){
+  border-top : solid #103B51 1px;
+}
+/*リストの商品画像--------------------------------------*/
+#list li>div:nth-child(1){
+  width     : 95px;
+  height    : 95px;
+}
+#list li>div:nth-child(1)>img{
+  width     : 95px;
+  height    : 95px;
+}
+/*商品の簡単説明--------------------------------------*/
+#list li>div:nth-child(2){
+  width         : 600px;
+  height        : 95px;
+  padding-left  : 10px;
+}
+/*商品詳細へのボタン--------------------------------------*/
 #list li>div:nth-child(3){
-  width: 165px;
-  height: 95px;  
+  width     : 165px;
+  height    : 95px;  
 }
 #list li>div:nth-child(3)>a{
-  display: block;
-	cursor: pointer;
-	max-width: 300px;
-  margin: 20px auto;
-  line-height    : 30px;
-  text-align     : right; 
-	border-radius: 4px;
-	box-sizing: border-box;
-	color: #fff;
-	text-align: center;
-	text-decoration: inherit;
-	background: #ff9900;
-	box-shadow: 0 6px 0 #ff2f00, 0 12px 0 rgba(0,0,0,.2);
-	transition: color .3s, background .3s, box-shadow .3s, transform 0.3s;
+  display         : block;
+	cursor          : pointer;
+	max-width       : 300px;
+  margin          : 20px auto;
+  line-height     : 30px;
+  text-align      : right; 
+	border-radius   : 4px;
+	box-sizing      : border-box;
+	color           : #fff;
+	text-align      : center;
+	text-decoration : inherit;
+	background      : #ff9900;
+	box-shadow      : 0 6px 0 #ff2f00, 0 12px 0 rgba(0,0,0,.2);
+	transition      : color .3s, background .3s, box-shadow .3s, transform 0.3s;
 }
 #list li>div:nth-child(3)>a:hover {
-  background: #ffbb55;
-	box-shadow: 0 3px 0 #941c01, 0 6px 0 rgba(0,0,0,.2);
-  transform: translateY(3px);
+  background      : #ffbb55;
+	box-shadow      : 0 3px 0 #941c01, 0 6px 0 rgba(0,0,0,.2);
+  transform       : translateY(3px);
 }
   #list li>div:nth-child(3)>a:active {
-  color: #ddd;
-	background: #6c2f0f;
-	box-shadow: 0 0 0 #941c01, 0 0 0 rgba(0,0,0,.2);
-	transform: translateY(6px);
-	transition-duration: .1s;}
+  color               : #ddd;
+	background          : #6c2f0f;
+	box-shadow          : 0 0 0 #941c01, 0 0 0 rgba(0,0,0,.2);
+	transform           : translateY(6px);
+  transition-duration : .1s;
+}
 /* Drag_details========================================== */
+
+#details > div.p__text_title {
+  width      : 100%;
+  margin     : 10px 0px;
+}
+/*ページの中見出し--------------------------------------------*/
+#details >  h2{
+  font-size  : 24px;
+  text-align : center;
+  color      : #103B51;
+  font-weight: bold;
+}
+#details > div:nth-child(2){
+  position        : relative;
+  display         : flex;  
+  justify-content : space-between;
+}
+
+#details > div:nth-child(2) > div.p__text_info{
+  width      : 500px;
+  margin     : 10px;
+}
+#details > div:nth-child(2) > div.p__text_info > div{
+  margin-top  : 0;
+}
+#details > div:nth-child(2) > div.p__text_info > table{
+  margin      : 20px;
+  font-size   : 16px;
+}
+#details > div:nth-child(2) > div.p__text_info > table th{
+  width       : 100px;
+}
+#details > div:nth-child(2) > div.p__text_info > table td{
+  width       : 300px;
+  padding     : 10px;
+}
+/*薬品の画像--------------------------------------------*/
+#details > div:nth-child(2) > div.p__main_img{
+  width      : 300px;
+  height     : 300px;
+  margin     : 10px;
+  display    : inline-block; 
+}
+#details > div:nth-child(2) > div.p__main_img > img{
+  width : 300px; 
+}
+/*薬品の説明概要覧-----------------------------------------*/
+#details article.p__main_text_info > section.list_section > div:nth-child(2){
+  margin        : 10px;
+  padding       : 10px;
+
+}
 /* Drag_seatch========================================== */
 #seatch{
-  position: relative;
+  position        : relative;
 }
 #seatch table {
-  border-collapse: collapse;  /* セルの線を重ねる */
-  height: 150px;
+  border-collapse : collapse;  /* セルの線を重ねる */
+  height          : 150px;
 }
 
 #seatch th,#seatch td{
-  padding : 10px 10px;
-  border : solid #fff 2px;
+  padding      : 10px 10px;
+  border       : solid #fff 2px;
 
 }
 #seatch td{
-  width : 350px;
-  padding : 0px 50px;
-  background: #bacaff;
+  width       : 350px;
+  padding     : 10px 50px;
+  background  : #bacaff;
 }
 #seatch th{
-  background: #29ABE2 ;
-  color:#fff;
+  background  : #29ABE2 ;
+  color       :#fff;
 }
-#seatch table input{
-  width : 100%;
+
+#seatch table tr:nth-child(-n+4) input{
+  width       : 100%;
+  height      : 20px;
 }
+/*チェックアウトボタン-----------------------------------*/
+#seatch table tr.p_cate_list ul,
+#seatch table tr.p_type_list ul{
+  width         : 100%;
+  height        : 200px;
+  display       : flex;
+  flex-direction:column;
+  flex-wrap     : wrap;
+}
+#seatch table tr.p_cate_list div,
+#seatch table tr.p_type_list div{
+  font-weight  : bold;
+  color        : #185E89;
+  padding-left : 25px;
+
+}
+#seatch table tr.p_cate_list li,
+#seatch table tr.p_type_list li{
+  width    : 33%;
+  height   : 10%;
+  padding  : 10px 0px;
+}
+#seatch table tr.p_cate_list li > label,
+#seatch table tr.p_type_list li > label{ 
+  display  : inline-block;
+  width    : 100%;
+}
+
 form{
-  display:flex;
+  display   :flex;
 }
-.c__seatch_bottom input{
-  display: block;
-	cursor: pointer;
+/*検索ボタン設定----------------------------------------------------------*/
+.c__seatch_bottom button{
+  display        : block;
+	cursor         : pointer;
   width          : 200px;
   height         : 100px;
   margin         : 13px 50%;
   font-size      : 30px;
-  line-height    : 100px;
-  text-align     : center;
-	border-radius: 4px;
-	box-sizing: border-box;
-	color: #fff;
-	text-align: center;
+	border-radius  : 4px;
+	color          : #fff;
+	text-align     : center;
 	text-decoration: inherit;
-	background: #29ABE2;
-	box-shadow: 0 10px 0 #103B51, 0 20px 0 rgba(0,0,0,.2);
-	transition: color .3s, background .3s, box-shadow .3s, transform 0.3s;
+	background     : #29ABE2;
+	box-shadow     : 0 10px 0 #103B51, 0 20px 0 rgba(0,0,0,.2);
+	transition     : color .3s, background .3s, box-shadow .3s, transform 0.3s;
 }
-.c__seatch_bottom input:hover {
-  background: #77c2e3;
-	box-shadow: 0 5px 0 #103B51, 0 10px 0 rgba(0,0,0,.2);
-  transform: translateY(3px);
+.c__seatch_bottom button:nth-child(2){
+  border-radius  : 50%;
+  width          : 100px;
+  margin         : 30px 75% 0px;
 }
-.c__seatch_bottom input:active {
-  color: #ddd;
-	background: #0c2e3c;
-	box-shadow: 0 0 0 #103B51, 0 0 0 rgba(0,0,0,.2);
-	transform: translateY(6px);
-  transition-duration: .1s;
+.c__seatch_bottom button:hover {
+  background     : #77c2e3;
+	box-shadow     : 0 5px 0 #103B51, 0 10px 0 rgba(0,0,0,.2);
+  transform      : translateY(3px);
 }
+.c__seatch_bottom button:active {
+  color               : #ddd;
+	background          : #0c2e3c;
+	box-shadow          : 0 0 0 #103B51, 0 0 0 rgba(0,0,0,.2);
+	transform           : translateY(6px);
+  transition-duration : .1s;
+}
+
 .seatch_block>div{
-  height : 25px;
-  border:solid #ddd 2px;
-  margin-top : 50px;
-  color: #103B51;
-  font-weight: bold;
-  line-height: 25px;
-  padding-left:50px; 
+  height         : 25px;
+  border         :solid #ddd 2px;
+  margin-top     : 50px;
+  color          : #103B51;
+  font-weight    : bold;
+  line-height    : 25px;
+  padding-left   :50px; 
 }
-
 .seatch_block li{
-  margin : 10px;
-  padding: 10px ;
-  border-bottom: solid #103B51 1px;
-  display: flex;
-
+  margin        : 10px;
+  padding       : 10px ;
+  border-bottom : solid #103B51 1px;
+  display       : flex;
 }
 .seatch_block li>div:nth-child(1){
-  width:95px;
-  height: 95px;
+  width    : 95px;
+  height   : 95px;
 }
 .seatch_block li>div:nth-child(1)>img{
-  width:95px;
-  height: 95px;
+  width    : 95px;
+  height   : 95px;
 
 }
 .seatch_block li>div:nth-child(2){
-  width: 600px;
-  height: 95px;
-  padding-left: 10px;
+  width        : 600px;
+  height       : 95px;
+  padding-left : 10px;
 }
 .seatch_block li>div:nth-child(2) h2{
   font-size : 24px;
 }
 
 .seatch_block li>div:nth-child(3){
-  width: 165px;
-  height: 95px;  
+  width    : 165px;
+  height   : 95px;  
 }
 .seatch_block li>div:nth-child(3)>a{
-  display: block;
-	cursor: pointer;
-	max-width: 300px;
-  margin: 20px auto;
+  display        : block;
+	cursor         : pointer;
+	max-width      : 300px;
+  margin         : 20px auto;
   line-height    : 30px;
   text-align     : right; 
-	border-radius: 4px;
-	box-sizing: border-box;
-	color: #fff;
-	text-align: center;
+	border-radius  : 4px;
+	box-sizing     : border-box;
+	color          : #fff;
+	text-align     : center;
 	text-decoration: inherit;
-	background: #ff9900;
-	box-shadow: 0 6px 0 #ff2f00, 0 12px 0 rgba(0,0,0,.2);
-	transition: color .3s, background .3s, box-shadow .3s, transform 0.3s;
+	background     : #ff9900;
+	box-shadow     : 0 6px 0 #ff2f00, 0 12px 0 rgba(0,0,0,.2);
+	transition     : color .3s, background .3s, box-shadow .3s, transform 0.3s;
 }
 .seatch_block li>div:nth-child(3)>a:hover {
-  background: #ffbb55;
-	box-shadow: 0 3px 0 #941c01, 0 6px 0 rgba(0,0,0,.2);
-  transform: translateY(3px);
+  background     : #ffbb55;
+	box-shadow     : 0 3px 0 #941c01, 0 6px 0 rgba(0,0,0,.2);
+  transform      : translateY(3px);
 }
 .seatch_block li>div:nth-child(3)>a:active {
-  color: #ddd;
-	background: #6c2f0f;
-	box-shadow: 0 0 0 #941c01, 0 0 0 rgba(0,0,0,.2);
-	transform: translateY(6px);
-	transition-duration: .1s;}
-/* Mane_Drag_Arrival========================================== */
-/* Mane_Drag_Arrival_History========================================== */
+  color              : #ddd;
+	background         : #6c2f0f;
+	box-shadow         : 0 0 0 #941c01, 0 0 0 rgba(0,0,0,.2);
+	transform          : translateY(6px);
+  transition-duration: .1s;
+}
+
+/* Qr_code========================================== */
+#qr_code{
+  width     : 100%;
+  height    : 450px;
+  margin    : auto;
+}
+#p_main_qr_code {
+  border    : 3px #000 solid;
+  width     : 300px;
+  height    : 300px;
+  margin    : 0 auto; 
+  padding   : 10px;
+}
+#p_main_qr_code > canvas{
+  width     : 300px;
+  height    : 300px;
+}
+#qr_code > aside{
+  margin-top : 20px;
+}
+#qr_code > aside > h2{
+  text-align: center;
+}
+/* Drag_copy========================================== */
+#copy > article {
+  text-align  : center;
+}
+#copy > article > img {
+  margin      : 20px auto; 
+}
+
+/*Copy_date========================================== */
+
+
+
 
 }
 
 
+
+
+/* scanDrug.php========================================== */
+.not-use-img{
+  visibility:hidden;
+}
