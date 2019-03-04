@@ -1,10 +1,9 @@
 
 <?php
-
 //==================================
 
 include "./tpl/header.php";
-include "./tpl/Drag_store_map.php";
+include "./tpl/Qr_code.php";
 include "./tpl/footer.html";
 
 //==================================

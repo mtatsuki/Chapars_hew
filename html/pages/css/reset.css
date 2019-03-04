@@ -57,7 +57,9 @@ a {
     vertical-align:baseline;
     background:transparent;
 }
-
+a:link {
+    text-decoration: none;
+}
 /* change colours to suit your needs */
 ins {
     background-color:#ff9;

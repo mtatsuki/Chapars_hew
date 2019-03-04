@@ -1,6 +1,5 @@
 
 <?php
-
 $jsonUrl = "./tpl/test.json"; //JSONファイルの場所とファイル名を記述
 if(file_exists($jsonUrl)){
   $json = file_get_contents($jsonUrl);
@@ -64,7 +63,7 @@ if(file_exists($jsonUrl)){
 
 include "./tpl/header.php";
 include "./tpl/Drag_list.php";
-include "./tpl/fooder.html";
+include "./tpl/footer.html";
 
 //==================================
 
