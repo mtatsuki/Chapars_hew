@@ -16,7 +16,7 @@ if (!empty($_GET['barcode']) && strpos($_GET['barcode'], ':') !== false) {
 } else {
     $err_msg = "バーコードが読み取られていないか、正しい形式ではありません。";
 }
-echo $err_msg;
+$err_msg;
 //医療品か
 //==================================
 

@@ -16,19 +16,19 @@
                 var paramItem = param[i].split('=');
                 paramArray[paramItem[0]] = paramItem[1];
             }
-            if(paramArray.id>="999999950"&&paramArray.id<="9999999959"){
+            if(paramArray.id>="0"&&paramArray.id<="10"){
               $("#A").css("background","#ff8484"); //IDパラメーターの場所の色を変える
             }
-            else if(paramArray.id>="9999999960"&&paramArray.id<="9999999969"){
+            else if(paramArray.id>="11"&&paramArray.id<="20"){
               $("#B").css("background","#ff8484"); //IDパラメーターの場所の色を変える
             }
-            else if(paramArray.id>="9999999970"&&paramArray.id<="9999999979"){
+            else if(paramArray.id>="21"&&paramArray.id<="30"){
               $("#C").css("background","#ff8484"); //IDパラメーターの場所の色を変える
             }
-            else if(paramArray.id>="9999999980"&&paramArray.id<="9999999989"){
+            else if(paramArray.id>="31"&&paramArray.id<="40"){
               $("#D").css("background","#ff8484"); //IDパラメーターの場所の色を変える
             }
-            else if(paramArray.id>="9999999990"&&paramArray.id<="99999999"){
+            else if(paramArray.id>="41"&&paramArray.id<="50"){
               $("#E").css("background","#ff8484"); //IDパラメーターの場所の色を変える
             }
 

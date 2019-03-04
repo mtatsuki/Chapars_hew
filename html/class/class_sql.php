@@ -33,7 +33,7 @@
             //SQL処理
             //-------------------------------------------------------
             $dbh -> setAttribute(PDO::ATTR_ERRMODE,PDO::ERRMODE_WARNING);                           //エラーレベル設定
-            $sql="SELECT * FROM stocks";                                           //SQL文作成 
+            $sql="SELECT * FROM stocks";                                                            //SQL文作成 
             $stmt = $dbh -> prepare($sql);      
             $stmt -> execute();                                                                     //クエリの実行
             // var_dump($stmt);                                                                     //配列表示(確認のため)
