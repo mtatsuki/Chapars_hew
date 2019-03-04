@@ -1,9 +1,13 @@
+
+  <title>jquery</title>
+</head>
+<body>
 <div class="wrapper">
     <!-- title -->
     <header class="title">
         <h1>お薬検索</h1>
     </header>
-    <form method="post" action="seatch.php"><input type="submit" name="del" value="削除"></form>
+    <!-- <form method="post" action="seatch.php"><input type="submit" name="del" value="削除"></form> -->
     <!-- main -->
     <div class="c__store_main">
         <div id="seatch">
@@ -64,13 +68,12 @@
             </form>
             <div class="seatch_block">  
                 <div>
-                    <h2>検索結果一覧  検索ワード:<?php echo  $name_ans.",".$symptom_ans.",".$company_ans; ?></h2>
+                    <h2>検索結果一覧  検索ワード:<?php //echo  $name_ans.",".$symptom_ans.",".$company_ans; ?></h2>
                 </div>
                 <ul>
                     <?php
                         foreach($datas as $data){
                     ?>
-                    
                     <li>
                         <div>
                             <img src="./image/Drag_search/IJxfad.png" alt="">
@@ -95,7 +98,7 @@
     <!-- nav -->
     <nav class="c__button_list">
         <ul>
-            <li><a href="./seatch.php">お薬検索</a></li>
+            <li><a href="./seatch.php" >お薬検索</a></li>
             <li><a href="./index.php">店内マップ</a></li>
             <li><a href="./list.php">お薬一覧</a></li>
         </ul>

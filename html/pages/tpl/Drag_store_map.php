@@ -1,22 +1,25 @@
-<script type="text/javascript">
-$(function(){
-    let url = document.referrer;                          //遷移元URL取得
-    let urlParam = location.search.substring(1);          //パラメーター取得
-    $("#right_nav >a").css("display","none");             //印刷するボタンを消す
-    if(urlParam) {  //URLにパラメータが存在する場合
-        console.log(url);                                 //遷移元URL取得
-        console.log(urlParam);                            //取得したパラメーターが一行で
-        var param = urlParam.split('&');                  //「&」が含まれている場合は「&」で分割
-        var paramArray = [];                              // パラメーター配列
-        for (i = 0; i < param.length; i++) {              // 用意した配列にパラメータを格納
-            var paramItem = param[i].split('=');
-            paramArray[paramItem[0]] = paramItem[1];
+    <script type="text/javascript">
+    $(function(){
+        let url = document.referrer;                          //遷移元URL取得
+        let urlParam = location.search.substring(1);          //パラメーター取得
+        $("#right_nav >a").css("display","none");             //印刷するボタンを消す
+        if(urlParam) {  //URLにパラメータが存在する場合
+            console.log(url);                                 //遷移元URL取得
+            console.log(urlParam);                            //取得したパラメーターが一行で
+            var param = urlParam.split('&');                  //「&」が含まれている場合は「&」で分割
+            var paramArray = [];                              // パラメーター配列
+            for (i = 0; i < param.length; i++) {              // 用意した配列にパラメータを格納
+                var paramItem = param[i].split('=');
+                paramArray[paramItem[0]] = paramItem[1];
+            }
+            $("#"+paramArray.id).css("background","#ff8484"); //IDパラメーターの場所の色を変える
+            $("#right_nav a").css("display","");              //右の印刷するボタン表示
         }
-        $("#"+paramArray.id).css("background","#ff8484"); //IDパラメーターの場所の色を変える
-        $("#right_nav a").css("display","");              //右の印刷するボタン表示
-    }
-})
-</script>
+    })
+    </script>
+    <title>jquery</title>
+</head>
+<body>
 <div class="wrapper">
     <!-- title -->
     <header class="title">
@@ -198,9 +201,9 @@ $(function(){
     <!-- nav -->
     <nav class="c__button_list">
         <ul>
-            <li><a href="./seatch.php">お薬検索</a></li>
+            <li><a href="./seatch.php" id="puppeteer_login">お薬検索</a></li>
             <li><a href="./index.php">店内マップ</a></li>
-            <li><a href="./list.php">お薬一覧</a></li>
+            <li><a href="./list.php" id="puppeteer_login">お薬一覧</a></li>
         </ul>
     </nav>
 </div>

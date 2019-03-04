@@ -22,9 +22,10 @@
   <link rel="stylesheet" href="./css/reset.css">
   <!-- CSS -->
   <link rel="stylesheet" href="./css/style.css">
-
-  <!-- jqueryバージョン３ -->
-  <script src="./js/jquery3.3.1.min.js"></script>
+ <!-- jqueryバージョン３ -->
+ <script type="text/javascript" src="js/jquery-3.3.1.min.js"></script>
+  <!-- puppteer -->
+  <script type="text/javascript" src="js/js_puppeteer.js"></script>
   <!-- js -->
   <script type="text/javascript"  src="./js/javascript_style.js"></script>
   <!-- qr_code -->
@@ -32,7 +33,7 @@
 
   <script type="text/javascript">
 
-  $(function(){
+$(function(){
     //ナビのアコーディオン（動作確認様）　
     $('section ul').hide();
     $("section h3").click(function(){
@@ -48,15 +49,11 @@
       $(this).next().slideDown(500);		
     });
     $("#store_item_box>ul>li:last-child").click(function(){
-      $("#store_item_box>ul").slideUp(500);		
+      $("#store_item_box>ul").slideUp(500);
     });
-
     $('#p_main_qr_code').qrcode("https://github.com/mtatsuki/Chapars_hew",{text: "size doesn't matter"});
-
   });
-
   </script>
-  <title>jquery</title>
-</head>
-<body>
+
+
   
