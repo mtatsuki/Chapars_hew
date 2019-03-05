@@ -22,11 +22,14 @@
   <link rel="stylesheet" href="./css/reset.css">
   <!-- CSS -->
   <link rel="stylesheet" href="./css/style.css">
+ <!-- jqueryバージョン３ -->
+ <script type="text/javascript" src="js/jquery-3.3.1.min.js"></script>
 
-  <!-- js -->
-  <script type="text/javascript"  src="./js/javascript_style.js"></script>
-  <!-- jqueryバージョン３ -->
-  <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.3.1/jquery.min.js"></script>
+  <!-- puppteer -->
+  <script type="text/javascript" src="js/js_puppeteer.js"></script>
+  <!-- qr_code -->
+  <script type="text/javascript" src="./js/jquery.qrcode.min.js"></script>
+
   <script type="text/javascript">
 
   $(function(){
@@ -35,6 +38,27 @@
     $("#list div").click(function(){
       $(this).next().slideToggle(500);								 
     });
+    //チェックボックスの
+    $('#checkboox ul').hide();
+    $("#checkboox div").click(function(){
+      $(this).next().slideToggle(500);								 
+    });
+      //棚内容の表示
+    $("#store_item_box h2").click(function(){
+      $(this).next().slideDown(500);		
+    });
+    $("#store_item_box>ul>li:last-child").click(function(){
+      $("#store_item_box>ul").slideUp(500);
+    });
+    $('#p_main_qr_code').qrcode("https://github.com/mtatsuki/Chapars_hew",{text: "size doesn't matter"});
+    //設定ボックスの表示
+    $('#ber_line_box >div').hide();
+    $("#ber_line_box> p").click(function(){
+      console.log("設定ボタン");
+      $(this).next().slideToggle(500);								 
+    });
+  });
+  </script>
 
   });
 

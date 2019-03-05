@@ -1,7 +1,237 @@
 
-/* ウィンドウサイズが0px */
-@media screen and (min-width: 0px) {
+  }
+    /* メイン========================================== */
+    .c__store_main{
+      width         : 900px;
+      margin        : 20px auto;
+      height        : 100%;
+      padding-bottom: 100px;
+      margin-bottom : 100px;
+    }
   
+    #store_map{
+      position     : relative;
+    }
+    #store_map img{
+      width        : 900px;
+      margin       : 0px auto;
+    }
+    #store_item_box{
+      width         : 900px;
+      display       : flex;
+      flex-wrap     : wrap;
+    }
+    /*薬品棚*/
+    #store_item_box>h2{
+      width        : 100px;
+      height       : 250px;
+      color        : #fff;
+      text-align   : center;
+      background   : #0c2e3c;
+      position     : absolute;
+    }
+    
+    #store_item_box>h2:nth-of-type(1){
+      top        : 100px;
+      left       : 0;
+    }
+    #store_item_box>h2:nth-of-type(2){
+      top        : 100px;
+      left       : 200px;
+    
+    }
+    #store_item_box>h2:nth-of-type(3){
+      top        : 100px;
+      left       : 400px;
+    
+    }
+    #store_item_box>h2:nth-of-type(4){
+      top        : 100px;
+      right      : 200px;
+    }
+    #store_item_box>h2:nth-of-type(5){
+      top        : 100px;
+      right      : 0;
+    }    
+
+
+
+    /*ボタンを非表示*/
+    form{
+      display: none;
+    }
+}
+/* ウィンドウサイズが0px */
+@media screen and (min-width: 300px) {
+  /* 全体========================================== */
+  .wrapper{
+    position   : relative;
+    width      : 100%;
+    height     : auto !important; /*IE6対策*/
+    height     : 100%; /*IE6対策*/
+    min-height : 100%;
+    margin     : 0 auto;
+  }
+  /* タイトル========================================== */
+  header{
+    width        : 90%;
+    height       : 30px;
+    margin       : 10px auto;
+    background   : #ddd;
+    text-align   : center;
+    line-height  : 30px;
+    border-radius: 20px;
+    font-size    : 20px;
+    color        : #185E89;
+
+  }
+  /* メイン========================================== */
+  #bar_code{
+    width      : 100%;
+    margin     : 10px auto;
+  }
+  /* 一番下以外のcol-md-12 */
+  .col-md-12:not(:last-child){
+    width         : 80%;
+    margin        : 10px auto;
+  }  
+  /*form*/
+  #bar_code>div:nth-child(1)>form{
+    font-size:20px;
+  }
+  /*コード出力*/
+  #bar_code>div:nth-child(1)>form>div>textarea{
+    width  : 100%;
+    height : 30px;
+  }
+  /*ボタン*/
+  #bar_code>div:nth-child(1)>form>button{
+    display        : block;
+    cursor         : pointer;
+    width          : 100%;
+    height         : 50px;
+    margin         : 10px auto 30px;
+    border-radius  : 4px;
+    color          : #fff;
+    text-align     : center;
+    text-decoration: inherit;
+    background     : #29ABE2;
+    box-shadow     : 0 10px 0 #103B51, 0 20px 0 rgba(0,0,0,.2);
+    transition     : color .3s, background .3s, box-shadow .3s, transform 0.3s;
+  }
+  #bar_code>div:nth-child(1)>form>button:hover {
+    background     : #77c2e3;
+    box-shadow     : 0 5px 0 #103B51, 0 10px 0 rgba(0,0,0,.2);
+    transform      : translateY(3px);
+  }
+  #bar_code>div:nth-child(1)>form>button:active {
+    color               : #ddd;
+    background          : #0c2e3c;
+    box-shadow          : 0 0 0 #103B51, 0 0 0 rgba(0,0,0,.2);
+    transform           : translateY(6px);
+    transition-duration : .1s;
+  }
+  #ber_line_box>p{
+    background: #0c2e3c;
+    text-align: center;
+    padding    : 5px 0px;
+    color      : #fff;
+    padding    : auto 0px;
+  }
+  #ber_line_box>p>img{
+    height     : 16px ;
+  }
+  .col-md-12:last-child{
+    width    : 100%;
+    margin   : 0;
+    position : fixed;
+    bottom   : 0;
+  }
+ #ber_line_box> div:nth-child(2){
+   background : #ccc;
+   height     : 300px;
+    display: none;
+  }  
+  #ber_line_box> div:nth-child(2)>p{
+    padding : 7px 20px;
+  }
+  #button_box{
+    display: flex;
+    justify-content: space-between;
+    }
+  #button_box>button{
+    cursor         : pointer;
+    width          : 30%;
+    height         : 50px;
+    margin         : 10px 0px 30px;
+    border-radius  : 30px;
+    color          : #fff;
+    text-align     : center;
+    text-decoration: inherit;
+    background     : #29ABE2;
+    box-shadow     : 0 10px 0 #103B51, 0 20px 0 rgba(0,0,0,.2);
+    transition     : color .3s, background .3s, box-shadow .3s, transform 0.3s;
+
+  }
+  #button_box>button:hover {
+    background     : #77c2e3;
+    box-shadow     : 0 5px 0 #103B51, 0 10px 0 rgba(0,0,0,.2);
+    transform      : translateY(3px);
+  }
+  #button_box>button:active {
+    color               : #ddd;
+    background          : #0c2e3c;
+    box-shadow          : 0 0 0 #103B51, 0 0 0 rgba(0,0,0,.2);
+    transform           : translateY(6px);
+    transition-duration : .1s;
+  }
+  /* セレクトボタン */
+  .cp_ipselect {
+    overflow: hidden;
+    width: 90%;
+    margin: 2em auto;
+    text-align: center;
+  }
+  .cp_ipselect select {
+    width: 100%;
+    padding-right: 1em;
+    cursor: pointer;
+    text-indent: 0.01px;
+    text-overflow: ellipsis;
+    border: none;
+    outline: none;
+    background: transparent;
+    background-image: none;
+    box-shadow: none;
+    -webkit-appearance: none;
+    appearance: none;
+  }
+  .cp_ipselect select::-ms-expand {
+      display: none;
+  }
+  .cp_ipselect.cp_sl04 {
+    position: relative;
+    border-radius: 2px;
+    border: 2px solid #103B51;
+    background: #29ABE2;
+  }
+  .cp_ipselect.cp_sl04::before {
+    position: absolute;
+    top: 0.8em;
+    right: 0.8em;
+    width: 0;
+    height: 0;
+    padding: 0;
+    content: '';
+    border-left: 6px solid transparent;
+    border-right: 6px solid transparent;
+    border-top: 6px solid #103B51;
+    pointer-events: none;
+  }
+  .cp_ipselect.cp_sl04 select {
+    padding: 8px 38px 8px 8px;
+    color: #fff;
+  }
 }
 /* ウィンドウサイズが480px */
 @media screen and (min-width:480px){
@@ -230,69 +460,70 @@
 #seatch{
   position        : relative;
 }
-#seatch table {
+#seatch table{
   border-collapse : collapse;  /* セルの線を重ねる */
-  height          : 150px;
+}
+#seatch table tr{
+  width : 100%;
+  height : 10px;
 }
 
-#seatch th,#seatch td{
-  padding         : 10px 10px;
-  border          : solid #fff 2px;
+/* 検索用インプット設定----------------------------------------*/
+#form_box{
+  position:relative;
+  width:1020px;	
+  margin-bottom:20px;
+}
+#form_box input{
+  width         : 95%;
+  height        : 48px;
+  position      : absolute; 
+  border-radius : 25px;
+  outline       : 0;
+  background    : #eee;
+  font-size     : 20px;
+  border        : none;
+  outline       : none;
+}
+/* 検索ボタン設定---------------------------------------------*/
+#seatch button:nth-of-type(1){/*音声*/
+  height:50px;
+  width:50px;	
+  position:absolute; 
+  right:50px; 
+  top:0;
+  background:#7fbfff;
+  color:#fff;
+  border:none;
+  /* border-radius:0 25px 25px 0; */
+}
+#seatch button:nth-of-type(2){/*検索*/
+  height:50px;
+  width:50px;	
+  position:absolute; 
+  right:0px; 
+  top:0;
+  background:#7fbfff;
+  color:#fff;
+  border:none;
+  border-radius:0 25px 25px 0;
+}
+#seatch button>img{
+  height : 30px;
+}
+#seatch button:hover{
+  background: #103B51;
+}
 
-}
-#seatch td{
-  width       : 350px;
-  padding     : 0px 50px;
-  background  : #bacaff;
-}
-#seatch th{
-  background  : #29ABE2 ;
-  color       :#fff;
-}
-#seatch table input{
-  width       : 100%;
-}
-form{
-  display   :flex;
-}
-.c__seatch_bottom input{
-  display        : block;
-	cursor         : pointer;
-  width          : 200px;
-  height         : 100px;
-  margin         : 13px 50%;
-  font-size      : 30px;
-  line-height    : 100px;
-  text-align     : center;
-	border-radius  : 4px;
-	box-sizing     : border-box;
-	color          : #fff;
-	text-align     : center;
-	text-decoration: inherit;
-	background     : #29ABE2;
-	box-shadow     : 0 10px 0 #103B51, 0 20px 0 rgba(0,0,0,.2);
-	transition     : color .3s, background .3s, box-shadow .3s, transform 0.3s;
-}
-.c__seatch_bottom input:hover {
-  background     : #77c2e3;
-	box-shadow     : 0 5px 0 #103B51, 0 10px 0 rgba(0,0,0,.2);
-  transform      : translateY(3px);
-}
-.c__seatch_bottom input:active {
-  color               : #ddd;
-	background          : #0c2e3c;
-	box-shadow          : 0 0 0 #103B51, 0 0 0 rgba(0,0,0,.2);
-	transform           : translateY(6px);
-  transition-duration : .1s;
-}
+/* 検索結果ブロック------------------------------------------ */
 .seatch_block>div{
   height         : 25px;
-  border         :solid #ddd 2px;
+  border         : solid #ddd 2px;
   margin-top     : 50px;
   color          : #103B51;
   font-weight    : bold;
   line-height    : 25px;
-  padding-left   :50px; 
+  padding-left   : 50px; 
 }
 .seatch_block li{
   margin        : 10px;
@@ -350,8 +581,79 @@ form{
 	transform          : translateY(6px);
   transition-duration: .1s;
 }
-/* Mane_Drag_Arrival========================================== */
-/* Mane_Drag_Arrival_History========================================== */
+
+/* Qr_code========================================== */
+#qr_code{
+  width     : 100%;
+  height    : 450px;
+  margin    : auto;
+}
+#p_main_qr_code {
+  border    : 3px #000 solid;
+  width     : 300px;
+  height    : 300px;
+  margin    : 0 auto; 
+  padding   : 10px;
+}
+#p_main_qr_code > canvas{
+  width     : 300px;
+  height    : 300px;
+}
+#qr_code > aside{
+  margin-top : 20px;
+}
+#qr_code > aside > h2{
+  text-align: center;
+}
+/* Drag_copy========================================== */
+#copy > article {
+  text-align  : center;
+}
+#copy > article > img {
+  margin      : 20px auto; 
+}
+
+/*bar_code========================================== */
+
+/*form*/
+#bar_code>div:nth-child(1)>form{
+  font-size:16px;
+}
+/*コード出力*/
+#bar_code>div:nth-child(1)>form>textarea{
+  margin : 10px;
+  width  : 100%;
+  height : 60px;
+}
+/*ボタン*/
+#bar_code>div:nth-child(1)>form>button{
+  display        : block;
+	cursor         : pointer;
+  width          : 100px;
+  height         : 50px;
+  margin         : 10px;
+	border-radius  : 4px;
+	color          : #fff;
+	text-align     : center;
+	text-decoration: inherit;
+	background     : #29ABE2;
+	box-shadow     : 0 10px 0 #103B51, 0 20px 0 rgba(0,0,0,.2);
+	transition     : color .3s, background .3s, box-shadow .3s, transform 0.3s;
+}
+#bar_code>div:nth-child(1)>form>button:hover {
+  background     : #77c2e3;
+	box-shadow     : 0 5px 0 #103B51, 0 10px 0 rgba(0,0,0,.2);
+  transform      : translateY(3px);
+}
+#bar_code>div:nth-child(1)>form>button:active {
+  color               : #ddd;
+	background          : #0c2e3c;
+	box-shadow          : 0 0 0 #103B51, 0 0 0 rgba(0,0,0,.2);
+	transform           : translateY(6px);
+  transition-duration : .1s;
+}
+
+
 
 }
 

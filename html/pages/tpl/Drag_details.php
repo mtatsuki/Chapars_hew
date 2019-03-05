@@ -6,48 +6,38 @@
     <!-- main -->
     <div class="c__store_main">
         <div id="details">
-            <div class="p__text_title"><p>薬の名前が入る</p></div>
+            <h2><?php echo $class_details ->get_itemName();?></h2>
             <div>
-                <div class="p__main_img"><img src="./image/Drag_search/IJxfad.png" alt="薬の名前が入る"></div>
+                <aside id="right_nav">
+                    <a href="./index.php?id=<?php echo $_GET['id'];?>"><img src="./image/icon/map.png" alt="map_icon"> <span>店内マップで表示</span> </a>
+                    <a href="./copy.php?id=<?php echo $_GET['id'];?>"> <img src="./image/icon/printer.png" alt="printer_icon"> <span>情報を印刷する</span> </a>
+                    <a href="./qr_code.php?id=<?php echo $_GET['id'];?>"> <img src="./image/icon/qr.png" alt="qr_icon"> <span>QRコード作成</span> </a>
+                </aside><!-- aside  right_nav -->
+                <div class="p__main_img"><img src="<?php echo $class_details ->get_mediumImageUrls(); ?>" alt="薬の名前が入る"></div>
                 <div class="p__text_info list_section">
                     <div class="list_h_text">製薬会社</div>
                     <table>
-                        <tr><th>薬品名　　：</th><td>薬品名</td></p></tr>
-                        <tr><th>棚番号　　：</th><td>A-999</td></p></tr>
-                        <tr><th>製品番号　：</th><td>999999X9999</td></p></tr>
-                        <tr><th>制作会社　：</th><td>会社の名前</td></p></tr>
-                        <tr><th>販売会社　：</th><td>会社の名前</td></p></tr>
+                        <tr><th>薬品名　　：</th><td><?php echo $class_details ->get_itemName();?></td></p></tr>
+                        <tr><th>棚番号　　：</th><td></td></p></tr>
+                        <tr><th>製品番号　：</th><td><?php echo $class_details ->get_itemCode();?></td></p></tr>
+                        <tr><th>値段　　　：</th><td><?php echo $class_details ->get_itemPrice();?>円</td></p></tr>
+                        <!-- <tr><th>制作会社　：</th><td>会社の名前</td></p></tr> -->
+                        <!-- <tr><th>販売会社　：</th><td><</td></p></tr> -->
                     </table>
                     
                 </div>
             </div>
-            <div class="p__main_text_info" >
-                <div class="list_section">
-                    <div class="list_h_text">test1</div>
+            <article class="p__main_text_info" >
+                <section class="list_section">
+                <h3 class="list_h_text">test1</h3>
+                <?php foreach ($itemCaption_array as $val) {?>
                     <div>
-                        内容
+                        <p> <?php echo $val;?></p>
+                        
                     </div>
-                </div>
-                <div class="list_section">
-                    <div class="list_h_text">test2</div>
-                    <div>
-                        内容
-                    </div>
-                </div>
-                <div class="list_section">
-                    <div class="list_h_text">test3</div>
-                    <div>
-                        内容
-                    </div>
-                </div>
-                <div class="list_section">
-                    <div class="list_h_text">test4</div>
-                    <div>
-                        内容
-                    </div>
-                </div>
-
-            </div>
+                <?php }  ?>
+                </section><!-- section  test1 -->
+            </article><!-- article  main_text_info -->
         </div>
     </div>
     <!-- nav -->
