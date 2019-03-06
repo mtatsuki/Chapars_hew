@@ -24,16 +24,15 @@
   <link rel="stylesheet" href="./css/style.css">
  <!-- jqueryバージョン３ -->
  <script type="text/javascript" src="js/jquery-3.3.1.min.js"></script>
+
   <!-- puppteer -->
   <script type="text/javascript" src="js/js_puppeteer.js"></script>
-  <!-- js -->
-  <script type="text/javascript"  src="./js/javascript_style.js"></script>
   <!-- qr_code -->
   <script type="text/javascript" src="./js/jquery.qrcode.min.js"></script>
 
   <script type="text/javascript">
 
-$(function(){
+  $(function(){
     //ナビのアコーディオン（動作確認様）　
     $('section ul').hide();
     $("section h3").click(function(){
@@ -52,6 +51,12 @@ $(function(){
       $("#store_item_box>ul").slideUp(500);
     });
     $('#p_main_qr_code').qrcode("https://github.com/mtatsuki/Chapars_hew",{text: "size doesn't matter"});
+    //設定ボックスの表示
+    $('#ber_line_box >div').hide();
+    $("#ber_line_box> p").click(function(){
+      console.log("設定ボタン");
+      $(this).next().slideToggle(500);								 
+    });
   });
   </script>
 
