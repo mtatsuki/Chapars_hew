@@ -15,14 +15,13 @@
     font-size    : 40px;
     color        : #185E89;
 
+  
   }
     /* メイン========================================== */
     .c__store_main{
       width         : 900px;
       margin        : 20px auto;
       height        : 100%;
-      padding-bottom: 100px;
-      margin-bottom : 100px;
     }
   
     #store_map{
@@ -70,13 +69,34 @@
       right      : 0;
     }    
 
-
-
-
+    .list_section>.list_h_text{
+      /* height       : 25px; */
+      border       : solid #ddd 2px;
+      margin-top   : 50px;
+      color        : #103B51;
+      font-weight  : bold;
+      /* line-height  : 25px; */
+      padding-left : 50px; 
+    }
+    
     /*ボタンを非表示*/
     form{
       display: none;
     }
+
+    #copy_main a{
+      display: none;
+    }
+    #copy_main .copy_details th,td{
+      font-size: 20px;
+    }
+    #copy_main .copy_details th{
+      line-height: 2;
+    }
+    #copy_main .copy_details .line_text{
+      margin-bottom: 2px;
+    }
+    
 }
 /* ウィンドウサイズが0px */
 @media screen and (min-width: 0px) {
@@ -110,7 +130,8 @@
   /* タイトル========================================== */
   header{
     width        :900px;
-    height       : 50px;
+    /* height       : 50px; */
+    padding:10px 0px;
     margin       : 20px auto;
     background   : #ddd;
     text-align   : center;
@@ -179,12 +200,12 @@
 }
   /* タイトル========================================== */
   .list_section>.list_h_text{
-  height       : 25px;
+  /* height       : 25px; */
   border       : solid #ddd 2px;
   margin-top   : 50px;
   color        : #103B51;
   font-weight  : bold;
-  line-height  : 25px;
+  /* line-height  : 25px; */
   padding-left : 50px; 
 }
   /* 右の固定ナビゲーション================================ */
@@ -630,11 +651,27 @@ form{
 #copy > article > img {
   margin      : 20px auto; 
 }
+#copy_main .c__store_main{
+  width         : 900px;
+  margin        : 20px auto;
+  height        : 100%;
+  margin-bottom : 30px;
 
-/*Copy_date========================================== */
-
-
-
+}
+#copy_main a img{
+  position: fixed ;
+  bottom:20px;
+  right:20px;
+}
+#copy_main .copy_details th,td{
+  font-size: 20px;
+}
+#copy_main .copy_details th{
+  line-height: 2;
+}
+#copy_main .copy_details .line_text{
+  margin-bottom: 2px;
+}
 
 }
 

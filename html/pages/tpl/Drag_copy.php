@@ -36,10 +36,10 @@
       })
     </script>
 
-  <div class="wrapper">
+  <div class="wrapper" id="copy_main">
     <!-- title -->
     <header class="title">
-        <h1>商品名</h1>
+        <h1>yakkyokumei</h1>
     </header>
     <!-- main -->
     <div class="c__store_main">
@@ -54,4 +54,31 @@
           </article><!-- store_item_box -->
       </div>
     </div>
-        <a href="javascript:void(0)" onclick="window.print();return false;">このページを印刷</a>
+      
+    <div class="copy_details">
+      <table>
+          <tr><th>薬品名　　：</th><td><?php echo $class_details ->get_itemName();?></td></p></tr>
+          <tr><th>棚番号　　：</th><td></td></p></tr>
+          <tr><th>製品番号　：</th><td><?php echo $class_details ->get_itemCode();?></td></p></tr>
+          <tr><th>値段　　　：</th><td><?php echo $class_details ->get_itemPrice();?>円</td></p></tr>
+          <!-- <tr><th>制作会社　：</th><td>会社の名前</td></p></tr> -->
+          <!-- <tr><th>販売会社　：</th><td><</td></p></tr> -->
+      </table>
+      <article class="p_main_text_info" >
+          <section class="list_section">
+          <h3 class="list_h_text">test1</h3>
+          <?php foreach($itemCaption_array as $val){?>
+              <div>
+                  <p class="line_text"> <?php echo $val;?></p>
+                  
+              </div>
+          <?php }  ?>
+          </section><!-- section  test1 -->
+      </article><!-- article  main_text_info -->
+
+
+    </div>
+
+    <a href="javascript:void(0)" onclick="window.print();return false;"><img src="image/icon/printer_2.png"></a>
+
+  </div>   
