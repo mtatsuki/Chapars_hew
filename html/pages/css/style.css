@@ -87,16 +87,21 @@
     #copy_main a{
       display: none;
     }
-    #copy_main .copy_details th,td{
+    #copy_main .copy_details th,
+    #copy_main .copy_details td{
       font-size: 20px;
     }
     #copy_main .copy_details th{
+      width:200px;
       line-height: 2;
     }
     #copy_main .copy_details .line_text{
       margin-bottom: 2px;
     }
-    
+    #copy_main #list_h_text{
+      margin-bottom:30px;
+    }
+      
 }
 /* ウィンドウサイズが0px */
 @media screen and (min-width: 300px) {
@@ -299,11 +304,11 @@
   header{
     width        :900px;
     /* height       : 50px; */
-    padding:10px 0px;
+    padding      : 10px 0px;
     margin       : 20px auto;
     background   : #ddd;
     text-align   : center;
-    line-height  : 50px;
+    /* line-height  : 50px; */
     border-radius: 20px;
     font-size    : 40px;
     color        : #185E89;
@@ -836,14 +841,19 @@
     bottom:20px;
     right:20px;
   }
-  #copy_main .copy_details th,td{
+  #copy_main .copy_details th,
+  #copy_main .copy_details td{
     font-size: 20px;
   }
   #copy_main .copy_details th{
+    width:200px;
     line-height: 2;
   }
   #copy_main .copy_details .line_text{
     margin-bottom: 2px;
+  }
+  #copy_main #list_h_text{
+    margin-bottom:30px;
   }
 
 

@@ -66,7 +66,7 @@
       </table>
       <article class="p_main_text_info" >
           <section class="list_section">
-          <h3 class="list_h_text">test1</h3>
+          <h3  id="list_h_text" class="list_h_text">test1</h3>
           <?php foreach($itemCaption_array as $val){?>
               <div>
                   <p class="line_text"> <?php echo $val;?></p>
