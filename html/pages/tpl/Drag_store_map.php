@@ -40,10 +40,10 @@
                     <li class="list_section">
                         <h4 class="list_h_text">カテゴリA-1</h4>
                         <ul>
-                            <li id="9999999990"><a href="./details.php?id=9999999990">1</a></li>
-                            <li id="9999999991"><a href="./details.php?id=9999999991">2</a></li>
-                            <li id="9999999992"><a href="./details.php?id=9999999992">3</a></li>
-                            <li id="9999999993"><a href="./details.php?id=9999999993">4</a></li>
+                            <li id="1"><a href="./details.php?id=1">1</a></li>
+                            <li id="2"><a href="./details.php?id=2">2</a></li>
+                            <li id="3"><a href="./details.php?id=3">3</a></li>
+                            <li id="4"><a href="./details.php?id=4">4</a></li>
                         </ul>
                     </li>
                     <li class="list_section">
@@ -73,10 +73,10 @@
                     <li class="list_section">
                         <h4 class="list_h_text">カテゴリB-1</h4>
                         <ul>
-                            <li><a href="#">1</a></li>
-                            <li><a href="#">2</a></li>
-                            <li><a href="#">3</a></li>
-                            <li><a href="#">4</a></li>
+                            <li id="5"><a href="./details.php?id=5">5</a></li>
+                            <li id="6"><a href="./details.php?id=6">6</a></li>
+                            <li id="7"><a href="./details.php?id=7">7</a></li>
+                            <li id="8"><a href="./details.php?id=8">8</a></li>
                         </ul>
                     </li>
                     <li class="list_section">
@@ -105,10 +105,10 @@
                     <li class="list_section">
                         <h4 class="list_h_text">カテゴリC-1</h4>
                         <ul>
-                            <li><a href="#">1</a></li>
-                            <li><a href="#">2</a></li>
-                            <li><a href="#">3</a></li>
-                            <li><a href="#">4</a></li>
+                            <li id="9"><a href="./details.php?id=9">9</a></li>
+                            <li id="10"><a href="./details.php?id=10">10</a></li>
+                            <li id="11"><a href="./details.php?id=11">11</a></li>
+                            <li id="12"><a href="./details.php?id=12">12</a></li>
                         </ul>
                     </li>
                     <li class="list_section">
@@ -137,10 +137,10 @@
                     <li class="list_section">
                         <h4 class="list_h_text">カテゴリD-1</h4>
                         <ul>
-                            <li><a href="#">1</a></li>
-                            <li><a href="#">2</a></li>
-                            <li><a href="#">3</a></li>
-                            <li><a href="#">4</a></li>
+                            <li id="13"><a href="./details.php?id=13">13</a></li>
+                            <li id="14"><a href="./details.php?id=14">14</a></li>
+                            <li id="15"><a href="./details.php?id=15">15</a></li>
+                            <li id="16"><a href="./details.php?id=16">16</a></li>
                         </ul>
                     </li>
                     <li class="list_section">
