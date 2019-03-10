@@ -30,7 +30,7 @@ async function screenshot(id){
     await page.goto(url);
     await page.waitForNavigation({waitUntil:'networkidle2', timeout:5000})
               .catch(e => console.log('timeout exceed. proceed to next operation'))
-    await page.screenshot({path: 'testing-blog.png', fullPage:true})
+    await page.screenshot({path: '/html/pages/image/Drag_screen/'+id+'.png', fullPage:true})
     console.log("save screenshot: " + url)
     await browser.close()
 }
