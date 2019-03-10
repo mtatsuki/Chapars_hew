@@ -14,6 +14,22 @@
             }
             $("#"+paramArray.id).css("background","#ff8484"); //IDパラメーターの場所の色を変える
             $("#right_nav a").css("display","");              //右の印刷するボタン表示
+            color=eval(paramArray.id);
+            if(color >= 0 && color <=4){
+                $(" #store_item_box>ul:nth-of-type(1)").css("display","block"); //棚の周りをひからす。
+            }
+            if(color > 4 && color <=8){
+                $(" #store_item_box>ul:nth-of-type(2)").css("display","block"); //棚の周りをひからす。
+            }
+            if(color > 8 && color <=12){
+                $(" #store_item_box>ul:nth-of-type(3)").css("display","block"); //棚の周りをひからす。
+            }
+            if(color > 12 && color <=16){
+                $(" #store_item_box>ul:nth-of-type(4)").css("display","block"); //棚の周りをひからす。
+            }
+            if(color > 16 && color <=20){
+                $(" #store_item_box>ul:nth-of-type(5)").css("display","block"); //棚の周りをひからす。
+            }
         }
     })
     </script>
@@ -34,7 +50,7 @@
             </aside><!-- right_nav -->
             <img src="./image/Drag_list/sample.png" alt="店内マップ">
             <article id="store_item_box">
-                <h2>A</h2>
+                <h2 id="box1">A</h2>
                 <ul>
                     <li><h3>棚番号Aの薬一覧</h3></li>
                     <li class="list_section">
@@ -49,17 +65,17 @@
                     <li class="list_section">
                         <h4 class="list_h_text">カテゴリA-2</h4>
                         <ul>
-                            <li id="9999999981"><a href="./details.php?id=9999999981">1</a></li>
-                            <li id="9999999982"><a href="./details.php?id=9999999982">2</a></li>
-                            <li id="9999999983"><a href="./details.php?id=9999999983">3</a></li>
-                            <li id="9999999984"><a href="./details.php?id=9999999984">4</a></li>
+                            <li><a href="#">1</a></li>
+                            <li><a href="#">2</a></li>
+                            <li><a href="#">3</a></li>
+                            <li><a href="#">4</a></li>
                         </ul>
                     </li>
                     <li class="list_section">
                         <h4 class="list_h_text">カテゴリA-3</h4>
                         <ul>
-                            <li id="9999999971"><a href="./details.php?id=9999999971">1</a></li>
-                            <li id="9999999972"><a href="./details.php?id=9999999972">2</a></li>
+                            <li><a href="#">1</a></li>
+                            <li><a href="#">2</a></li>
                             <li><a href="#">3</a></li>
                             <li><a href="#">4</a></li>
                         </ul>
@@ -67,7 +83,7 @@
 
                     <li>×</li>
                 </ul>
-                <h2>B</h2>
+                <h2 id="box2">B</h2>
                 <ul>
                     <li><h3>棚番号Bの薬一覧</h3></li>
                     <li class="list_section">
@@ -99,7 +115,7 @@
                     </li>
                     <li>×</li>
                 </ul>
-                <h2>C</h2>
+                <h2 id="box3">C</h2>
                 <ul>
                     <li><h3>棚番号Cの薬一覧</h3></li>
                     <li class="list_section">
@@ -131,7 +147,7 @@
                     </li>
                     <li>×</li>
                 </ul>
-                <h2>D</h2>
+                <h2 id="box4">D</h2>
                 <ul>
                     <li><h3>棚番号Dの薬一覧</h3></li>
                     <li class="list_section">
@@ -163,16 +179,16 @@
                     </li>
                     <li>×</li>
                 </ul>
-                <h2>E</h2>
+                <h2 id="box5">E</h2>
                 <ul>
                     <li><h3>棚番号Eの薬一覧</h3></li>
                     <li class="list_section">
                         <h4 class="list_h_text">カテゴリE-1</h4>
                         <ul>
-                            <li><a href="#">1</a></li>
-                            <li><a href="#">2</a></li>
-                            <li><a href="#">3</a></li>
-                            <li><a href="#">4</a></li>
+                            <li id="17"><a href="./details.php?id=17">17</a></li>
+                            <li id="18"><a href="./details.php?id=18">18</a></li>
+                            <li id="19"><a href="./details.php?id=19">19</a></li>
+                            <li id="20"><a href="./details.php?id=20">20</a></li>
                         </ul>
                     </li>
                     <li class="list_section">

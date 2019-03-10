@@ -48,6 +48,8 @@
     $company = "";
     $datas = getdatas($name,$symptom,$company); 
   }
+
+
 //==================================
 
 include "./tpl/header.php";

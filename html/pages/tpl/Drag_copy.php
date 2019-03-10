@@ -16,22 +16,23 @@
                 var paramItem = param[i].split('=');
                 paramArray[paramItem[0]] = paramItem[1];
             }
-            if(paramArray.id>="0"&&paramArray.id<="10"){
-              $("#A").css("background","#ff8484"); //IDパラメーターの場所の色を変える
+            color=eval(paramArray.id);
+            console.log(color);
+            if(color >= 0 && color <=4){
+              $("#a").css("background","#ff8484"); //IDパラメーターの場所の色を変える
             }
-            else if(paramArray.id>="11"&&paramArray.id<="20"){
-              $("#B").css("background","#ff8484"); //IDパラメーターの場所の色を変える
+            if(color > 4 && color <=8){
+              $("#b").css("background","#ff8484"); //IDパラメーターの場所の色を変える
             }
-            else if(paramArray.id>="21"&&paramArray.id<="30"){
-              $("#C").css("background","#ff8484"); //IDパラメーターの場所の色を変える
+            if(color > 8 && color <=12){
+              $("#c").css("background","#ff8484"); //IDパラメーターの場所の色を変える
             }
-            else if(paramArray.id>="31"&&paramArray.id<="40"){
-              $("#D").css("background","#ff8484"); //IDパラメーターの場所の色を変える
+            if(color > 12 && color <=16){
+              $("#d").css("background","#ff8484"); //IDパラメーターの場所の色を変える
             }
-            else if(paramArray.id>="41"&&paramArray.id<="50"){
-              $("#E").css("background","#ff8484"); //IDパラメーターの場所の色を変える
+            if(color > 16 && color <=20){
+              $("#e").css("background","#ff8484"); //IDパラメーターの場所の色を変える
             }
-
         }
       })
     </script>
@@ -46,11 +47,11 @@
       <div id="store_map">
           <img src="./image/Drag_list/sample.png" alt="店内マップ">
           <article id="store_item_box">
-              <h2 id="A">A</h2>
-              <h2 id="B">B</h2>
-              <h2 id="C">C</h2>
-              <h2 id="D">D</h2>
-              <h2 id="E">E</h2>
+              <h2 id="a">A</h2>
+              <h2 id="b">B</h2>
+              <h2 id="c">C</h2>
+              <h2 id="d">D</h2>
+              <h2 id="e">E</h2>
           </article><!-- store_item_box -->
       </div>
     </div>
