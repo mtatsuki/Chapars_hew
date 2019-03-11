@@ -7,7 +7,6 @@ class scrine_image{
                 for($i=0;count($id_array)>$i;$i++){
                     $id_url=$id_url." ".$id_array[$i];
                 }
-                
             $this->image_command($id_url);
         }           
 

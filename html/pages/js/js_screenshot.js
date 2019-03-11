@@ -25,16 +25,37 @@ async function screenshot(id){
     const browser = await puppeteer.launch({headless: false});
     const page = await browser.newPage();
     await page.setViewport({width: 1320, height: 800});
-    const url = 'http://localhost:8888/project_file/chapars/Chapars_hew/html/pages/copy.php?id='+id
+    const url = 'http://localhost:8888/project_file/chapars/Chapars_hew/html/pages/copy.php?id='+id;
     await page.goto(url);
-    await page.waitForNavigation({waitUntil:'networkidle2', timeout:5000})
-              .catch(e => console.log('timeout exceed. proceed to next operation'))
-    await page.screenshot({path: '/works/project_file/chapars/Chapars_hew/html/pages/image/Drag_screen/'+id+'.png', fullPage:true})
-    console.log("save screenshot: " + url)
-    await browser.close()
+    await page.waitForNavigation({waitUntil:'networkidle2', timeout:5000}).catch(e => console.log('timeout exceed. proceed to next operation'));
+    await page.screenshot({path: '/works/project_file/chapars/Chapars_hew/html/pages/image/Drag_screen/'+id+'.png', fullPage:true});
+    console.log("save screenshot: " + url);
+    await browser.close();
 }
-for(var i = 0;i < process.argv.length; i++){
-    if (i  > 1) {
-        screenshot(process.argv[i]);
-      } 
-  }
+
+
+
+
+
+const exec = require('child_process').exec;
+
+const command = command_url;
+    exec(command, function(err, stdout, stderr) {
+        if (err) return console.error('実行エラー ${command}');
+
+        stdout = stdout.toString(); // バッファを文字列に変換
+        console.log(stdout);
+
+        stderr = stderr.toString();
+        if (stderr !== '') {
+            console.error('error');
+            console.error(stderr);
+        }
+
+
+        for(var i = 0;i < process.argv.length; i++){
+            if (i  > 1) {
+                screenshot(process.argv[i]);
+            } 
+        }
+    });
