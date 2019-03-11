@@ -13,8 +13,5 @@
     "config": "^3.0.1",
     "express": "^4.16.4",
     "puppeteer": "^1.12.2"
-  },
-  "scripts": {
-    "start": "node ./html/pages/js/js_puppeteer.js"
   }
 }
