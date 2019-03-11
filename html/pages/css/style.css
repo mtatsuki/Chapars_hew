@@ -626,7 +626,9 @@
     display    : inline-block; 
   }
   #details > div:nth-child(2) > div.p__main_img > img{
-    height : 300px;
+    max-height : 300px;
+    max-width   : 300px;
+    min-width : 300px;
   }
   /*薬品の説明概要覧-----------------------------------------*/
   #details article.p__main_text_info > section.list_section > div:nth-child(2){
