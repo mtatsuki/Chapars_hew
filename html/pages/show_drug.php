@@ -10,7 +10,7 @@ if (empty($_GET['barcode'])) {
 }
 
 $barcode = $_GET['barcode'];
-$rakuten_result = getRakutenResult($barcode, 'https://app.rakuten.co.jp/services/api/IchibaItem/Search/20170706', 'keyword');
+$rakuten_result = getRakutenResult($barcode, 'https://app.rakuten.co.jp/services/api/IchibaItem/search/20170706', 'keyword');
 
 if (isset($rakuten_result)) {
     $result_item = current($rakuten_result->Items)->Item;

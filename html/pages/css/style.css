@@ -608,14 +608,14 @@ border-top   : 1px dashed #fff;
   padding       : 10px;
 
 }
-/* Drag_seatch========================================== */
-#seatch{
+/* Drag_search========================================== */
+#search{
   position        : relative;
 }
-#seatch table{
+#search table{
   border-collapse : collapse;  /* セルの線を重ねる */
 }
-#seatch table tr{
+#search table tr{
   width : 100%;
   height : 10px;
 }
@@ -638,7 +638,7 @@ border-top   : 1px dashed #fff;
   outline       : none;
 }
 /* 検索ボタン設定---------------------------------------------*/
-#seatch button:nth-of-type(1){/*音声*/
+#search button:nth-of-type(1){/*音声*/
   height:50px;
   width:50px;	
   position:absolute; 
@@ -649,7 +649,7 @@ border-top   : 1px dashed #fff;
   border:none;
   /* border-radius:0 25px 25px 0; */
 }
-#seatch button:nth-of-type(2){/*検索*/
+#search button:nth-of-type(2){/*検索*/
   height:50px;
   width:50px;	
   position:absolute; 
@@ -660,15 +660,15 @@ border-top   : 1px dashed #fff;
   border:none;
   border-radius:0 25px 25px 0;
 }
-#seatch button>img{
+#search button>img{
   height : 30px;
 }
-#seatch button:hover{
+#search button:hover{
   background: #103B51;
 }
 
 /* 検索結果ブロック------------------------------------------ */
-.seatch_block>div{
+.search_block>div{
   height         : 25px;
   border         : solid #ddd 2px;
   margin-top     : 50px;
@@ -677,35 +677,35 @@ border-top   : 1px dashed #fff;
   line-height    : 25px;
   padding-left   : 50px; 
 }
-.seatch_block li{
+.search_block li{
   margin        : 10px;
   padding       : 10px ;
   border-bottom : solid #103B51 1px;
   display       : flex;
 }
-.seatch_block li>div:nth-child(1){
+.search_block li>div:nth-child(1){
   width    : 95px;
   height   : 95px;
 }
-.seatch_block li>div:nth-child(1)>img{
+.search_block li>div:nth-child(1)>img{
   width    : 95px;
   height   : 95px;
 
 }
-.seatch_block li>div:nth-child(2){
+.search_block li>div:nth-child(2){
   width        : 600px;
   height       : 95px;
   padding-left : 10px;
 }
-.seatch_block li>div:nth-child(2) h2{
+.search_block li>div:nth-child(2) h2{
   font-size : 24px;
 }
 
-.seatch_block li>div:nth-child(3){
+.search_block li>div:nth-child(3){
   width    : 165px;
   height   : 95px;  
 }
-.seatch_block li>div:nth-child(3)>a{
+.search_block li>div:nth-child(3)>a{
   display        : block;
 	cursor         : pointer;
 	max-width      : 300px;
@@ -721,12 +721,12 @@ border-top   : 1px dashed #fff;
 	box-shadow     : 0 6px 0 #ff2f00, 0 12px 0 rgba(0,0,0,.2);
 	transition     : color .3s, background .3s, box-shadow .3s, transform 0.3s;
 }
-.seatch_block li>div:nth-child(3)>a:hover {
+.search_block li>div:nth-child(3)>a:hover {
   background     : #ffbb55;
 	box-shadow     : 0 3px 0 #941c01, 0 6px 0 rgba(0,0,0,.2);
   transform      : translateY(3px);
 }
-.seatch_block li>div:nth-child(3)>a:active {
+.search_block li>div:nth-child(3)>a:active {
   color              : #ddd;
 	background         : #6c2f0f;
 	box-shadow         : 0 0 0 #941c01, 0 0 0 rgba(0,0,0,.2);
