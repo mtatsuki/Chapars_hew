@@ -22,14 +22,14 @@ const puppeteer = require('puppeteer');
 //=========================== 
 //ログインとダウンロード関数
 //=========================== 
-async function downloads(){
+async function downloads() {
 
-    const browser = await puppeteer.launch({headless:false});
+    const browser = await puppeteer.launch({ headless: false });
     //--------------------------------------------------
     //新タブを作る
     //--------------------------------------------------
     const page = await browser.newPage();
-    
+
     // ページの大きさ定義
     await page.setViewport({ width: 1024, height: 768 });
 

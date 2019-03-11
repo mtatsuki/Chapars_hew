@@ -1,4 +1,5 @@
-/node_modules
-conf.php
-package.json
+node_modules
+/conf.php
+/package.json
 .gitignore
+/MeCab
