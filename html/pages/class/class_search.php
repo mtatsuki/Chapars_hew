@@ -22,7 +22,6 @@ class search
       
         $i = 0; //最後を判断する用の変数
         while ($row = $stmt -> fetch(PDO::FETCH_ASSOC)) {
-            $cnt = count($row["id"]);
             $data["id"] = $row["id"];
             $data["itemName"] = $row["itemName"];
             $data["smallImageUrls"] = $row["smallImageUrls"];
