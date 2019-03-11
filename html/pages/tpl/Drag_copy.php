@@ -40,7 +40,7 @@
   <div class="wrapper" id="copy_main">
     <!-- title -->
     <header class="title">
-        <h1>yakkyokumei</h1>
+        <h1>HAL薬局</h1>
     </header>
     <!-- main -->
     <div class="c__store_main">
@@ -67,7 +67,9 @@
       </table>
       <article class="p_main_text_info" >
           <section class="list_section">
-          <h3  id="list_h_text" class="list_h_text">test1</h3>
+          <h3 class="list_h_text">薬品情報</h3>
+          <div></div>
+
           <?php foreach($itemCaption_array as $val){?>
               <div>
                   <p class="line_text"> <?php echo $val;?></p>

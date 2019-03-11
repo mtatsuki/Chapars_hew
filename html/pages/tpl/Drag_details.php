@@ -32,11 +32,11 @@
             </div>
             <article class="p__main_text_info" >
                 <section class="list_section">
-                <h3 class="list_h_text">test1</h3>
+                <h3 class="list_h_text">薬品情報</h3>
+                <div ></div>
                 <?php foreach($itemCaption_array as $val){?>
                     <div>
                         <p> <?php echo $val;?></p>
-                        
                     </div>
                 <?php }  ?>
                 </section><!-- section  test1 -->
