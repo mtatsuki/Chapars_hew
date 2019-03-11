@@ -15,7 +15,8 @@ class search
               charset=utf8";
         $dbh = new PDO($dsn, DB_USER, DB_PASS);
 
-        $stmt = $dbh -> prepare("SELECT id,itemName,smallImageUrls FROM stocks WHERE itemName LIKE '%".$search."%'");
+        $stmt = $dbh -> prepare("SELECT id,itemName,smallImageUrls FROM stocks WHERE itemName LIKE :search");
+        $stmt -> bindValue(':search','%'.$search.'%');
         $stmt -> execute();
         $data = array();
         $datas = array();
@@ -30,7 +31,8 @@ class search
             $data["hit_flg"] = 1;
             $datas = $data;
         }
-        $stmt2 = $dbh -> prepare("SELECT id,itemName,smallImageUrls FROM stocks WHERE itemCaption LIKE '%".$search."%'");
+        $stmt2 = $dbh -> prepare("SELECT id,itemName,smallImageUrls FROM stocks WHERE itemCaption LIKE :search");
+        $stmt2 -> bindValue(':search','%'.$search.'%');
         $stmt2 -> execute();
         $data = array();
         $datas = array();
