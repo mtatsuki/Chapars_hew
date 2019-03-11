@@ -15,6 +15,6 @@
     "puppeteer": "^1.12.2"
   },
   "scripts": {
-    "start": "node /Applications/MAMP/htdocs/Chapars_hew/html/pages/js/js_puppeteer.js"
+    "start": "node ./html/pages/js/js_puppeteer.js"
   }
 }
