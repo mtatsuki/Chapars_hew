@@ -29,7 +29,6 @@ foreach ($products as $product) {
             '".$result_item->smallImageUrls[0]->imageUrl."',
             '".$result_item->mediumImageUrls[0]->imageUrl."'
         )";
-        echo $sql;
         $stm = db_prepare($pdo, $sql);
         db_execute($stm);
     }
