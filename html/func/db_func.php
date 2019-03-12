@@ -10,7 +10,7 @@ function db_prepare($pdo, $sql)
     $stm = $pdo -> prepare($sql);
     return $stm;
 }
-function db_execute($stm, $itemCode)
+function db_execute($stm)
 {
-    $stm ->execute($itemCode);
+    $stm ->execute();
 }
