@@ -3,22 +3,19 @@
   </head>
   <script>
     $(function() {
-                // const exec = require('child_process').exec;
+    $.getJSON("./json/id_array.json" , function(data) {
+        var ulObj = $("#demo")
+        var length = Object.keys(data).length;
+        // console.log(length); 要素個数
+        // const require = require('require');
+        command_url="node /works/project_file/chapars/Chapars_hew/html/pages/js/js_screenshot.js";
+        for(var i = 0; i < length; i++) {
+            command_url=command_url+" "+data[i];
+        }
+        ulObj.append($("<p>").text(command_url));
 
-                //     const command = command_url;
-                //     exec(command, function(err, stdout, stderr) {
-                //     if (err) return console.error('実行エラー ${command}');
-
-                //     stdout = stdout.toString(); // バッファを文字列に変換
-                //     console.log(stdout);
-
-                //     stderr = stderr.toString();
-                //         if (stderr !== '') {
-                //             console.error('error');
-                //             console.error(stderr);
-                //         }
-                //     });
-
+        });
+        
     });
 
   </script>
