@@ -1,8 +1,3 @@
-<<<<<<< .merge_file_ToWTzM
-/node_modules
-conf.php
-/package.json
-=======
 node_modules
 /conf.php
 /package.json
@@ -10,4 +5,3 @@ node_modules
 /MeCab
 
 /vendor/
->>>>>>> .merge_file_BywIO4
