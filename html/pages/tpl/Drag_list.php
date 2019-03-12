@@ -1,334 +1,42 @@
+
+  <title>jquery</title>
+</head>
+<body>
 <div class="wrapper">
     <!-- title -->
-    <div class="title">
+    <header>
         <h1>お薬一覧</h1>
-    </div>
+    </header>
     <!-- main -->
     <div class="c__store_main">
-        <div id="list" class="list_section">
-            <div class="list_h_text">
-                <p>解熱鎮痛剤</p>
-            </div>
-            <ul>
-                <?php foreach ($drag0 as $value) {?>
-                <li>
-                    <div>
-                        <img src="./image/Drag_search/<?php echo $value["image"][0];?>" alt="">
-                    </div>
-                    <div>
-                        <h2><?php echo $value["name"]; ?></h2>
-                        <p><?php  ?></p>
-                    </div>
-                    <div>
-                        <a href="./details.php?id=<?php echo $value["code"];?>">詳しくはこちら</a>
-                    </div>
-
-                </li>
-                <?php } ?>
-            </ul>
-            <div class="list_h_text">
-                <p>総合感冒薬</p>
-            </div>
-            <ul>
-            <?php foreach ($drag1 as $value) {?>
-                <li>
-                    <div>
-                        <img src="./image/Drag_search/<?php echo $value["image"][0];?>" alt="">
-                    </div>
-                    <div>
-                        <h2><?php echo $value["name"]; ?></h2>
-                        <p><?php  ?></p>
-                    </div>
-                    <div>
-                        <a href="./details.php?id=<?php echo $value["code"];?>">詳しくはこちら</a>
-                    </div>
-
-                </li>
-                <?php } ?>            </ul>
-            <div class="list_h_text">
-                <p>鎮咳去痰薬</p>
-            </div>
-            <ul>
-            <?php foreach ($drag2 as $value) {?>
-                <li>
-                    <div>
-                        <img src="./image/Drag_search/<?php echo $value["image"][0];?>" alt="">
-                    </div>
-                    <div>
-                        <h2><?php echo $value["name"]; ?></h2>
-                        <p><?php  ?></p>
-                    </div>
-                    <div>
-                        <a href="./details.php?id=<?php echo $value["code"];?>">詳しくはこちら</a>
-                    </div>
-
-                </li>
-                <?php } ?>
-            </ul>
-            <div class="list_h_text">
-                <p>解鼻炎用薬</p>
-            </div>
-            <ul>
-            <?php foreach ($drag3 as $value) {?>
-                <li>
-                    <div>
-                        <img src="./image/Drag_search/<?php echo $value["image"][0];?>" alt="">
-                    </div>
-                    <div>
-                        <h2><?php echo $value["name"]; ?></h2>
-                        <p><?php  ?></p>
-                    </div>
-                    <div>
-                        <a href="./details.php?id=<?php echo $value["code"];?>">詳しくはこちら</a>
-                    </div>
-
-                </li>
-                <?php } ?> 
-           </ul>
-            <div class="list_h_text">
-                <p>解胃腸薬</p>
-            </div>
-            <ul>
-            <?php foreach ($drag4 as $value) {?>
-                <li>
-                    <div>
-                        <img src="./image/Drag_search/<?php echo $value["image"][0];?>" alt="">
-                    </div>
-                    <div>
-                        <h2><?php echo $value["name"]; ?></h2>
-                        <p><?php  ?></p>
-                    </div>
-                    <div>
-                        <a href="./details.php?id=<?php echo $value["code"];?>">詳しくはこちら</a>
-                    </div>
-
-                </li>
-                <?php } ?>            </ul>
-
-            <div class="list_h_text">
-                <p>下痢止め・整腸剤</p>
-            </div>
-            <ul>
-            <?php foreach ($drag5 as $value) {?>
-                <li>
-                    <div>
-                        <img src="./image/Drag_search/<?php echo $value["image"][0];?>" alt="">
-                    </div>
-                    <div>
-                        <h2><?php echo $value["name"]; ?></h2>
-                        <p><?php  ?></p>
-                    </div>
-                    <div>
-                        <a href="./details.php?id=<?php echo $value["code"];?>">詳しくはこちら</a>
-                    </div>
-
-                </li>
-                <?php } ?>            </ul>
-
-            <div class="list_h_text">
-                <p>便秘薬</p>
-            </div>
-            <ul>
-            <?php foreach ($drag6 as $value) {?>
-                <li>
-                    <div>
-                        <img src="./image/Drag_search/<?php echo $value["image"][0];?>" alt="">
-                    </div>
-                    <div>
-                        <h2><?php echo $value["name"]; ?></h2>
-                        <p><?php  ?></p>
-                    </div>
-                    <div>
-                        <a href="./details.php?id=<?php echo $value["code"];?>">詳しくはこちら</a>
-                    </div>
-
-                </li>
-                <?php } ?>            </ul>
-
-            <div class="list_h_text">
-                <p>痔疾用薬</p>
-            </div>
-            <ul>
-            <?php foreach ($drag7 as $value) {?>
-                <li>
-                    <div>
-                        <img src="./image/Drag_search/<?php echo $value["image"][0];?>" alt="">
-                    </div>
-                    <div>
-                        <h2><?php echo $value["name"]; ?></h2>
-                        <p><?php  ?></p>
-                    </div>
-                    <div>
-                        <a href="./details.php?id=<?php echo $value["code"];?>">詳しくはこちら</a>
-                    </div>
-
-                </li>
-                <?php } ?>
-            </ul>
-
-            <div class="list_h_text">
-                <p>乗り物酔い薬</p>
-            </div>
-            <ul>
-            <?php foreach ($drag8 as $value) {?>
-                <li>
-                    <div>
-                        <img src="./image/Drag_search/<?php echo $value["image"][0];?>" alt="">
-                    </div>
-                    <div>
-                        <h2><?php echo $value["name"]; ?></h2>
-                        <p><?php  ?></p>
-                    </div>
-                    <div>
-                        <a href="./details.php?id=<?php echo $value["code"];?>">詳しくはこちら</a>
-                    </div>
-
-                </li>
-                <?php } ?>            </ul>
-            <div class="list_h_text">
-                <p>目薬</p>
-            </div>
-            <ul>
-            <?php foreach ($drag9 as $value) {?>
-                <li>
-                    <div>
-                        <img src="./image/Drag_search/<?php echo $value["image"][0];?>" alt="">
-                    </div>
-                    <div>
-                        <h2><?php echo $value["name"]; ?></h2>
-                        <p><?php  ?></p>
-                    </div>
-                    <div>
-                        <a href="./details.php?id=<?php echo $value["code"];?>">詳しくはこちら</a>
-                    </div>
-
-                </li>
-                <?php } ?>            </ul>
-            <div class="list_h_text">
-                <p>口内炎・口唇ヘルパス</p>
-            </div>
-            <ul>
-            <?php foreach ($drag10 as $value) {?>
-                <li>
-                    <div>
-                        <img src="./image/Drag_search/<?php echo $value["image"][0];?>" alt="">
-                    </div>
-                    <div>
-                        <h2><?php echo $value["name"]; ?></h2>
-                        <p><?php  ?></p>
-                    </div>
-                    <div>
-                        <a href="./details.php?id=<?php echo $value["code"];?>">詳しくはこちら</a>
-                    </div>
-
-                </li>
-                <?php } ?>            </ul>
-
-            <div class="list_h_text">
-                <p>皮膚炎</p>
-            </div>
-            <ul>
-            <?php foreach ($drag11 as $value) {?>
-                <li>
-                    <div>
-                        <img src="./image/Drag_search/<?php echo $value["image"][0];?>" alt="">
-                    </div>
-                    <div>
-                        <h2><?php echo $value["name"]; ?></h2>
-                        <p><?php  ?></p>
-                    </div>
-                    <div>
-                        <a href="./details.php?id=<?php echo $value["code"];?>">詳しくはこちら</a>
-                    </div>
-
-                </li>
-                <?php } ?>            </ul>
-
-            <div class="list_h_text">
-                <p>傷創・消毒薬</p>
-            </div>
-            <ul>
-            <?php foreach ($drag12 as $value) {?>
-                <li>
-                    <div>
-                        <img src="./image/Drag_search/<?php echo $value["image"][0];?>" alt="">
-                    </div>
-                    <div>
-                        <h2><?php echo $value["name"]; ?></h2>
-                        <p><?php  ?></p>
-                    </div>
-                    <div>
-                        <a href="./details.php?id=<?php echo $value["code"];?>">詳しくはこちら</a>
-                    </div>
-
-                </li>
-                <?php } ?>            </ul>
-
-            <div class="list_h_text">
-                <p>筋肉痛・捻挫・関節痛薬</p>
-            </div>
-            <ul>
-            <?php foreach ($drag13 as $value) {?>
-                <li>
-                    <div>
-                        <img src="./image/Drag_search/<?php echo $value["image"][0];?>" alt="">
-                    </div>
-                    <div>
-                        <h2><?php echo $value["name"]; ?></h2>
-                        <p><?php  ?></p>
-                    </div>
-                    <div>
-                        <a href="./details.php?id=<?php echo $value["code"];?>">詳しくはこちら</a>
-                    </div>
-
-                </li>
-                <?php } ?>            </ul>
-            <div class="list_h_text">
-                <p>ドリンク・ビタミン剤</p>
-            </div>
-            <ul>
-            <?php foreach ($drag14 as $value) {?>
-                <li>
-                    <div>
-                        <img src="./image/Drag_search/<?php echo $value["image"][0];?>" alt="">
-                    </div>
-                    <div>
-                        <h2><?php echo $value["name"]; ?></h2>
-                        <p><?php  ?></p>
-                    </div>
-                    <div>
-                        <a href="./details.php?id=<?php echo $value["code"];?>">詳しくはこちら</a>
-                    </div>
-                </li>
-                <?php } ?>           
-            </ul>
-            <div class="list_h_text">
-                <p>その他</p>
-            </div>
-            <ul>
-            <?php foreach ($drag15 as $value) {?>
-                <li>
-                    <div>
-                        <img src="./image/Drag_search/<?php echo $value["image"][0];?>" alt="">
-                    </div>
-                    <div>
-                        <h2><?php echo $value["name"]; ?></h2>
-                        <p><?php  ?></p>
-                    </div>
-                    <div>
-                        <a href="./details.php?id=<?php echo $value["code"];?>">詳しくはこちら</a>
-                    </div>
-                </li>
-                <?php } ?> 
-            </ul>
-        </div>
+        <article id="list" >
+            <h2>※項目をクリックすると綱目にあう薬が表示されます。</h2>
+            <?php foreach($datas as $key => $data){ ?>
+            <section class="list_section">
+                <h3 class="list_h_text"><?php echo $key; ?></h3>
+                <ul>
+                    <li>
+                        <div>
+                            <img src="<?php echo $data["smallImageUrls"]; ?>" alt="">
+                        </div>
+                        <div>
+                            <h4><?php echo $data["itemName"]; ?></h4>
+                        </div>
+                        <div>
+                            <a href="./details.php?id=<?php echo $data["id"];?>">詳しくはこちら</a>
+                        </div>
+                    </li>
+                </ul>
+            </section>
+            <?php } ?>
+        </article>
     </div>
     <!-- nav -->
-    <div class="c__button_list">
+    <nav class="c__button_list">
         <ul>
-            <li><a href="./seatch.php">お薬検索</a></li>
+            <li id="puppeteer_login"><a href="./search.php" >お薬検索</a></li>
             <li><a href="./index.php">店内マップ</a></li>
-            <li><a href="./list.php">お薬一覧</a></li>
+            <li id="puppeteer_login"><a href="./list.php" >お薬一覧</a></li>
         </ul>
-    </div>
+    </nav>
 </div>

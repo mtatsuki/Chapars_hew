@@ -1,3 +1,11 @@
+<<<<<<< HEAD
 /node_modules
 config.php
 sample/
+=======
+node_modules
+/conf.php
+/package.json
+.gitignore
+/MeCab
+>>>>>>> c8ced241f8941b6bb7381a63d65aea614f4f03e1
