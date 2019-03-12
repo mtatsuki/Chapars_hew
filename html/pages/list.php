@@ -7,21 +7,22 @@
   $cates = getcatename(); //カテゴリー名のみを取ってくる
   require_once "./func/getcate.php";  //DBから検索する関数を呼び出す
   $getdata = array();
-  for($cnt = 0;$cnt < count($cates);$cnt++){
+for ($cnt = 0; $cnt < count($cates); $cnt++) {
     $getdata[] = getcate($cates[$cnt]); //カテゴリー取得
-  }
+}
+
   require_once "./func/getproduct.php";  //DBから検索する関数を呼び出す
   $getproducts = array();
-  for($cnt = 0;$cnt < count($getdata);$cnt++){
+for ($cnt = 0; $cnt < count($getdata); $cnt++) {
     $getproducts[] = getproduct($getdata[$cnt]); //商品取得
-  }
+}
 
   $datas = array();
-  for($i = 0;$i < count($getdata);$i++){
-    for($j = 0;$j < $getproducts[$i]["cnt"];$j++){
-      $datas[$cates[$i]]["id"] = $getproducts[$i]["id"];
-      $datas[$cates[$i]]["itemName"] = $getproducts[$i]["itemName"];
-      $datas[$cates[$i]]["smallImageUrls"] = $getproducts[$i]["smallImageUrls"];
+for ($i = 0; $i < count($getdata); $i++) {
+    for ($j = 0; $j < $getproducts[$i]["cnt"]; $j++) {
+        $datas[$cates[$i]]["id"] = $getproducts[$i]["id"];
+        $datas[$cates[$i]]["itemName"] = $getproducts[$i]["itemName"];
+        $datas[$cates[$i]]["smallImageUrls"] = $getproducts[$i]["smallImageUrls"];
     }
   }
   var_dump($datas);
@@ -83,7 +84,7 @@
 //         break;
 //     }
 //   }
-// }  
+// }
 //==================================
 
 include "./tpl/header.php";
@@ -91,5 +92,3 @@ include "./tpl/Drag_list.php";
 include "./tpl/footer.html";
 
 //==================================
-
-?>
