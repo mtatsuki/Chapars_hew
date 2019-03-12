@@ -19,7 +19,7 @@
 
   include "./tpl/header.php";
   include "./tpl/index.php";
-  include "./tpl/fooder.html";
+  include "./tpl/footer.html";
 
   //==================================
 
