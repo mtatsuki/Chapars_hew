@@ -1,6 +1,7 @@
-/node_modules
-conf.php
-<<<<<<< HEAD
-=======
+node_modules
+/conf.php
 /package.json
->>>>>>> dev
+.gitignore
+/MeCab
+
+/vendor/
