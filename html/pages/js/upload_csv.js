@@ -22,7 +22,7 @@ const puppeteer = require('puppeteer');
 //=========================== 
 //ログインとダウンロード関数
 //=========================== 
-async function downloads() {
+async function creates() {
 
     const browser = await puppeteer.launch({ headless: false });
     //--------------------------------------------------
@@ -85,20 +85,23 @@ async function downloads() {
         '#Product > div.layout > div.body-super-container > div.body-container > div > div.contents-nav > div:nth-child(1) > a.btn.btn-default.btn-file-up.tt'
     );
     await page.waitFor(3000);
+
+    page.on('dialog', async dialog => {
+        dialog.accept(); // OK
+    });
     //--------------------------------------------------
     //ファイルアップロード
     //--------------------------------------------------
-    var filePath = '/icon.jpg';
+    var filePath = '../csv/商品データ(20190312130225).csv';
     console.log("filePath:" + filePath);
-    var inputfileup = await page.$('#ent_img_file1');
+    var inputfileup = await page.$('#ProductUpload > div.layout > div.body-super-container > div.body-container > div > div.form-horizontal > form > div.section.form-section > div:nth-child(3) > div.fg-value > input[type="file"]');
     await inputfileup.uploadFile(filePath);
     await page.waitFor(2000);
-    await page.screenshot({ path: 'images/blog_edit.png' });
     //--------------------------------------------------
     //CSVダウンロードボタン
     //--------------------------------------------------
     await page.click(
-        '#id_csv_download_button'
+        '#ProductUpload > div.layout > div.body-super-container > div.body-container > div > div.form-horizontal > form > div.section.submit-section > div > input.btn.btn-m.btn-primary.btn-action-upload'
     );
     await page.waitFor(3000);
     //--------------------------------------------------
@@ -107,5 +110,5 @@ async function downloads() {
     await browser.close();
 
 }//downloads
-downloads();
+creates();
 
