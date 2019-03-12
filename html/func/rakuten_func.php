@@ -6,7 +6,7 @@ function getRakutenResult($keyword, $base_url, $search_type)
     $params = array();
     $params['format'] = 'json';
     $params[$params_type] = urlencode_rfc3986($keyword); // 任意のキーワード。※文字コードは UTF-8
-    $params['applicationId'] = '1081503638167697244'; // アプリID
+    $params['applicationId'] = '1069000170280582227'; // アプリID
     $canonical_string='';
 
     foreach ($params as $k => $v) {

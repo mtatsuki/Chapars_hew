@@ -88,9 +88,9 @@ async function downloads() {
     //--------------------------------------------------
     //CSVダウンロードボタン
     //--------------------------------------------------
-    await page.click(
-        '#id_csv_download_button'
-    );
+    const reportLink = await page.$('#id_csv_download_button');
+    await page._client.send('Page.setDownloadBehavior', { behavior: 'allow', downloadPath: './html/pages/csv' });
+    await reportLink.click({ clickCount: 1, delay: 100 });
     await page.waitFor(3000);
     //--------------------------------------------------
     // ブラウザーを閉じる
