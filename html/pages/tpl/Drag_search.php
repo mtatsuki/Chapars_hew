@@ -1,6 +1,23 @@
 
   <title>jquery</title>
 </head>
+<script>
+// window.SpeechRecognition = window.SpeechRecognition || webkitSpeechRecognition;
+// var recognition = new webkitSpeechRecognition();
+// recognition.lang = 'ja';
+
+// // 録音終了時トリガー
+// recognition.addEventListener('result', function(event){
+//     var text = event.results.item(0).item(0).transcript;
+//     $("#result_text").val(text);
+// }, false);
+
+// // 録音開始
+// function record()
+// {
+//     recognition.start();
+// }
+</script>
 <body>
 <div class="wrapper">
     <!-- title -->
@@ -14,17 +31,14 @@
                 <table>
                     <tr>
                         <td id="form_box">
-                            <input id="name_search" type="text" name="name" value="<?php echo $name; ?>" placeholder="  検索ワードを入力" >
-                            <button id="recBtn" name="voice_sound_search"><img src="./image/icon/maic.png" alt="map_icon"></button>
+                            <input id="name_search result_text" type="text" name="name" value="<?php echo $name; ?>" placeholder="  検索ワードを入力" >
+                            <button id="recBtn" name="voice_search" value="clickvoice"><!--<img src="./image/icon/maic.png" alt="map_icon">--></button> 
                             <button name="search">検索</button>
                         </td>
                     </tr>
                 </table>
-                <div class="c__search_bottom">
-                    <!-- <input type="submit" name="search" value="検索"> -->
-                </div>
-            </form>
 
+            </form>
             <div class="search_block">  
                 <div>
                     <p>商品一覧<?php echo isset($_GET["search"]) ? "　検索ワード:".$name : ""; ?></p>

@@ -29,7 +29,8 @@
   <script type="text/javascript" src="js/js_puppeteer.js"></script>
   <!-- qr_code -->
   <script type="text/javascript" src="./js/jquery.qrcode.min.js"></script>
-
+  <!-- voice -->
+  <script type="text/javascript" src="./js/voice.js"></script>
   <script type="text/javascript">
 
   $(function(){

@@ -14,9 +14,12 @@
             var paramArray = [];                              // パラメーター配列
             for (i = 0; i < param.length; i++) {              // 用意した配列にパラメータを格納
                 var paramItem = param[i].split('=');
-                paramArray[paramItem[0]] = paramItem[1];
+                console.log(paramItem[1]);
+                console.log(paramArray[paramItem[0]] = paramItem[1]);
             }
-            id=eval(paramArray.id);
+            console.log(paramArray.id);
+            id=eval(paramArray.id);//数字にする
+            console.log(id);
             //画像の入ったドライブへのリンク
             $('#p_main_qr_code').qrcode("https://drive.google.com/open?id=1UnE95w7tEKJ9UCauA5ZiHmPrxe140MIC");
         }
