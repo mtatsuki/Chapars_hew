@@ -83,11 +83,7 @@ for ($i = 0; $i < count($getdata); $i++) {
 //         break;
 //     }
 //   }
-<<<<<<< HEAD
-// }  
-=======
 // }
->>>>>>> 2a622f5d29adec01ec960ce44d0fcbba43c9a774
 //==================================
 
 include "./tpl/header.php";

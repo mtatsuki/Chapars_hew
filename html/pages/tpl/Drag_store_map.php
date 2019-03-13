@@ -15,19 +15,19 @@
             $("#"+paramArray.id).css("background","#ff8484"); //IDパラメーターの場所の色を変える
             $("#right_nav a").css("display","");              //右の印刷するボタン表示
             color=eval(paramArray.id);
-            if(color >= 0 && color <=4){
+            if(color > 10 && color <=15){
                 $(" #store_item_box>ul:nth-of-type(1)").css("display","block"); //棚の周りをひからす。
             }
-            if(color > 4 && color <=8){
+            if(color == 4 && color ==8){
                 $(" #store_item_box>ul:nth-of-type(2)").css("display","block"); //棚の周りをひからす。
             }
-            if(color > 8 && color <=12){
+            if(color == 8 && color <=12){
                 $(" #store_item_box>ul:nth-of-type(3)").css("display","block"); //棚の周りをひからす。
             }
-            if(color > 12 && color <=16){
+            if(color == 20 && color == 21){
                 $(" #store_item_box>ul:nth-of-type(4)").css("display","block"); //棚の周りをひからす。
             }
-            if(color > 16 && color <=20){
+            if(color == 16 && color ===20){
                 $(" #store_item_box>ul:nth-of-type(5)").css("display","block"); //棚の周りをひからす。
             }
         }
@@ -50,42 +50,23 @@
             </aside><!-- right_nav -->
             <img src="./image/Drag_list/sample.png" alt="店内マップ">
             <article id="store_item_box">
-                <h2 id="box1">A</h2>
+                <h2 id="box1">第3類医薬品</h2>
                 <ul>
-                    <li><h3>棚番号Aの薬一覧</h3></li>
+                    <li><h3>第3類医薬品の薬一覧</h3></li>
                     <li class="list_section">
-                        <h4 class="list_h_text">カテゴリA-1</h4>
+                        <h4 class="list_h_text"></h4>
                         <ul>
-                            <li id="1"><a href="./details.php?id=1">1</a></li>
-                            <li id="2"><a href="./details.php?id=2">2</a></li>
-                            <li id="3"><a href="./details.php?id=3">3</a></li>
-                            <li id="4"><a href="./details.php?id=4">4</a></li>
-                        </ul>
-                    </li>
-                    <li class="list_section">
-                        <h4 class="list_h_text">カテゴリA-2</h4>
-                        <ul>
-                            <li><a href="#">1</a></li>
-                            <li><a href="#">2</a></li>
-                            <li><a href="#">3</a></li>
-                            <li><a href="#">4</a></li>
-                        </ul>
-                    </li>
-                    <li class="list_section">
-                        <h4 class="list_h_text">カテゴリA-3</h4>
-                        <ul>
-                            <li><a href="#">1</a></li>
-                            <li><a href="#">2</a></li>
-                            <li><a href="#">3</a></li>
-                            <li><a href="#">4</a></li>
+                        <?php foreach ($list as $value) { ?>
+                            <li id="<?php echo $value['id']?>"><a href="./details.php?id=<?php echo $value['id']?>"><?php echo $value['itemName'] ?></a></li>
+                        <?php } ?>
                         </ul>
                     </li>
 
                     <li>×</li>
                 </ul>
-                <h2 id="box2">B</h2>
+                <h2 id="box2">第2類医薬品</h2>
                 <ul>
-                    <li><h3>棚番号Bの薬一覧</h3></li>
+                    <li><h3>第2類医薬品の薬一覧</h3></li>
                     <li class="list_section">
                         <h4 class="list_h_text">カテゴリB-1</h4>
                         <ul>
@@ -117,7 +98,7 @@
                 </ul>
                 <h2 id="box3">C</h2>
                 <ul>
-                    <li><h3>棚番号Cの薬一覧</h3></li>
+                    <li><h3>第1類医薬品</h3></li>
                     <li class="list_section">
                         <h4 class="list_h_text">カテゴリC-1</h4>
                         <ul>

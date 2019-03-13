@@ -18,19 +18,19 @@
             }
             color=eval(paramArray.id);
             console.log(color);
-            if(color >= 0 && color <=4){
+            if(color > 10 && color <=15){
               $("#a").css("background","#ff8484"); //IDパラメーターの場所の色を変える
             }
             if(color > 4 && color <=8){
               $("#b").css("background","#ff8484"); //IDパラメーターの場所の色を変える
             }
-            if(color > 8 && color <=12){
+            if(color > 8 && color <=9){
               $("#c").css("background","#ff8484"); //IDパラメーターの場所の色を変える
             }
-            if(color > 12 && color <=16){
+            if(color > 20 && color <=23){
               $("#d").css("background","#ff8484"); //IDパラメーターの場所の色を変える
             }
-            if(color > 16 && color <=20){
+            if(color > 30 && color <=32){
               $("#e").css("background","#ff8484"); //IDパラメーターの場所の色を変える
             }
         }
@@ -70,12 +70,12 @@
           <h3 class="list_h_text">薬品情報</h3>
           <div></div>
 
-          <?php foreach($itemCaption_array as $val){?>
+            <?php foreach ($itemCaption_array as $val) {?>
               <div>
                   <p class="line_text"> <?php echo $val;?></p>
                   
               </div>
-          <?php }  ?>
+            <?php }  ?>
           </section><!-- section  test1 -->
       </article><!-- article  main_text_info -->
 

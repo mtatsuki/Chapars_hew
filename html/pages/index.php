@@ -31,8 +31,35 @@ foreach ($products as $product) {
         )";
         $stm = db_prepare($pdo, $sql);
         db_execute($stm);
+
+        $rakuten_genre_result = getRakutenResult(
+            $result_item->genreId,
+            'https://app.rakuten.co.jp/services/api/IchibaGenre/Search/20140222',
+            'genre'
+        );
+        $result_genre = $rakuten_genre_result->current;
+        $stm = db_prepare($pdo, $sql);
+                $sql = "insert into genres
+            (genreId, itemCode, genreName, genreLevel)
+        values(
+            '".$result_genre->genreId."',
+            '".$result_item->itemCode."',
+            '".$result_genre->genreName."',
+            '".$result_genre->genreLevel."'
+        )";
+        $stm = db_prepare($pdo, $sql);
+        db_execute($stm);
     }
 }
+
+$sql = 'select * from stocks INNER JOIN genres ON stocks.itemCode = genres.itemCode where genreName ="第三類医薬品"';
+$stm = db_prepare($pdo, $sql);
+$list = db_execute($stm);
+$list = array();
+while ($row = $stm->fetch(PDO::FETCH_ASSOC)) {
+    $list[] = $row;
+}
+
 //==================================
 
 include "./tpl/header.php";
