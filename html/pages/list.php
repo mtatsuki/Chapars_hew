@@ -24,7 +24,8 @@ for ($i = 0; $i < count($getdata); $i++) {
         $datas[$cates[$i]]["itemName"] = $getproducts[$i]["itemName"];
         $datas[$cates[$i]]["smallImageUrls"] = $getproducts[$i]["smallImageUrls"];
     }
-}
+  }
+  var_dump($datas);
 // $jsonUrl = "./tpl/test.json"; //JSONファイルの場所とファイル名を記述
 // if(file_exists($jsonUrl)){
 //   $json = file_get_contents($jsonUrl);

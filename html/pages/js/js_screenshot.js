@@ -31,7 +31,7 @@ async function screenshot(id){
               .catch(e => console.log('timeout exceed. proceed to next operation'))
     await page.screenshot({path: '/works/project_file/chapars/Chapars_hew/html/pages/image/Drag_screen/'+id+'.png', fullPage:true})
     console.log("save screenshot: " + url)
-    // await browser.close()
+    await browser.close()
 }
 for(var i = 0;i < process.argv.length; i++){
     if (i  > 1) {

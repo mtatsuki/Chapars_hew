@@ -22,14 +22,15 @@
   <link rel="stylesheet" href="./css/reset.css">
   <!-- CSS -->
   <link rel="stylesheet" href="./css/style.css">
- <!-- jqueryバージョン３ -->
- <script type="text/javascript" src="js/jquery-3.3.1.min.js"></script>
+  <!-- jqueryバージョン３ -->
+  <script type="text/javascript" src="js/jquery-3.3.1.min.js"></script>
 
   <!-- puppteer -->
   <script type="text/javascript" src="js/js_puppeteer.js"></script>
   <!-- qr_code -->
   <script type="text/javascript" src="./js/jquery.qrcode.min.js"></script>
-
+  <!-- voice -->
+  <script type="text/javascript" src="./js/voice.js"></script>
   <script type="text/javascript">
 
   $(function(){
@@ -50,7 +51,6 @@
     $("#store_item_box>ul>li:last-child").click(function(){
       $("#store_item_box>ul").slideUp(500);
     });
-    $('#p_main_qr_code').qrcode("https://github.com/mtatsuki/Chapars_hew",{text: "size doesn't matter"});
     //設定ボックスの表示
     $('#ber_line_box >div').hide();
     $("#ber_line_box> p").click(function(){

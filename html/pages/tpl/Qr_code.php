@@ -1,6 +1,32 @@
-<script ></script>
+
 <title>jquery</title>
 </head>
+<script >
+    $(function(){
+
+        let url = document.referrer;                          //遷移元URL取得
+        let urlParam = location.search.substring(1);          //パラメーター取得
+        $("#right_nav >a").css("display","none");             //印刷するボタンを消す
+        if(urlParam) {  //URLにパラメータが存在する場合
+            console.log(url);                                 //遷移元URL取得
+            console.log(urlParam);                            //取得したパラメーターが一行で
+            var param = urlParam.split('&');                  //「&」が含まれている場合は「&」で分割
+            var paramArray = [];                              // パラメーター配列
+            for (i = 0; i < param.length; i++) {              // 用意した配列にパラメータを格納
+                var paramItem = param[i].split('=');
+                console.log(paramItem[1]);
+                console.log(paramArray[paramItem[0]] = paramItem[1]);
+            }
+            console.log(paramArray.id);
+            id=eval(paramArray.id);//数字にする
+            console.log(id);
+            //画像の入ったドライブへのリンク
+            $('#p_main_qr_code').qrcode("https://drive.google.com/open?id=1UnE95w7tEKJ9UCauA5ZiHmPrxe140MIC");
+        }
+        // $('#p_main_qr_code').qrcode("https://on-ze.com/archives/6022");
+
+    })
+</script>
 <body>
 <div class="wrapper">
     <!-- title -->
